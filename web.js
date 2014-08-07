@@ -35,6 +35,13 @@ app.get('/', function(req, res){
   })
 })
 
+app.get('/bundle.js', function(req, res){
+  fs.readFile('bundle.js', function(err, contents){
+    res.setHeader('Content-Type', 'application/javascript')
+    res.end(contents)
+  })
+})
+
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'))
 })
