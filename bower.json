@@ -1,0 +1,10 @@
+{
+  "name": "binnyfields",
+  "version": "0.0.1",
+  "dependencies": {
+    "marionette": "~1.8.8",
+    "bootstrap": "~3.2.0",
+    "backbone": "~1.1.2"
+  },
+  "private": true
+}

@@ -5,6 +5,7 @@
 var express = require('express')
   , http = require('http')
   , path = require('path')
+  , fs = require('fs')
   , logfmt = require('logfmt')
   , app = express()
 
@@ -28,7 +29,10 @@ app.configure('development', function(){
 })
 
 app.get('/', function(req, res){
-  res.send('hello drunky')
+  fs.readFile('index.html', function(err, contents){
+    res.setHeader('Content-Type', 'text/html')
+    res.end(contents)
+  })
 })
 
 http.createServer(app).listen(app.get('port'), function(){
