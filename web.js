@@ -8,6 +8,7 @@ var express = require('express')
   , fs = require('fs')
   , logfmt = require('logfmt')
   , app = express()
+  , querystring = require('querystring')
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000)
@@ -40,6 +41,32 @@ app.get('/bundle.js', function(req, res){
     res.setHeader('Content-Type', 'application/javascript')
     res.end(contents)
   })
+})
+
+app.post('*', function(request, response){
+  data = querystring.stringify(request.body)
+  options = {
+    host: 'www.binnys.com',
+    port: 80,
+    path: request.url,
+    method: request.method,
+    headers: {
+      'Content-Type': request.headers['content-type'],
+      'Content-Length': data.length
+    }
+  }
+  proxy_callback = function(resp) {
+    resp.on('data', function(chunk){
+      response.write(chunk, 'binary')
+    })
+    resp.on('end', function() {
+      response.end()
+    })
+    response.writeHead(resp.statusCode, resp.headers)
+  }
+  proxy_request = http.request(options, proxy_callback)
+  proxy_request.write(data)
+  proxy_request.end()
 })
 
 http.createServer(app).listen(app.get('port'), function(){

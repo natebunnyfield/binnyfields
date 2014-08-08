@@ -31,6 +31,8 @@ module.exports = {
     alias: {
       'app': __dirname + '/app.coffee',
       'underscore': __dirname + '/bower_components/lodash/dist/lodash.underscore.js',
+      'backgrid': __dirname + '/bower_components/backgrid/lib/backgrid.js',
+      'backgrid-filter': __dirname + '/bower_components/backgrid-filter/backgrid-filter.js'
     }
   },
   amd: {

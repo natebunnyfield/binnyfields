@@ -34,6 +34,11 @@ App.on 'initialize:after', ->
   log 'init:after'
   Header = require('./apps/header/header_app')
   Header.start()
-  #@startHistory()
+  Inventory = require('./apps/inventory/inventory_app')
+  Inventory.start()
+  if Backbone.history
+    Backbone.history.start
+      pushState: true
+      root: '/'
 
 module.exports = App
