@@ -3,21 +3,23 @@ Panel = Marionette.ItemView.extend
   events:
     'submit': 'search'
   search: (e) =>
-    log arguments
     e.stopPropagation()
     e.preventDefault()
 
-    keyword = $('#search-keyword').val() # TODO gross
+    # TODO gross
+    keyword = $('#search-keyword').val()
 
+    # TODO Replace with App.vent.request 'get:products', keyword, (whatever) =>
     $.ajax
       type: 'POST'
       url: '/ajax/productlist'
       data:
         keyword: keyword
-      success: =>
-        log 'worked'
+      success: (data) =>
+        products = new Backbone.Collection data,
+          comparator: 'Availability'
+        App.vent.trigger 'list:products', products
       error: =>
-        log 'failed'
-    #App.commands.execute 'search', () ->
+        warn 'search error',arguments
 
 module.exports = Panel

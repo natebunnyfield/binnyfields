@@ -46,7 +46,7 @@
 
 	/* WEBPACK VAR INJECTION */(function(_) {var App;
 
-	__webpack_require__(9);
+	__webpack_require__(12);
 
 	__webpack_require__(4);
 
@@ -113,7 +113,8 @@
 	});
 
 	App.on('initialize:before', function(options) {
-	  return log('init:before');
+	  log('init:before');
+	  return __webpack_require__(7);
 	});
 
 	App.on('initialize:after', function() {
@@ -133,7 +134,7 @@
 
 	module.exports = App;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(7), __webpack_require__(2), __webpack_require__(8)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14), __webpack_require__(9), __webpack_require__(2), __webpack_require__(10)))
 
 /***/ },
 /* 2 */
@@ -7919,7 +7920,7 @@
 
 	}(jQuery);
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)))
 
 /***/ },
 /* 5 */
@@ -7930,7 +7931,7 @@
 	API = {
 	  show: function() {
 	    var Show;
-	    Show = __webpack_require__(13);
+	    Show = __webpack_require__(16);
 	    return new Show;
 	  }
 	};
@@ -7951,7 +7952,7 @@
 	API = {
 	  list: function() {
 	    var List;
-	    List = __webpack_require__(14);
+	    List = __webpack_require__(17);
 	    return new List;
 	  }
 	};
@@ -7965,6 +7966,26 @@
 
 /***/ },
 /* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	var dispose = __webpack_require__(11)
+		// The css code:
+		(__webpack_require__(8))
+	if(false) {
+		module.hot.accept();
+		module.hot.dispose(dispose);
+	}
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports =
+		"@media (max-width: 767px){img{max-width:30px;}}";
+
+/***/ },
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(module) {/*!
@@ -17760,7 +17781,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(15)(module)))
 
 /***/ },
-/* 8 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Backbone.js 1.1.2
@@ -17774,7 +17795,7 @@
 
 	  // Set up Backbone appropriately for the environment. Start with AMD.
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2), __webpack_require__(7), exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function(_, $, exports) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(2), __webpack_require__(9), exports], __WEBPACK_AMD_DEFINE_RESULT__ = (function(_, $, exports) {
 	      // Export global even in AMD case in case this script is loaded with
 	      // others that may still expect a global Backbone.
 	      root.Backbone = factory(root, exports, _, $);
@@ -19374,26 +19395,6 @@
 
 
 /***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	var dispose = __webpack_require__(11)
-		// The css code:
-		(__webpack_require__(10))
-	if(false) {
-		module.hot.accept();
-		module.hot.dispose(dispose);
-	}
-
-/***/ },
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports =
-		"/*! normalize.css v3.0.1 | MIT License | git.io/normalize */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n@media print {\n  * {\n    text-shadow: none !important;\n    color: #000 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n  }\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n  a[href]:after {\n    content: \" (\" attr(href) \")\";\n  }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\";\n  }\n  a[href^=\"javascript:\"]:after,\n  a[href^=\"#\"]:after {\n    content: \"\";\n  }\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n  thead {\n    display: table-header-group;\n  }\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n  img {\n    max-width: 100% !important;\n  }\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n  select {\n    background: #fff !important;\n  }\n  .navbar {\n    display: none;\n  }\n  .table td,\n  .table th {\n    background-color: #fff !important;\n  }\n  .btn > .caret,\n  .dropup > .btn > .caret {\n    border-top-color: #000 !important;\n  }\n  .label {\n    border: 1px solid #000;\n  }\n  .table {\n    border-collapse: collapse !important;\n  }\n  .table-bordered th,\n  .table-bordered td {\n    border: 1px solid #ddd !important;\n  }\n}\n@font-face {\n  font-family: 'Glyphicons Halflings';\n  src: url("+__webpack_require__(94)+");\n  src: url("+__webpack_require__(94)+"?#iefix) format('embedded-opentype'), url("+__webpack_require__(97)+") format('woff'), url("+__webpack_require__(95)+") format('truetype'), url("+__webpack_require__(96)+"#glyphicons_halflingsregular) format('svg');\n}\n.glyphicon {\n  position: relative;\n  top: 1px;\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  font-style: normal;\n  font-weight: normal;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.glyphicon-asterisk:before {\n  content: \"\\2a\";\n}\n.glyphicon-plus:before {\n  content: \"\\2b\";\n}\n.glyphicon-euro:before {\n  content: \"\\20ac\";\n}\n.glyphicon-minus:before {\n  content: \"\\2212\";\n}\n.glyphicon-cloud:before {\n  content: \"\\2601\";\n}\n.glyphicon-envelope:before {\n  content: \"\\2709\";\n}\n.glyphicon-pencil:before {\n  content: \"\\270f\";\n}\n.glyphicon-glass:before {\n  content: \"\\e001\";\n}\n.glyphicon-music:before {\n  content: \"\\e002\";\n}\n.glyphicon-search:before {\n  content: \"\\e003\";\n}\n.glyphicon-heart:before {\n  content: \"\\e005\";\n}\n.glyphicon-star:before {\n  content: \"\\e006\";\n}\n.glyphicon-star-empty:before {\n  content: \"\\e007\";\n}\n.glyphicon-user:before {\n  content: \"\\e008\";\n}\n.glyphicon-film:before {\n  content: \"\\e009\";\n}\n.glyphicon-th-large:before {\n  content: \"\\e010\";\n}\n.glyphicon-th:before {\n  content: \"\\e011\";\n}\n.glyphicon-th-list:before {\n  content: \"\\e012\";\n}\n.glyphicon-ok:before {\n  content: \"\\e013\";\n}\n.glyphicon-remove:before {\n  content: \"\\e014\";\n}\n.glyphicon-zoom-in:before {\n  content: \"\\e015\";\n}\n.glyphicon-zoom-out:before {\n  content: \"\\e016\";\n}\n.glyphicon-off:before {\n  content: \"\\e017\";\n}\n.glyphicon-signal:before {\n  content: \"\\e018\";\n}\n.glyphicon-cog:before {\n  content: \"\\e019\";\n}\n.glyphicon-trash:before {\n  content: \"\\e020\";\n}\n.glyphicon-home:before {\n  content: \"\\e021\";\n}\n.glyphicon-file:before {\n  content: \"\\e022\";\n}\n.glyphicon-time:before {\n  content: \"\\e023\";\n}\n.glyphicon-road:before {\n  content: \"\\e024\";\n}\n.glyphicon-download-alt:before {\n  content: \"\\e025\";\n}\n.glyphicon-download:before {\n  content: \"\\e026\";\n}\n.glyphicon-upload:before {\n  content: \"\\e027\";\n}\n.glyphicon-inbox:before {\n  content: \"\\e028\";\n}\n.glyphicon-play-circle:before {\n  content: \"\\e029\";\n}\n.glyphicon-repeat:before {\n  content: \"\\e030\";\n}\n.glyphicon-refresh:before {\n  content: \"\\e031\";\n}\n.glyphicon-list-alt:before {\n  content: \"\\e032\";\n}\n.glyphicon-lock:before {\n  content: \"\\e033\";\n}\n.glyphicon-flag:before {\n  content: \"\\e034\";\n}\n.glyphicon-headphones:before {\n  content: \"\\e035\";\n}\n.glyphicon-volume-off:before {\n  content: \"\\e036\";\n}\n.glyphicon-volume-down:before {\n  content: \"\\e037\";\n}\n.glyphicon-volume-up:before {\n  content: \"\\e038\";\n}\n.glyphicon-qrcode:before {\n  content: \"\\e039\";\n}\n.glyphicon-barcode:before {\n  content: \"\\e040\";\n}\n.glyphicon-tag:before {\n  content: \"\\e041\";\n}\n.glyphicon-tags:before {\n  content: \"\\e042\";\n}\n.glyphicon-book:before {\n  content: \"\\e043\";\n}\n.glyphicon-bookmark:before {\n  content: \"\\e044\";\n}\n.glyphicon-print:before {\n  content: \"\\e045\";\n}\n.glyphicon-camera:before {\n  content: \"\\e046\";\n}\n.glyphicon-font:before {\n  content: \"\\e047\";\n}\n.glyphicon-bold:before {\n  content: \"\\e048\";\n}\n.glyphicon-italic:before {\n  content: \"\\e049\";\n}\n.glyphicon-text-height:before {\n  content: \"\\e050\";\n}\n.glyphicon-text-width:before {\n  content: \"\\e051\";\n}\n.glyphicon-align-left:before {\n  content: \"\\e052\";\n}\n.glyphicon-align-center:before {\n  content: \"\\e053\";\n}\n.glyphicon-align-right:before {\n  content: \"\\e054\";\n}\n.glyphicon-align-justify:before {\n  content: \"\\e055\";\n}\n.glyphicon-list:before {\n  content: \"\\e056\";\n}\n.glyphicon-indent-left:before {\n  content: \"\\e057\";\n}\n.glyphicon-indent-right:before {\n  content: \"\\e058\";\n}\n.glyphicon-facetime-video:before {\n  content: \"\\e059\";\n}\n.glyphicon-picture:before {\n  content: \"\\e060\";\n}\n.glyphicon-map-marker:before {\n  content: \"\\e062\";\n}\n.glyphicon-adjust:before {\n  content: \"\\e063\";\n}\n.glyphicon-tint:before {\n  content: \"\\e064\";\n}\n.glyphicon-edit:before {\n  content: \"\\e065\";\n}\n.glyphicon-share:before {\n  content: \"\\e066\";\n}\n.glyphicon-check:before {\n  content: \"\\e067\";\n}\n.glyphicon-move:before {\n  content: \"\\e068\";\n}\n.glyphicon-step-backward:before {\n  content: \"\\e069\";\n}\n.glyphicon-fast-backward:before {\n  content: \"\\e070\";\n}\n.glyphicon-backward:before {\n  content: \"\\e071\";\n}\n.glyphicon-play:before {\n  content: \"\\e072\";\n}\n.glyphicon-pause:before {\n  content: \"\\e073\";\n}\n.glyphicon-stop:before {\n  content: \"\\e074\";\n}\n.glyphicon-forward:before {\n  content: \"\\e075\";\n}\n.glyphicon-fast-forward:before {\n  content: \"\\e076\";\n}\n.glyphicon-step-forward:before {\n  content: \"\\e077\";\n}\n.glyphicon-eject:before {\n  content: \"\\e078\";\n}\n.glyphicon-chevron-left:before {\n  content: \"\\e079\";\n}\n.glyphicon-chevron-right:before {\n  content: \"\\e080\";\n}\n.glyphicon-plus-sign:before {\n  content: \"\\e081\";\n}\n.glyphicon-minus-sign:before {\n  content: \"\\e082\";\n}\n.glyphicon-remove-sign:before {\n  content: \"\\e083\";\n}\n.glyphicon-ok-sign:before {\n  content: \"\\e084\";\n}\n.glyphicon-question-sign:before {\n  content: \"\\e085\";\n}\n.glyphicon-info-sign:before {\n  content: \"\\e086\";\n}\n.glyphicon-screenshot:before {\n  content: \"\\e087\";\n}\n.glyphicon-remove-circle:before {\n  content: \"\\e088\";\n}\n.glyphicon-ok-circle:before {\n  content: \"\\e089\";\n}\n.glyphicon-ban-circle:before {\n  content: \"\\e090\";\n}\n.glyphicon-arrow-left:before {\n  content: \"\\e091\";\n}\n.glyphicon-arrow-right:before {\n  content: \"\\e092\";\n}\n.glyphicon-arrow-up:before {\n  content: \"\\e093\";\n}\n.glyphicon-arrow-down:before {\n  content: \"\\e094\";\n}\n.glyphicon-share-alt:before {\n  content: \"\\e095\";\n}\n.glyphicon-resize-full:before {\n  content: \"\\e096\";\n}\n.glyphicon-resize-small:before {\n  content: \"\\e097\";\n}\n.glyphicon-exclamation-sign:before {\n  content: \"\\e101\";\n}\n.glyphicon-gift:before {\n  content: \"\\e102\";\n}\n.glyphicon-leaf:before {\n  content: \"\\e103\";\n}\n.glyphicon-fire:before {\n  content: \"\\e104\";\n}\n.glyphicon-eye-open:before {\n  content: \"\\e105\";\n}\n.glyphicon-eye-close:before {\n  content: \"\\e106\";\n}\n.glyphicon-warning-sign:before {\n  content: \"\\e107\";\n}\n.glyphicon-plane:before {\n  content: \"\\e108\";\n}\n.glyphicon-calendar:before {\n  content: \"\\e109\";\n}\n.glyphicon-random:before {\n  content: \"\\e110\";\n}\n.glyphicon-comment:before {\n  content: \"\\e111\";\n}\n.glyphicon-magnet:before {\n  content: \"\\e112\";\n}\n.glyphicon-chevron-up:before {\n  content: \"\\e113\";\n}\n.glyphicon-chevron-down:before {\n  content: \"\\e114\";\n}\n.glyphicon-retweet:before {\n  content: \"\\e115\";\n}\n.glyphicon-shopping-cart:before {\n  content: \"\\e116\";\n}\n.glyphicon-folder-close:before {\n  content: \"\\e117\";\n}\n.glyphicon-folder-open:before {\n  content: \"\\e118\";\n}\n.glyphicon-resize-vertical:before {\n  content: \"\\e119\";\n}\n.glyphicon-resize-horizontal:before {\n  content: \"\\e120\";\n}\n.glyphicon-hdd:before {\n  content: \"\\e121\";\n}\n.glyphicon-bullhorn:before {\n  content: \"\\e122\";\n}\n.glyphicon-bell:before {\n  content: \"\\e123\";\n}\n.glyphicon-certificate:before {\n  content: \"\\e124\";\n}\n.glyphicon-thumbs-up:before {\n  content: \"\\e125\";\n}\n.glyphicon-thumbs-down:before {\n  content: \"\\e126\";\n}\n.glyphicon-hand-right:before {\n  content: \"\\e127\";\n}\n.glyphicon-hand-left:before {\n  content: \"\\e128\";\n}\n.glyphicon-hand-up:before {\n  content: \"\\e129\";\n}\n.glyphicon-hand-down:before {\n  content: \"\\e130\";\n}\n.glyphicon-circle-arrow-right:before {\n  content: \"\\e131\";\n}\n.glyphicon-circle-arrow-left:before {\n  content: \"\\e132\";\n}\n.glyphicon-circle-arrow-up:before {\n  content: \"\\e133\";\n}\n.glyphicon-circle-arrow-down:before {\n  content: \"\\e134\";\n}\n.glyphicon-globe:before {\n  content: \"\\e135\";\n}\n.glyphicon-wrench:before {\n  content: \"\\e136\";\n}\n.glyphicon-tasks:before {\n  content: \"\\e137\";\n}\n.glyphicon-filter:before {\n  content: \"\\e138\";\n}\n.glyphicon-briefcase:before {\n  content: \"\\e139\";\n}\n.glyphicon-fullscreen:before {\n  content: \"\\e140\";\n}\n.glyphicon-dashboard:before {\n  content: \"\\e141\";\n}\n.glyphicon-paperclip:before {\n  content: \"\\e142\";\n}\n.glyphicon-heart-empty:before {\n  content: \"\\e143\";\n}\n.glyphicon-link:before {\n  content: \"\\e144\";\n}\n.glyphicon-phone:before {\n  content: \"\\e145\";\n}\n.glyphicon-pushpin:before {\n  content: \"\\e146\";\n}\n.glyphicon-usd:before {\n  content: \"\\e148\";\n}\n.glyphicon-gbp:before {\n  content: \"\\e149\";\n}\n.glyphicon-sort:before {\n  content: \"\\e150\";\n}\n.glyphicon-sort-by-alphabet:before {\n  content: \"\\e151\";\n}\n.glyphicon-sort-by-alphabet-alt:before {\n  content: \"\\e152\";\n}\n.glyphicon-sort-by-order:before {\n  content: \"\\e153\";\n}\n.glyphicon-sort-by-order-alt:before {\n  content: \"\\e154\";\n}\n.glyphicon-sort-by-attributes:before {\n  content: \"\\e155\";\n}\n.glyphicon-sort-by-attributes-alt:before {\n  content: \"\\e156\";\n}\n.glyphicon-unchecked:before {\n  content: \"\\e157\";\n}\n.glyphicon-expand:before {\n  content: \"\\e158\";\n}\n.glyphicon-collapse-down:before {\n  content: \"\\e159\";\n}\n.glyphicon-collapse-up:before {\n  content: \"\\e160\";\n}\n.glyphicon-log-in:before {\n  content: \"\\e161\";\n}\n.glyphicon-flash:before {\n  content: \"\\e162\";\n}\n.glyphicon-log-out:before {\n  content: \"\\e163\";\n}\n.glyphicon-new-window:before {\n  content: \"\\e164\";\n}\n.glyphicon-record:before {\n  content: \"\\e165\";\n}\n.glyphicon-save:before {\n  content: \"\\e166\";\n}\n.glyphicon-open:before {\n  content: \"\\e167\";\n}\n.glyphicon-saved:before {\n  content: \"\\e168\";\n}\n.glyphicon-import:before {\n  content: \"\\e169\";\n}\n.glyphicon-export:before {\n  content: \"\\e170\";\n}\n.glyphicon-send:before {\n  content: \"\\e171\";\n}\n.glyphicon-floppy-disk:before {\n  content: \"\\e172\";\n}\n.glyphicon-floppy-saved:before {\n  content: \"\\e173\";\n}\n.glyphicon-floppy-remove:before {\n  content: \"\\e174\";\n}\n.glyphicon-floppy-save:before {\n  content: \"\\e175\";\n}\n.glyphicon-floppy-open:before {\n  content: \"\\e176\";\n}\n.glyphicon-credit-card:before {\n  content: \"\\e177\";\n}\n.glyphicon-transfer:before {\n  content: \"\\e178\";\n}\n.glyphicon-cutlery:before {\n  content: \"\\e179\";\n}\n.glyphicon-header:before {\n  content: \"\\e180\";\n}\n.glyphicon-compressed:before {\n  content: \"\\e181\";\n}\n.glyphicon-earphone:before {\n  content: \"\\e182\";\n}\n.glyphicon-phone-alt:before {\n  content: \"\\e183\";\n}\n.glyphicon-tower:before {\n  content: \"\\e184\";\n}\n.glyphicon-stats:before {\n  content: \"\\e185\";\n}\n.glyphicon-sd-video:before {\n  content: \"\\e186\";\n}\n.glyphicon-hd-video:before {\n  content: \"\\e187\";\n}\n.glyphicon-subtitles:before {\n  content: \"\\e188\";\n}\n.glyphicon-sound-stereo:before {\n  content: \"\\e189\";\n}\n.glyphicon-sound-dolby:before {\n  content: \"\\e190\";\n}\n.glyphicon-sound-5-1:before {\n  content: \"\\e191\";\n}\n.glyphicon-sound-6-1:before {\n  content: \"\\e192\";\n}\n.glyphicon-sound-7-1:before {\n  content: \"\\e193\";\n}\n.glyphicon-copyright-mark:before {\n  content: \"\\e194\";\n}\n.glyphicon-registration-mark:before {\n  content: \"\\e195\";\n}\n.glyphicon-cloud-download:before {\n  content: \"\\e197\";\n}\n.glyphicon-cloud-upload:before {\n  content: \"\\e198\";\n}\n.glyphicon-tree-conifer:before {\n  content: \"\\e199\";\n}\n.glyphicon-tree-deciduous:before {\n  content: \"\\e200\";\n}\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 10px;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #333333;\n  background-color: #ffffff;\n}\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\na {\n  color: #428bca;\n  text-decoration: none;\n}\na:hover,\na:focus {\n  color: #2a6496;\n  text-decoration: underline;\n}\na:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\nfigure {\n  margin: 0;\n}\nimg {\n  vertical-align: middle;\n}\n.img-responsive,\n.thumbnail > img,\n.thumbnail a > img,\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  display: block;\n  width: 100% \\9;\n  max-width: 100%;\n  height: auto;\n}\n.img-rounded {\n  border-radius: 6px;\n}\n.img-thumbnail {\n  padding: 4px;\n  line-height: 1.42857143;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  display: inline-block;\n  width: 100% \\9;\n  max-width: 100%;\n  height: auto;\n}\n.img-circle {\n  border-radius: 50%;\n}\nhr {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  border: 0;\n  border-top: 1px solid #eeeeee;\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  font-family: inherit;\n  font-weight: 500;\n  line-height: 1.1;\n  color: inherit;\n}\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small,\nh1 .small,\nh2 .small,\nh3 .small,\nh4 .small,\nh5 .small,\nh6 .small,\n.h1 .small,\n.h2 .small,\n.h3 .small,\n.h4 .small,\n.h5 .small,\n.h6 .small {\n  font-weight: normal;\n  line-height: 1;\n  color: #777777;\n}\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\nh1 small,\n.h1 small,\nh2 small,\n.h2 small,\nh3 small,\n.h3 small,\nh1 .small,\n.h1 .small,\nh2 .small,\n.h2 .small,\nh3 .small,\n.h3 .small {\n  font-size: 65%;\n}\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\nh4 small,\n.h4 small,\nh5 small,\n.h5 small,\nh6 small,\n.h6 small,\nh4 .small,\n.h4 .small,\nh5 .small,\n.h5 .small,\nh6 .small,\n.h6 .small {\n  font-size: 75%;\n}\nh1,\n.h1 {\n  font-size: 36px;\n}\nh2,\n.h2 {\n  font-size: 30px;\n}\nh3,\n.h3 {\n  font-size: 24px;\n}\nh4,\n.h4 {\n  font-size: 18px;\n}\nh5,\n.h5 {\n  font-size: 14px;\n}\nh6,\n.h6 {\n  font-size: 12px;\n}\np {\n  margin: 0 0 10px;\n}\n.lead {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 300;\n  line-height: 1.4;\n}\n@media (min-width: 768px) {\n  .lead {\n    font-size: 21px;\n  }\n}\nsmall,\n.small {\n  font-size: 85%;\n}\ncite {\n  font-style: normal;\n}\nmark,\n.mark {\n  background-color: #fcf8e3;\n  padding: .2em;\n}\n.text-left {\n  text-align: left;\n}\n.text-right {\n  text-align: right;\n}\n.text-center {\n  text-align: center;\n}\n.text-justify {\n  text-align: justify;\n}\n.text-nowrap {\n  white-space: nowrap;\n}\n.text-lowercase {\n  text-transform: lowercase;\n}\n.text-uppercase {\n  text-transform: uppercase;\n}\n.text-capitalize {\n  text-transform: capitalize;\n}\n.text-muted {\n  color: #777777;\n}\n.text-primary {\n  color: #428bca;\n}\na.text-primary:hover {\n  color: #3071a9;\n}\n.text-success {\n  color: #3c763d;\n}\na.text-success:hover {\n  color: #2b542c;\n}\n.text-info {\n  color: #31708f;\n}\na.text-info:hover {\n  color: #245269;\n}\n.text-warning {\n  color: #8a6d3b;\n}\na.text-warning:hover {\n  color: #66512c;\n}\n.text-danger {\n  color: #a94442;\n}\na.text-danger:hover {\n  color: #843534;\n}\n.bg-primary {\n  color: #fff;\n  background-color: #428bca;\n}\na.bg-primary:hover {\n  background-color: #3071a9;\n}\n.bg-success {\n  background-color: #dff0d8;\n}\na.bg-success:hover {\n  background-color: #c1e2b3;\n}\n.bg-info {\n  background-color: #d9edf7;\n}\na.bg-info:hover {\n  background-color: #afd9ee;\n}\n.bg-warning {\n  background-color: #fcf8e3;\n}\na.bg-warning:hover {\n  background-color: #f7ecb5;\n}\n.bg-danger {\n  background-color: #f2dede;\n}\na.bg-danger:hover {\n  background-color: #e4b9b9;\n}\n.page-header {\n  padding-bottom: 9px;\n  margin: 40px 0 20px;\n  border-bottom: 1px solid #eeeeee;\n}\nul,\nol {\n  margin-top: 0;\n  margin-bottom: 10px;\n}\nul ul,\nol ul,\nul ol,\nol ol {\n  margin-bottom: 0;\n}\n.list-unstyled {\n  padding-left: 0;\n  list-style: none;\n}\n.list-inline {\n  padding-left: 0;\n  list-style: none;\n  margin-left: -5px;\n}\n.list-inline > li {\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px;\n}\ndl {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\ndt,\ndd {\n  line-height: 1.42857143;\n}\ndt {\n  font-weight: bold;\n}\ndd {\n  margin-left: 0;\n}\n@media (min-width: 768px) {\n  .dl-horizontal dt {\n    float: left;\n    width: 160px;\n    clear: left;\n    text-align: right;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n  .dl-horizontal dd {\n    margin-left: 180px;\n  }\n}\nabbr[title],\nabbr[data-original-title] {\n  cursor: help;\n  border-bottom: 1px dotted #777777;\n}\n.initialism {\n  font-size: 90%;\n  text-transform: uppercase;\n}\nblockquote {\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eeeeee;\n}\nblockquote p:last-child,\nblockquote ul:last-child,\nblockquote ol:last-child {\n  margin-bottom: 0;\n}\nblockquote footer,\nblockquote small,\nblockquote .small {\n  display: block;\n  font-size: 80%;\n  line-height: 1.42857143;\n  color: #777777;\n}\nblockquote footer:before,\nblockquote small:before,\nblockquote .small:before {\n  content: '\\2014 \\00A0';\n}\n.blockquote-reverse,\nblockquote.pull-right {\n  padding-right: 15px;\n  padding-left: 0;\n  border-right: 5px solid #eeeeee;\n  border-left: 0;\n  text-align: right;\n}\n.blockquote-reverse footer:before,\nblockquote.pull-right footer:before,\n.blockquote-reverse small:before,\nblockquote.pull-right small:before,\n.blockquote-reverse .small:before,\nblockquote.pull-right .small:before {\n  content: '';\n}\n.blockquote-reverse footer:after,\nblockquote.pull-right footer:after,\n.blockquote-reverse small:after,\nblockquote.pull-right small:after,\n.blockquote-reverse .small:after,\nblockquote.pull-right .small:after {\n  content: '\\00A0 \\2014';\n}\nblockquote:before,\nblockquote:after {\n  content: \"\";\n}\naddress {\n  margin-bottom: 20px;\n  font-style: normal;\n  line-height: 1.42857143;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\ncode {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #c7254e;\n  background-color: #f9f2f4;\n  border-radius: 4px;\n}\nkbd {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #ffffff;\n  background-color: #333333;\n  border-radius: 3px;\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);\n}\nkbd kbd {\n  padding: 0;\n  font-size: 100%;\n  box-shadow: none;\n}\npre {\n  display: block;\n  padding: 9.5px;\n  margin: 0 0 10px;\n  font-size: 13px;\n  line-height: 1.42857143;\n  word-break: break-all;\n  word-wrap: break-word;\n  color: #333333;\n  background-color: #f5f5f5;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n}\npre code {\n  padding: 0;\n  font-size: inherit;\n  color: inherit;\n  white-space: pre-wrap;\n  background-color: transparent;\n  border-radius: 0;\n}\n.pre-scrollable {\n  max-height: 340px;\n  overflow-y: scroll;\n}\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n  }\n}\n@media (min-width: 992px) {\n  .container {\n    width: 970px;\n  }\n}\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px;\n  }\n}\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left;\n}\n.col-xs-12 {\n  width: 100%;\n}\n.col-xs-11 {\n  width: 91.66666667%;\n}\n.col-xs-10 {\n  width: 83.33333333%;\n}\n.col-xs-9 {\n  width: 75%;\n}\n.col-xs-8 {\n  width: 66.66666667%;\n}\n.col-xs-7 {\n  width: 58.33333333%;\n}\n.col-xs-6 {\n  width: 50%;\n}\n.col-xs-5 {\n  width: 41.66666667%;\n}\n.col-xs-4 {\n  width: 33.33333333%;\n}\n.col-xs-3 {\n  width: 25%;\n}\n.col-xs-2 {\n  width: 16.66666667%;\n}\n.col-xs-1 {\n  width: 8.33333333%;\n}\n.col-xs-pull-12 {\n  right: 100%;\n}\n.col-xs-pull-11 {\n  right: 91.66666667%;\n}\n.col-xs-pull-10 {\n  right: 83.33333333%;\n}\n.col-xs-pull-9 {\n  right: 75%;\n}\n.col-xs-pull-8 {\n  right: 66.66666667%;\n}\n.col-xs-pull-7 {\n  right: 58.33333333%;\n}\n.col-xs-pull-6 {\n  right: 50%;\n}\n.col-xs-pull-5 {\n  right: 41.66666667%;\n}\n.col-xs-pull-4 {\n  right: 33.33333333%;\n}\n.col-xs-pull-3 {\n  right: 25%;\n}\n.col-xs-pull-2 {\n  right: 16.66666667%;\n}\n.col-xs-pull-1 {\n  right: 8.33333333%;\n}\n.col-xs-pull-0 {\n  right: auto;\n}\n.col-xs-push-12 {\n  left: 100%;\n}\n.col-xs-push-11 {\n  left: 91.66666667%;\n}\n.col-xs-push-10 {\n  left: 83.33333333%;\n}\n.col-xs-push-9 {\n  left: 75%;\n}\n.col-xs-push-8 {\n  left: 66.66666667%;\n}\n.col-xs-push-7 {\n  left: 58.33333333%;\n}\n.col-xs-push-6 {\n  left: 50%;\n}\n.col-xs-push-5 {\n  left: 41.66666667%;\n}\n.col-xs-push-4 {\n  left: 33.33333333%;\n}\n.col-xs-push-3 {\n  left: 25%;\n}\n.col-xs-push-2 {\n  left: 16.66666667%;\n}\n.col-xs-push-1 {\n  left: 8.33333333%;\n}\n.col-xs-push-0 {\n  left: auto;\n}\n.col-xs-offset-12 {\n  margin-left: 100%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.66666667%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.33333333%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.66666667%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.33333333%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.66666667%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.33333333%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.66666667%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.33333333%;\n}\n.col-xs-offset-0 {\n  margin-left: 0%;\n}\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left;\n  }\n  .col-sm-12 {\n    width: 100%;\n  }\n  .col-sm-11 {\n    width: 91.66666667%;\n  }\n  .col-sm-10 {\n    width: 83.33333333%;\n  }\n  .col-sm-9 {\n    width: 75%;\n  }\n  .col-sm-8 {\n    width: 66.66666667%;\n  }\n  .col-sm-7 {\n    width: 58.33333333%;\n  }\n  .col-sm-6 {\n    width: 50%;\n  }\n  .col-sm-5 {\n    width: 41.66666667%;\n  }\n  .col-sm-4 {\n    width: 33.33333333%;\n  }\n  .col-sm-3 {\n    width: 25%;\n  }\n  .col-sm-2 {\n    width: 16.66666667%;\n  }\n  .col-sm-1 {\n    width: 8.33333333%;\n  }\n  .col-sm-pull-12 {\n    right: 100%;\n  }\n  .col-sm-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-sm-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-sm-pull-9 {\n    right: 75%;\n  }\n  .col-sm-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-sm-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-sm-pull-6 {\n    right: 50%;\n  }\n  .col-sm-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-sm-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-sm-pull-3 {\n    right: 25%;\n  }\n  .col-sm-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-sm-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-sm-pull-0 {\n    right: auto;\n  }\n  .col-sm-push-12 {\n    left: 100%;\n  }\n  .col-sm-push-11 {\n    left: 91.66666667%;\n  }\n  .col-sm-push-10 {\n    left: 83.33333333%;\n  }\n  .col-sm-push-9 {\n    left: 75%;\n  }\n  .col-sm-push-8 {\n    left: 66.66666667%;\n  }\n  .col-sm-push-7 {\n    left: 58.33333333%;\n  }\n  .col-sm-push-6 {\n    left: 50%;\n  }\n  .col-sm-push-5 {\n    left: 41.66666667%;\n  }\n  .col-sm-push-4 {\n    left: 33.33333333%;\n  }\n  .col-sm-push-3 {\n    left: 25%;\n  }\n  .col-sm-push-2 {\n    left: 16.66666667%;\n  }\n  .col-sm-push-1 {\n    left: 8.33333333%;\n  }\n  .col-sm-push-0 {\n    left: auto;\n  }\n  .col-sm-offset-12 {\n    margin-left: 100%;\n  }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-sm-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left;\n  }\n  .col-md-12 {\n    width: 100%;\n  }\n  .col-md-11 {\n    width: 91.66666667%;\n  }\n  .col-md-10 {\n    width: 83.33333333%;\n  }\n  .col-md-9 {\n    width: 75%;\n  }\n  .col-md-8 {\n    width: 66.66666667%;\n  }\n  .col-md-7 {\n    width: 58.33333333%;\n  }\n  .col-md-6 {\n    width: 50%;\n  }\n  .col-md-5 {\n    width: 41.66666667%;\n  }\n  .col-md-4 {\n    width: 33.33333333%;\n  }\n  .col-md-3 {\n    width: 25%;\n  }\n  .col-md-2 {\n    width: 16.66666667%;\n  }\n  .col-md-1 {\n    width: 8.33333333%;\n  }\n  .col-md-pull-12 {\n    right: 100%;\n  }\n  .col-md-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-md-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-md-pull-9 {\n    right: 75%;\n  }\n  .col-md-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-md-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-md-pull-6 {\n    right: 50%;\n  }\n  .col-md-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-md-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-md-pull-3 {\n    right: 25%;\n  }\n  .col-md-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-md-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-md-pull-0 {\n    right: auto;\n  }\n  .col-md-push-12 {\n    left: 100%;\n  }\n  .col-md-push-11 {\n    left: 91.66666667%;\n  }\n  .col-md-push-10 {\n    left: 83.33333333%;\n  }\n  .col-md-push-9 {\n    left: 75%;\n  }\n  .col-md-push-8 {\n    left: 66.66666667%;\n  }\n  .col-md-push-7 {\n    left: 58.33333333%;\n  }\n  .col-md-push-6 {\n    left: 50%;\n  }\n  .col-md-push-5 {\n    left: 41.66666667%;\n  }\n  .col-md-push-4 {\n    left: 33.33333333%;\n  }\n  .col-md-push-3 {\n    left: 25%;\n  }\n  .col-md-push-2 {\n    left: 16.66666667%;\n  }\n  .col-md-push-1 {\n    left: 8.33333333%;\n  }\n  .col-md-push-0 {\n    left: auto;\n  }\n  .col-md-offset-12 {\n    margin-left: 100%;\n  }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-md-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left;\n  }\n  .col-lg-12 {\n    width: 100%;\n  }\n  .col-lg-11 {\n    width: 91.66666667%;\n  }\n  .col-lg-10 {\n    width: 83.33333333%;\n  }\n  .col-lg-9 {\n    width: 75%;\n  }\n  .col-lg-8 {\n    width: 66.66666667%;\n  }\n  .col-lg-7 {\n    width: 58.33333333%;\n  }\n  .col-lg-6 {\n    width: 50%;\n  }\n  .col-lg-5 {\n    width: 41.66666667%;\n  }\n  .col-lg-4 {\n    width: 33.33333333%;\n  }\n  .col-lg-3 {\n    width: 25%;\n  }\n  .col-lg-2 {\n    width: 16.66666667%;\n  }\n  .col-lg-1 {\n    width: 8.33333333%;\n  }\n  .col-lg-pull-12 {\n    right: 100%;\n  }\n  .col-lg-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-lg-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-lg-pull-9 {\n    right: 75%;\n  }\n  .col-lg-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-lg-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-lg-pull-6 {\n    right: 50%;\n  }\n  .col-lg-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-lg-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-lg-pull-3 {\n    right: 25%;\n  }\n  .col-lg-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-lg-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-lg-pull-0 {\n    right: auto;\n  }\n  .col-lg-push-12 {\n    left: 100%;\n  }\n  .col-lg-push-11 {\n    left: 91.66666667%;\n  }\n  .col-lg-push-10 {\n    left: 83.33333333%;\n  }\n  .col-lg-push-9 {\n    left: 75%;\n  }\n  .col-lg-push-8 {\n    left: 66.66666667%;\n  }\n  .col-lg-push-7 {\n    left: 58.33333333%;\n  }\n  .col-lg-push-6 {\n    left: 50%;\n  }\n  .col-lg-push-5 {\n    left: 41.66666667%;\n  }\n  .col-lg-push-4 {\n    left: 33.33333333%;\n  }\n  .col-lg-push-3 {\n    left: 25%;\n  }\n  .col-lg-push-2 {\n    left: 16.66666667%;\n  }\n  .col-lg-push-1 {\n    left: 8.33333333%;\n  }\n  .col-lg-push-0 {\n    left: auto;\n  }\n  .col-lg-offset-12 {\n    margin-left: 100%;\n  }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-lg-offset-0 {\n    margin-left: 0%;\n  }\n}\ntable {\n  background-color: transparent;\n}\nth {\n  text-align: left;\n}\n.table {\n  width: 100%;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n.table > thead > tr > th,\n.table > tbody > tr > th,\n.table > tfoot > tr > th,\n.table > thead > tr > td,\n.table > tbody > tr > td,\n.table > tfoot > tr > td {\n  padding: 8px;\n  line-height: 1.42857143;\n  vertical-align: top;\n  border-top: 1px solid #dddddd;\n}\n.table > thead > tr > th {\n  vertical-align: bottom;\n  border-bottom: 2px solid #dddddd;\n}\n.table > caption + thead > tr:first-child > th,\n.table > colgroup + thead > tr:first-child > th,\n.table > thead:first-child > tr:first-child > th,\n.table > caption + thead > tr:first-child > td,\n.table > colgroup + thead > tr:first-child > td,\n.table > thead:first-child > tr:first-child > td {\n  border-top: 0;\n}\n.table > tbody + tbody {\n  border-top: 2px solid #dddddd;\n}\n.table .table {\n  background-color: #ffffff;\n}\n.table-condensed > thead > tr > th,\n.table-condensed > tbody > tr > th,\n.table-condensed > tfoot > tr > th,\n.table-condensed > thead > tr > td,\n.table-condensed > tbody > tr > td,\n.table-condensed > tfoot > tr > td {\n  padding: 5px;\n}\n.table-bordered {\n  border: 1px solid #dddddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > tbody > tr > th,\n.table-bordered > tfoot > tr > th,\n.table-bordered > thead > tr > td,\n.table-bordered > tbody > tr > td,\n.table-bordered > tfoot > tr > td {\n  border: 1px solid #dddddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > thead > tr > td {\n  border-bottom-width: 2px;\n}\n.table-striped > tbody > tr:nth-child(odd) > td,\n.table-striped > tbody > tr:nth-child(odd) > th {\n  background-color: #f9f9f9;\n}\n.table-hover > tbody > tr:hover > td,\n.table-hover > tbody > tr:hover > th {\n  background-color: #f5f5f5;\n}\ntable col[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-column;\n}\ntable td[class*=\"col-\"],\ntable th[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-cell;\n}\n.table > thead > tr > td.active,\n.table > tbody > tr > td.active,\n.table > tfoot > tr > td.active,\n.table > thead > tr > th.active,\n.table > tbody > tr > th.active,\n.table > tfoot > tr > th.active,\n.table > thead > tr.active > td,\n.table > tbody > tr.active > td,\n.table > tfoot > tr.active > td,\n.table > thead > tr.active > th,\n.table > tbody > tr.active > th,\n.table > tfoot > tr.active > th {\n  background-color: #f5f5f5;\n}\n.table-hover > tbody > tr > td.active:hover,\n.table-hover > tbody > tr > th.active:hover,\n.table-hover > tbody > tr.active:hover > td,\n.table-hover > tbody > tr:hover > .active,\n.table-hover > tbody > tr.active:hover > th {\n  background-color: #e8e8e8;\n}\n.table > thead > tr > td.success,\n.table > tbody > tr > td.success,\n.table > tfoot > tr > td.success,\n.table > thead > tr > th.success,\n.table > tbody > tr > th.success,\n.table > tfoot > tr > th.success,\n.table > thead > tr.success > td,\n.table > tbody > tr.success > td,\n.table > tfoot > tr.success > td,\n.table > thead > tr.success > th,\n.table > tbody > tr.success > th,\n.table > tfoot > tr.success > th {\n  background-color: #dff0d8;\n}\n.table-hover > tbody > tr > td.success:hover,\n.table-hover > tbody > tr > th.success:hover,\n.table-hover > tbody > tr.success:hover > td,\n.table-hover > tbody > tr:hover > .success,\n.table-hover > tbody > tr.success:hover > th {\n  background-color: #d0e9c6;\n}\n.table > thead > tr > td.info,\n.table > tbody > tr > td.info,\n.table > tfoot > tr > td.info,\n.table > thead > tr > th.info,\n.table > tbody > tr > th.info,\n.table > tfoot > tr > th.info,\n.table > thead > tr.info > td,\n.table > tbody > tr.info > td,\n.table > tfoot > tr.info > td,\n.table > thead > tr.info > th,\n.table > tbody > tr.info > th,\n.table > tfoot > tr.info > th {\n  background-color: #d9edf7;\n}\n.table-hover > tbody > tr > td.info:hover,\n.table-hover > tbody > tr > th.info:hover,\n.table-hover > tbody > tr.info:hover > td,\n.table-hover > tbody > tr:hover > .info,\n.table-hover > tbody > tr.info:hover > th {\n  background-color: #c4e3f3;\n}\n.table > thead > tr > td.warning,\n.table > tbody > tr > td.warning,\n.table > tfoot > tr > td.warning,\n.table > thead > tr > th.warning,\n.table > tbody > tr > th.warning,\n.table > tfoot > tr > th.warning,\n.table > thead > tr.warning > td,\n.table > tbody > tr.warning > td,\n.table > tfoot > tr.warning > td,\n.table > thead > tr.warning > th,\n.table > tbody > tr.warning > th,\n.table > tfoot > tr.warning > th {\n  background-color: #fcf8e3;\n}\n.table-hover > tbody > tr > td.warning:hover,\n.table-hover > tbody > tr > th.warning:hover,\n.table-hover > tbody > tr.warning:hover > td,\n.table-hover > tbody > tr:hover > .warning,\n.table-hover > tbody > tr.warning:hover > th {\n  background-color: #faf2cc;\n}\n.table > thead > tr > td.danger,\n.table > tbody > tr > td.danger,\n.table > tfoot > tr > td.danger,\n.table > thead > tr > th.danger,\n.table > tbody > tr > th.danger,\n.table > tfoot > tr > th.danger,\n.table > thead > tr.danger > td,\n.table > tbody > tr.danger > td,\n.table > tfoot > tr.danger > td,\n.table > thead > tr.danger > th,\n.table > tbody > tr.danger > th,\n.table > tfoot > tr.danger > th {\n  background-color: #f2dede;\n}\n.table-hover > tbody > tr > td.danger:hover,\n.table-hover > tbody > tr > th.danger:hover,\n.table-hover > tbody > tr.danger:hover > td,\n.table-hover > tbody > tr:hover > .danger,\n.table-hover > tbody > tr.danger:hover > th {\n  background-color: #ebcccc;\n}\n@media screen and (max-width: 767px) {\n  .table-responsive {\n    width: 100%;\n    margin-bottom: 15px;\n    overflow-y: hidden;\n    overflow-x: auto;\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    border: 1px solid #dddddd;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive > .table {\n    margin-bottom: 0;\n  }\n  .table-responsive > .table > thead > tr > th,\n  .table-responsive > .table > tbody > tr > th,\n  .table-responsive > .table > tfoot > tr > th,\n  .table-responsive > .table > thead > tr > td,\n  .table-responsive > .table > tbody > tr > td,\n  .table-responsive > .table > tfoot > tr > td {\n    white-space: nowrap;\n  }\n  .table-responsive > .table-bordered {\n    border: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:first-child,\n  .table-responsive > .table-bordered > tbody > tr > th:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n  .table-responsive > .table-bordered > thead > tr > td:first-child,\n  .table-responsive > .table-bordered > tbody > tr > td:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n    border-left: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:last-child,\n  .table-responsive > .table-bordered > tbody > tr > th:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n  .table-responsive > .table-bordered > thead > tr > td:last-child,\n  .table-responsive > .table-bordered > tbody > tr > td:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n    border-right: 0;\n  }\n  .table-responsive > .table-bordered > tbody > tr:last-child > th,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > th,\n  .table-responsive > .table-bordered > tbody > tr:last-child > td,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > td {\n    border-bottom: 0;\n  }\n}\nfieldset {\n  padding: 0;\n  margin: 0;\n  border: 0;\n  min-width: 0;\n}\nlegend {\n  display: block;\n  width: 100%;\n  padding: 0;\n  margin-bottom: 20px;\n  font-size: 21px;\n  line-height: inherit;\n  color: #333333;\n  border: 0;\n  border-bottom: 1px solid #e5e5e5;\n}\nlabel {\n  display: inline-block;\n  max-width: 100%;\n  margin-bottom: 5px;\n  font-weight: bold;\n}\ninput[type=\"search\"] {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 4px 0 0;\n  margin-top: 1px \\9;\n  line-height: normal;\n}\ninput[type=\"file\"] {\n  display: block;\n}\ninput[type=\"range\"] {\n  display: block;\n  width: 100%;\n}\nselect[multiple],\nselect[size] {\n  height: auto;\n}\ninput[type=\"file\"]:focus,\ninput[type=\"radio\"]:focus,\ninput[type=\"checkbox\"]:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\noutput {\n  display: block;\n  padding-top: 7px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n}\n.form-control {\n  display: block;\n  width: 100%;\n  height: 34px;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n  background-color: #ffffff;\n  background-image: none;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n}\n.form-control:focus {\n  border-color: #66afe9;\n  outline: 0;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n}\n.form-control::-moz-placeholder {\n  color: #777777;\n  opacity: 1;\n}\n.form-control:-ms-input-placeholder {\n  color: #777777;\n}\n.form-control::-webkit-input-placeholder {\n  color: #777777;\n}\n.form-control[disabled],\n.form-control[readonly],\nfieldset[disabled] .form-control {\n  cursor: not-allowed;\n  background-color: #eeeeee;\n  opacity: 1;\n}\ntextarea.form-control {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: none;\n}\ninput[type=\"date\"],\ninput[type=\"time\"],\ninput[type=\"datetime-local\"],\ninput[type=\"month\"] {\n  line-height: 34px;\n  line-height: 1.42857143 \\0;\n}\ninput[type=\"date\"].input-sm,\ninput[type=\"time\"].input-sm,\ninput[type=\"datetime-local\"].input-sm,\ninput[type=\"month\"].input-sm {\n  line-height: 30px;\n}\ninput[type=\"date\"].input-lg,\ninput[type=\"time\"].input-lg,\ninput[type=\"datetime-local\"].input-lg,\ninput[type=\"month\"].input-lg {\n  line-height: 46px;\n}\n.form-group {\n  margin-bottom: 15px;\n}\n.radio,\n.checkbox {\n  position: relative;\n  display: block;\n  min-height: 20px;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.radio label,\n.checkbox label {\n  padding-left: 20px;\n  margin-bottom: 0;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio input[type=\"radio\"],\n.radio-inline input[type=\"radio\"],\n.checkbox input[type=\"checkbox\"],\n.checkbox-inline input[type=\"checkbox\"] {\n  position: absolute;\n  margin-left: -20px;\n  margin-top: 4px \\9;\n}\n.radio + .radio,\n.checkbox + .checkbox {\n  margin-top: -5px;\n}\n.radio-inline,\n.checkbox-inline {\n  display: inline-block;\n  padding-left: 20px;\n  margin-bottom: 0;\n  vertical-align: middle;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio-inline + .radio-inline,\n.checkbox-inline + .checkbox-inline {\n  margin-top: 0;\n  margin-left: 10px;\n}\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"].disabled,\ninput[type=\"checkbox\"].disabled,\nfieldset[disabled] input[type=\"radio\"],\nfieldset[disabled] input[type=\"checkbox\"] {\n  cursor: not-allowed;\n}\n.radio-inline.disabled,\n.checkbox-inline.disabled,\nfieldset[disabled] .radio-inline,\nfieldset[disabled] .checkbox-inline {\n  cursor: not-allowed;\n}\n.radio.disabled label,\n.checkbox.disabled label,\nfieldset[disabled] .radio label,\nfieldset[disabled] .checkbox label {\n  cursor: not-allowed;\n}\n.form-control-static {\n  padding-top: 7px;\n  padding-bottom: 7px;\n  margin-bottom: 0;\n}\n.form-control-static.input-lg,\n.form-control-static.input-sm {\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-sm,\n.form-horizontal .form-group-sm .form-control {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-sm {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-sm,\nselect[multiple].input-sm {\n  height: auto;\n}\n.input-lg,\n.form-horizontal .form-group-lg .form-control {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\nselect.input-lg {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-lg,\nselect[multiple].input-lg {\n  height: auto;\n}\n.has-feedback {\n  position: relative;\n}\n.has-feedback .form-control {\n  padding-right: 42.5px;\n}\n.form-control-feedback {\n  position: absolute;\n  top: 25px;\n  right: 0;\n  z-index: 2;\n  display: block;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  text-align: center;\n}\n.input-lg + .form-control-feedback {\n  width: 46px;\n  height: 46px;\n  line-height: 46px;\n}\n.input-sm + .form-control-feedback {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n}\n.has-success .help-block,\n.has-success .control-label,\n.has-success .radio,\n.has-success .checkbox,\n.has-success .radio-inline,\n.has-success .checkbox-inline {\n  color: #3c763d;\n}\n.has-success .form-control {\n  border-color: #3c763d;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-success .form-control:focus {\n  border-color: #2b542c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n}\n.has-success .input-group-addon {\n  color: #3c763d;\n  border-color: #3c763d;\n  background-color: #dff0d8;\n}\n.has-success .form-control-feedback {\n  color: #3c763d;\n}\n.has-warning .help-block,\n.has-warning .control-label,\n.has-warning .radio,\n.has-warning .checkbox,\n.has-warning .radio-inline,\n.has-warning .checkbox-inline {\n  color: #8a6d3b;\n}\n.has-warning .form-control {\n  border-color: #8a6d3b;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-warning .form-control:focus {\n  border-color: #66512c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n}\n.has-warning .input-group-addon {\n  color: #8a6d3b;\n  border-color: #8a6d3b;\n  background-color: #fcf8e3;\n}\n.has-warning .form-control-feedback {\n  color: #8a6d3b;\n}\n.has-error .help-block,\n.has-error .control-label,\n.has-error .radio,\n.has-error .checkbox,\n.has-error .radio-inline,\n.has-error .checkbox-inline {\n  color: #a94442;\n}\n.has-error .form-control {\n  border-color: #a94442;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-error .form-control:focus {\n  border-color: #843534;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n}\n.has-error .input-group-addon {\n  color: #a94442;\n  border-color: #a94442;\n  background-color: #f2dede;\n}\n.has-error .form-control-feedback {\n  color: #a94442;\n}\n.has-feedback label.sr-only ~ .form-control-feedback {\n  top: 0;\n}\n.help-block {\n  display: block;\n  margin-top: 5px;\n  margin-bottom: 10px;\n  color: #737373;\n}\n@media (min-width: 768px) {\n  .form-inline .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .form-inline .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .form-inline .input-group .input-group-addon,\n  .form-inline .input-group .input-group-btn,\n  .form-inline .input-group .form-control {\n    width: auto;\n  }\n  .form-inline .input-group > .form-control {\n    width: 100%;\n  }\n  .form-inline .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio,\n  .form-inline .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio label,\n  .form-inline .checkbox label {\n    padding-left: 0;\n  }\n  .form-inline .radio input[type=\"radio\"],\n  .form-inline .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .form-inline .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox,\n.form-horizontal .radio-inline,\n.form-horizontal .checkbox-inline {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox {\n  min-height: 27px;\n}\n.form-horizontal .form-group {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .control-label {\n    text-align: right;\n    margin-bottom: 0;\n    padding-top: 7px;\n  }\n}\n.form-horizontal .has-feedback .form-control-feedback {\n  top: 0;\n  right: 15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-lg .control-label {\n    padding-top: 14.3px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-sm .control-label {\n    padding-top: 6px;\n  }\n}\n.btn {\n  display: inline-block;\n  margin-bottom: 0;\n  font-weight: normal;\n  text-align: center;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  border-radius: 4px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.btn:focus,\n.btn:active:focus,\n.btn.active:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\n.btn:hover,\n.btn:focus {\n  color: #333333;\n  text-decoration: none;\n}\n.btn:active,\n.btn.active {\n  outline: 0;\n  background-image: none;\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn.disabled,\n.btn[disabled],\nfieldset[disabled] .btn {\n  cursor: not-allowed;\n  pointer-events: none;\n  opacity: 0.65;\n  filter: alpha(opacity=65);\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-default {\n  color: #333333;\n  background-color: #ffffff;\n  border-color: #cccccc;\n}\n.btn-default:hover,\n.btn-default:focus,\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  color: #333333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  background-image: none;\n}\n.btn-default.disabled,\n.btn-default[disabled],\nfieldset[disabled] .btn-default,\n.btn-default.disabled:hover,\n.btn-default[disabled]:hover,\nfieldset[disabled] .btn-default:hover,\n.btn-default.disabled:focus,\n.btn-default[disabled]:focus,\nfieldset[disabled] .btn-default:focus,\n.btn-default.disabled:active,\n.btn-default[disabled]:active,\nfieldset[disabled] .btn-default:active,\n.btn-default.disabled.active,\n.btn-default[disabled].active,\nfieldset[disabled] .btn-default.active {\n  background-color: #ffffff;\n  border-color: #cccccc;\n}\n.btn-default .badge {\n  color: #ffffff;\n  background-color: #333333;\n}\n.btn-primary {\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #357ebd;\n}\n.btn-primary:hover,\n.btn-primary:focus,\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  color: #ffffff;\n  background-color: #3071a9;\n  border-color: #285e8e;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  background-image: none;\n}\n.btn-primary.disabled,\n.btn-primary[disabled],\nfieldset[disabled] .btn-primary,\n.btn-primary.disabled:hover,\n.btn-primary[disabled]:hover,\nfieldset[disabled] .btn-primary:hover,\n.btn-primary.disabled:focus,\n.btn-primary[disabled]:focus,\nfieldset[disabled] .btn-primary:focus,\n.btn-primary.disabled:active,\n.btn-primary[disabled]:active,\nfieldset[disabled] .btn-primary:active,\n.btn-primary.disabled.active,\n.btn-primary[disabled].active,\nfieldset[disabled] .btn-primary.active {\n  background-color: #428bca;\n  border-color: #357ebd;\n}\n.btn-primary .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.btn-success {\n  color: #ffffff;\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success:hover,\n.btn-success:focus,\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  color: #ffffff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  background-image: none;\n}\n.btn-success.disabled,\n.btn-success[disabled],\nfieldset[disabled] .btn-success,\n.btn-success.disabled:hover,\n.btn-success[disabled]:hover,\nfieldset[disabled] .btn-success:hover,\n.btn-success.disabled:focus,\n.btn-success[disabled]:focus,\nfieldset[disabled] .btn-success:focus,\n.btn-success.disabled:active,\n.btn-success[disabled]:active,\nfieldset[disabled] .btn-success:active,\n.btn-success.disabled.active,\n.btn-success[disabled].active,\nfieldset[disabled] .btn-success.active {\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success .badge {\n  color: #5cb85c;\n  background-color: #ffffff;\n}\n.btn-info {\n  color: #ffffff;\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info:hover,\n.btn-info:focus,\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  color: #ffffff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  background-image: none;\n}\n.btn-info.disabled,\n.btn-info[disabled],\nfieldset[disabled] .btn-info,\n.btn-info.disabled:hover,\n.btn-info[disabled]:hover,\nfieldset[disabled] .btn-info:hover,\n.btn-info.disabled:focus,\n.btn-info[disabled]:focus,\nfieldset[disabled] .btn-info:focus,\n.btn-info.disabled:active,\n.btn-info[disabled]:active,\nfieldset[disabled] .btn-info:active,\n.btn-info.disabled.active,\n.btn-info[disabled].active,\nfieldset[disabled] .btn-info.active {\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info .badge {\n  color: #5bc0de;\n  background-color: #ffffff;\n}\n.btn-warning {\n  color: #ffffff;\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning:hover,\n.btn-warning:focus,\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  color: #ffffff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  background-image: none;\n}\n.btn-warning.disabled,\n.btn-warning[disabled],\nfieldset[disabled] .btn-warning,\n.btn-warning.disabled:hover,\n.btn-warning[disabled]:hover,\nfieldset[disabled] .btn-warning:hover,\n.btn-warning.disabled:focus,\n.btn-warning[disabled]:focus,\nfieldset[disabled] .btn-warning:focus,\n.btn-warning.disabled:active,\n.btn-warning[disabled]:active,\nfieldset[disabled] .btn-warning:active,\n.btn-warning.disabled.active,\n.btn-warning[disabled].active,\nfieldset[disabled] .btn-warning.active {\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning .badge {\n  color: #f0ad4e;\n  background-color: #ffffff;\n}\n.btn-danger {\n  color: #ffffff;\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger:hover,\n.btn-danger:focus,\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  color: #ffffff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  background-image: none;\n}\n.btn-danger.disabled,\n.btn-danger[disabled],\nfieldset[disabled] .btn-danger,\n.btn-danger.disabled:hover,\n.btn-danger[disabled]:hover,\nfieldset[disabled] .btn-danger:hover,\n.btn-danger.disabled:focus,\n.btn-danger[disabled]:focus,\nfieldset[disabled] .btn-danger:focus,\n.btn-danger.disabled:active,\n.btn-danger[disabled]:active,\nfieldset[disabled] .btn-danger:active,\n.btn-danger.disabled.active,\n.btn-danger[disabled].active,\nfieldset[disabled] .btn-danger.active {\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger .badge {\n  color: #d9534f;\n  background-color: #ffffff;\n}\n.btn-link {\n  color: #428bca;\n  font-weight: normal;\n  cursor: pointer;\n  border-radius: 0;\n}\n.btn-link,\n.btn-link:active,\n.btn-link[disabled],\nfieldset[disabled] .btn-link {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-link,\n.btn-link:hover,\n.btn-link:focus,\n.btn-link:active {\n  border-color: transparent;\n}\n.btn-link:hover,\n.btn-link:focus {\n  color: #2a6496;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.btn-link[disabled]:hover,\nfieldset[disabled] .btn-link:hover,\n.btn-link[disabled]:focus,\nfieldset[disabled] .btn-link:focus {\n  color: #777777;\n  text-decoration: none;\n}\n.btn-lg,\n.btn-group-lg > .btn {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\n.btn-sm,\n.btn-group-sm > .btn {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-xs,\n.btn-group-xs > .btn {\n  padding: 1px 5px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-block {\n  display: block;\n  width: 100%;\n}\n.btn-block + .btn-block {\n  margin-top: 5px;\n}\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%;\n}\n.fade {\n  opacity: 0;\n  -webkit-transition: opacity 0.15s linear;\n  -o-transition: opacity 0.15s linear;\n  transition: opacity 0.15s linear;\n}\n.fade.in {\n  opacity: 1;\n}\n.collapse {\n  display: none;\n}\n.collapse.in {\n  display: block;\n}\ntr.collapse.in {\n  display: table-row;\n}\ntbody.collapse.in {\n  display: table-row-group;\n}\n.collapsing {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition: height 0.35s ease;\n  -o-transition: height 0.35s ease;\n  transition: height 0.35s ease;\n}\n.caret {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  margin-left: 2px;\n  vertical-align: middle;\n  border-top: 4px solid;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropdown {\n  position: relative;\n}\n.dropdown-toggle:focus {\n  outline: 0;\n}\n.dropdown-menu {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 160px;\n  padding: 5px 0;\n  margin: 2px 0 0;\n  list-style: none;\n  font-size: 14px;\n  text-align: left;\n  background-color: #ffffff;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 4px;\n  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  background-clip: padding-box;\n}\n.dropdown-menu.pull-right {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu .divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.dropdown-menu > li > a {\n  display: block;\n  padding: 3px 20px;\n  clear: both;\n  font-weight: normal;\n  line-height: 1.42857143;\n  color: #333333;\n  white-space: nowrap;\n}\n.dropdown-menu > li > a:hover,\n.dropdown-menu > li > a:focus {\n  text-decoration: none;\n  color: #262626;\n  background-color: #f5f5f5;\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  color: #ffffff;\n  text-decoration: none;\n  outline: 0;\n  background-color: #428bca;\n}\n.dropdown-menu > .disabled > a,\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  color: #777777;\n}\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  background-image: none;\n  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);\n  cursor: not-allowed;\n}\n.open > .dropdown-menu {\n  display: block;\n}\n.open > a {\n  outline: 0;\n}\n.dropdown-menu-right {\n  left: auto;\n  right: 0;\n}\n.dropdown-menu-left {\n  left: 0;\n  right: auto;\n}\n.dropdown-header {\n  display: block;\n  padding: 3px 20px;\n  font-size: 12px;\n  line-height: 1.42857143;\n  color: #777777;\n  white-space: nowrap;\n}\n.dropdown-backdrop {\n  position: fixed;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  top: 0;\n  z-index: 990;\n}\n.pull-right > .dropdown-menu {\n  right: 0;\n  left: auto;\n}\n.dropup .caret,\n.navbar-fixed-bottom .dropdown .caret {\n  border-top: 0;\n  border-bottom: 4px solid;\n  content: \"\";\n}\n.dropup .dropdown-menu,\n.navbar-fixed-bottom .dropdown .dropdown-menu {\n  top: auto;\n  bottom: 100%;\n  margin-bottom: 1px;\n}\n@media (min-width: 768px) {\n  .navbar-right .dropdown-menu {\n    left: auto;\n    right: 0;\n  }\n  .navbar-right .dropdown-menu-left {\n    left: 0;\n    right: auto;\n  }\n}\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.btn-group > .btn,\n.btn-group-vertical > .btn {\n  position: relative;\n  float: left;\n}\n.btn-group > .btn:hover,\n.btn-group-vertical > .btn:hover,\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus,\n.btn-group > .btn:active,\n.btn-group-vertical > .btn:active,\n.btn-group > .btn.active,\n.btn-group-vertical > .btn.active {\n  z-index: 2;\n}\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus {\n  outline: 0;\n}\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px;\n}\n.btn-toolbar {\n  margin-left: -5px;\n}\n.btn-toolbar .btn-group,\n.btn-toolbar .input-group {\n  float: left;\n}\n.btn-toolbar > .btn,\n.btn-toolbar > .btn-group,\n.btn-toolbar > .input-group {\n  margin-left: 5px;\n}\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0;\n}\n.btn-group > .btn:first-child {\n  margin-left: 0;\n}\n.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group > .btn-group {\n  float: left;\n}\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group > .btn-group:first-child > .btn:last-child,\n.btn-group > .btn-group:first-child > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn-group:last-child > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0;\n}\n.btn-group > .btn + .dropdown-toggle {\n  padding-left: 8px;\n  padding-right: 8px;\n}\n.btn-group > .btn-lg + .dropdown-toggle {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.btn-group.open .dropdown-toggle {\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn-group.open .dropdown-toggle.btn-link {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn .caret {\n  margin-left: 0;\n}\n.btn-lg .caret {\n  border-width: 5px 5px 0;\n  border-bottom-width: 0;\n}\n.dropup .btn-lg .caret {\n  border-width: 0 5px 5px;\n}\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.btn-group-vertical > .btn-group > .btn {\n  float: none;\n}\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 4px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-justified {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.btn-group-justified > .btn,\n.btn-group-justified > .btn-group {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.btn-group-justified > .btn-group .btn {\n  width: 100%;\n}\n.btn-group-justified > .btn-group .dropdown-menu {\n  left: auto;\n}\n[data-toggle=\"buttons\"] > .btn > input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn > input[type=\"checkbox\"] {\n  position: absolute;\n  z-index: -1;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.input-group {\n  position: relative;\n  display: table;\n  border-collapse: separate;\n}\n.input-group[class*=\"col-\"] {\n  float: none;\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-group .form-control {\n  position: relative;\n  z-index: 2;\n  float: left;\n  width: 100%;\n  margin-bottom: 0;\n}\n.input-group-lg > .form-control,\n.input-group-lg > .input-group-addon,\n.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\nselect.input-group-lg > .form-control,\nselect.input-group-lg > .input-group-addon,\nselect.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-group-lg > .form-control,\ntextarea.input-group-lg > .input-group-addon,\ntextarea.input-group-lg > .input-group-btn > .btn,\nselect[multiple].input-group-lg > .form-control,\nselect[multiple].input-group-lg > .input-group-addon,\nselect[multiple].input-group-lg > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-sm > .form-control,\n.input-group-sm > .input-group-addon,\n.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-group-sm > .form-control,\nselect.input-group-sm > .input-group-addon,\nselect.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-group-sm > .form-control,\ntextarea.input-group-sm > .input-group-addon,\ntextarea.input-group-sm > .input-group-btn > .btn,\nselect[multiple].input-group-sm > .form-control,\nselect[multiple].input-group-sm > .input-group-addon,\nselect[multiple].input-group-sm > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-addon,\n.input-group-btn,\n.input-group .form-control {\n  display: table-cell;\n}\n.input-group-addon:not(:first-child):not(:last-child),\n.input-group-btn:not(:first-child):not(:last-child),\n.input-group .form-control:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.input-group-addon,\n.input-group-btn {\n  width: 1%;\n  white-space: nowrap;\n  vertical-align: middle;\n}\n.input-group-addon {\n  padding: 6px 12px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 1;\n  color: #555555;\n  text-align: center;\n  background-color: #eeeeee;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n}\n.input-group-addon.input-sm {\n  padding: 5px 10px;\n  font-size: 12px;\n  border-radius: 3px;\n}\n.input-group-addon.input-lg {\n  padding: 10px 16px;\n  font-size: 18px;\n  border-radius: 6px;\n}\n.input-group-addon input[type=\"radio\"],\n.input-group-addon input[type=\"checkbox\"] {\n  margin-top: 0;\n}\n.input-group .form-control:first-child,\n.input-group-addon:first-child,\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group > .btn,\n.input-group-btn:first-child > .dropdown-toggle,\n.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.input-group-addon:first-child {\n  border-right: 0;\n}\n.input-group .form-control:last-child,\n.input-group-addon:last-child,\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group > .btn,\n.input-group-btn:last-child > .dropdown-toggle,\n.input-group-btn:first-child > .btn:not(:first-child),\n.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.input-group-addon:last-child {\n  border-left: 0;\n}\n.input-group-btn {\n  position: relative;\n  font-size: 0;\n  white-space: nowrap;\n}\n.input-group-btn > .btn {\n  position: relative;\n}\n.input-group-btn > .btn + .btn {\n  margin-left: -1px;\n}\n.input-group-btn > .btn:hover,\n.input-group-btn > .btn:focus,\n.input-group-btn > .btn:active {\n  z-index: 2;\n}\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group {\n  margin-right: -1px;\n}\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group {\n  margin-left: -1px;\n}\n.nav {\n  margin-bottom: 0;\n  padding-left: 0;\n  list-style: none;\n}\n.nav > li {\n  position: relative;\n  display: block;\n}\n.nav > li > a {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n}\n.nav > li > a:hover,\n.nav > li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.nav > li.disabled > a {\n  color: #777777;\n}\n.nav > li.disabled > a:hover,\n.nav > li.disabled > a:focus {\n  color: #777777;\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.nav .open > a,\n.nav .open > a:hover,\n.nav .open > a:focus {\n  background-color: #eeeeee;\n  border-color: #428bca;\n}\n.nav .nav-divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.nav > li > a > img {\n  max-width: none;\n}\n.nav-tabs {\n  border-bottom: 1px solid #dddddd;\n}\n.nav-tabs > li {\n  float: left;\n  margin-bottom: -1px;\n}\n.nav-tabs > li > a {\n  margin-right: 2px;\n  line-height: 1.42857143;\n  border: 1px solid transparent;\n  border-radius: 4px 4px 0 0;\n}\n.nav-tabs > li > a:hover {\n  border-color: #eeeeee #eeeeee #dddddd;\n}\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n  color: #555555;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-bottom-color: transparent;\n  cursor: default;\n}\n.nav-tabs.nav-justified {\n  width: 100%;\n  border-bottom: 0;\n}\n.nav-tabs.nav-justified > li {\n  float: none;\n}\n.nav-tabs.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-tabs.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-tabs.nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs.nav-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs.nav-justified > .active > a,\n.nav-tabs.nav-justified > .active > a:hover,\n.nav-tabs.nav-justified > .active > a:focus {\n  border: 1px solid #dddddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li > a {\n    border-bottom: 1px solid #dddddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs.nav-justified > .active > a,\n  .nav-tabs.nav-justified > .active > a:hover,\n  .nav-tabs.nav-justified > .active > a:focus {\n    border-bottom-color: #ffffff;\n  }\n}\n.nav-pills > li {\n  float: left;\n}\n.nav-pills > li > a {\n  border-radius: 4px;\n}\n.nav-pills > li + li {\n  margin-left: 2px;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus {\n  color: #ffffff;\n  background-color: #428bca;\n}\n.nav-stacked > li {\n  float: none;\n}\n.nav-stacked > li + li {\n  margin-top: 2px;\n  margin-left: 0;\n}\n.nav-justified {\n  width: 100%;\n}\n.nav-justified > li {\n  float: none;\n}\n.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs-justified {\n  border-bottom: 0;\n}\n.nav-tabs-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs-justified > .active > a,\n.nav-tabs-justified > .active > a:hover,\n.nav-tabs-justified > .active > a:focus {\n  border: 1px solid #dddddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs-justified > li > a {\n    border-bottom: 1px solid #dddddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs-justified > .active > a,\n  .nav-tabs-justified > .active > a:hover,\n  .nav-tabs-justified > .active > a:focus {\n    border-bottom-color: #ffffff;\n  }\n}\n.tab-content > .tab-pane {\n  display: none;\n}\n.tab-content > .active {\n  display: block;\n}\n.nav-tabs .dropdown-menu {\n  margin-top: -1px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar {\n  position: relative;\n  min-height: 50px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n}\n@media (min-width: 768px) {\n  .navbar {\n    border-radius: 4px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-header {\n    float: left;\n  }\n}\n.navbar-collapse {\n  overflow-x: visible;\n  padding-right: 15px;\n  padding-left: 15px;\n  border-top: 1px solid transparent;\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  -webkit-overflow-scrolling: touch;\n}\n.navbar-collapse.in {\n  overflow-y: auto;\n}\n@media (min-width: 768px) {\n  .navbar-collapse {\n    width: auto;\n    border-top: 0;\n    box-shadow: none;\n  }\n  .navbar-collapse.collapse {\n    display: block !important;\n    height: auto !important;\n    padding-bottom: 0;\n    overflow: visible !important;\n  }\n  .navbar-collapse.in {\n    overflow-y: visible;\n  }\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-static-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    padding-left: 0;\n    padding-right: 0;\n  }\n}\n.navbar-fixed-top .navbar-collapse,\n.navbar-fixed-bottom .navbar-collapse {\n  max-height: 340px;\n}\n@media (max-width: 480px) and (orientation: landscape) {\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    max-height: 200px;\n  }\n}\n.container > .navbar-header,\n.container-fluid > .navbar-header,\n.container > .navbar-collapse,\n.container-fluid > .navbar-collapse {\n  margin-right: -15px;\n  margin-left: -15px;\n}\n@media (min-width: 768px) {\n  .container > .navbar-header,\n  .container-fluid > .navbar-header,\n  .container > .navbar-collapse,\n  .container-fluid > .navbar-collapse {\n    margin-right: 0;\n    margin-left: 0;\n  }\n}\n.navbar-static-top {\n  z-index: 1000;\n  border-width: 0 0 1px;\n}\n@media (min-width: 768px) {\n  .navbar-static-top {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  position: fixed;\n  right: 0;\n  left: 0;\n  z-index: 1030;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n@media (min-width: 768px) {\n  .navbar-fixed-top,\n  .navbar-fixed-bottom {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top {\n  top: 0;\n  border-width: 0 0 1px;\n}\n.navbar-fixed-bottom {\n  bottom: 0;\n  margin-bottom: 0;\n  border-width: 1px 0 0;\n}\n.navbar-brand {\n  float: left;\n  padding: 15px 15px;\n  font-size: 18px;\n  line-height: 20px;\n  height: 50px;\n}\n.navbar-brand:hover,\n.navbar-brand:focus {\n  text-decoration: none;\n}\n@media (min-width: 768px) {\n  .navbar > .container .navbar-brand,\n  .navbar > .container-fluid .navbar-brand {\n    margin-left: -15px;\n  }\n}\n.navbar-toggle {\n  position: relative;\n  float: right;\n  margin-right: 15px;\n  padding: 9px 10px;\n  margin-top: 8px;\n  margin-bottom: 8px;\n  background-color: transparent;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.navbar-toggle:focus {\n  outline: 0;\n}\n.navbar-toggle .icon-bar {\n  display: block;\n  width: 22px;\n  height: 2px;\n  border-radius: 1px;\n}\n.navbar-toggle .icon-bar + .icon-bar {\n  margin-top: 4px;\n}\n@media (min-width: 768px) {\n  .navbar-toggle {\n    display: none;\n  }\n}\n.navbar-nav {\n  margin: 7.5px -15px;\n}\n.navbar-nav > li > a {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  line-height: 20px;\n}\n@media (max-width: 767px) {\n  .navbar-nav .open .dropdown-menu {\n    position: static;\n    float: none;\n    width: auto;\n    margin-top: 0;\n    background-color: transparent;\n    border: 0;\n    box-shadow: none;\n  }\n  .navbar-nav .open .dropdown-menu > li > a,\n  .navbar-nav .open .dropdown-menu .dropdown-header {\n    padding: 5px 15px 5px 25px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a {\n    line-height: 20px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-nav .open .dropdown-menu > li > a:focus {\n    background-image: none;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-nav {\n    float: left;\n    margin: 0;\n  }\n  .navbar-nav > li {\n    float: left;\n  }\n  .navbar-nav > li > a {\n    padding-top: 15px;\n    padding-bottom: 15px;\n  }\n  .navbar-nav.navbar-right:last-child {\n    margin-right: -15px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-left {\n    float: left !important;\n  }\n  .navbar-right {\n    float: right !important;\n  }\n}\n.navbar-form {\n  margin-left: -15px;\n  margin-right: -15px;\n  padding: 10px 15px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n@media (min-width: 768px) {\n  .navbar-form .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group .input-group-addon,\n  .navbar-form .input-group .input-group-btn,\n  .navbar-form .input-group .form-control {\n    width: auto;\n  }\n  .navbar-form .input-group > .form-control {\n    width: 100%;\n  }\n  .navbar-form .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio,\n  .navbar-form .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio label,\n  .navbar-form .checkbox label {\n    padding-left: 0;\n  }\n  .navbar-form .radio input[type=\"radio\"],\n  .navbar-form .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .navbar-form .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n@media (max-width: 767px) {\n  .navbar-form .form-group {\n    margin-bottom: 5px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-form {\n    width: auto;\n    border: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    -webkit-box-shadow: none;\n    box-shadow: none;\n  }\n  .navbar-form.navbar-right:last-child {\n    margin-right: -15px;\n  }\n}\n.navbar-nav > li > .dropdown-menu {\n  margin-top: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.navbar-btn {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.navbar-btn.btn-sm {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.navbar-btn.btn-xs {\n  margin-top: 14px;\n  margin-bottom: 14px;\n}\n.navbar-text {\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n@media (min-width: 768px) {\n  .navbar-text {\n    float: left;\n    margin-left: 15px;\n    margin-right: 15px;\n  }\n  .navbar-text.navbar-right:last-child {\n    margin-right: 0;\n  }\n}\n.navbar-default {\n  background-color: #f8f8f8;\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-brand {\n  color: #777777;\n}\n.navbar-default .navbar-brand:hover,\n.navbar-default .navbar-brand:focus {\n  color: #5e5e5e;\n  background-color: transparent;\n}\n.navbar-default .navbar-text {\n  color: #777777;\n}\n.navbar-default .navbar-nav > li > a {\n  color: #777777;\n}\n.navbar-default .navbar-nav > li > a:hover,\n.navbar-default .navbar-nav > li > a:focus {\n  color: #333333;\n  background-color: transparent;\n}\n.navbar-default .navbar-nav > .active > a,\n.navbar-default .navbar-nav > .active > a:hover,\n.navbar-default .navbar-nav > .active > a:focus {\n  color: #555555;\n  background-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .disabled > a,\n.navbar-default .navbar-nav > .disabled > a:hover,\n.navbar-default .navbar-nav > .disabled > a:focus {\n  color: #cccccc;\n  background-color: transparent;\n}\n.navbar-default .navbar-toggle {\n  border-color: #dddddd;\n}\n.navbar-default .navbar-toggle:hover,\n.navbar-default .navbar-toggle:focus {\n  background-color: #dddddd;\n}\n.navbar-default .navbar-toggle .icon-bar {\n  background-color: #888888;\n}\n.navbar-default .navbar-collapse,\n.navbar-default .navbar-form {\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .open > a,\n.navbar-default .navbar-nav > .open > a:hover,\n.navbar-default .navbar-nav > .open > a:focus {\n  background-color: #e7e7e7;\n  color: #555555;\n}\n@media (max-width: 767px) {\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a {\n    color: #777777;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #333333;\n    background-color: transparent;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #555555;\n    background-color: #e7e7e7;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #cccccc;\n    background-color: transparent;\n  }\n}\n.navbar-default .navbar-link {\n  color: #777777;\n}\n.navbar-default .navbar-link:hover {\n  color: #333333;\n}\n.navbar-default .btn-link {\n  color: #777777;\n}\n.navbar-default .btn-link:hover,\n.navbar-default .btn-link:focus {\n  color: #333333;\n}\n.navbar-default .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-default .btn-link:hover,\n.navbar-default .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-default .btn-link:focus {\n  color: #cccccc;\n}\n.navbar-inverse {\n  background-color: #222222;\n  border-color: #080808;\n}\n.navbar-inverse .navbar-brand {\n  color: #777777;\n}\n.navbar-inverse .navbar-brand:hover,\n.navbar-inverse .navbar-brand:focus {\n  color: #ffffff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-text {\n  color: #777777;\n}\n.navbar-inverse .navbar-nav > li > a {\n  color: #777777;\n}\n.navbar-inverse .navbar-nav > li > a:hover,\n.navbar-inverse .navbar-nav > li > a:focus {\n  color: #ffffff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-nav > .active > a,\n.navbar-inverse .navbar-nav > .active > a:hover,\n.navbar-inverse .navbar-nav > .active > a:focus {\n  color: #ffffff;\n  background-color: #080808;\n}\n.navbar-inverse .navbar-nav > .disabled > a,\n.navbar-inverse .navbar-nav > .disabled > a:hover,\n.navbar-inverse .navbar-nav > .disabled > a:focus {\n  color: #444444;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-toggle {\n  border-color: #333333;\n}\n.navbar-inverse .navbar-toggle:hover,\n.navbar-inverse .navbar-toggle:focus {\n  background-color: #333333;\n}\n.navbar-inverse .navbar-toggle .icon-bar {\n  background-color: #ffffff;\n}\n.navbar-inverse .navbar-collapse,\n.navbar-inverse .navbar-form {\n  border-color: #101010;\n}\n.navbar-inverse .navbar-nav > .open > a,\n.navbar-inverse .navbar-nav > .open > a:hover,\n.navbar-inverse .navbar-nav > .open > a:focus {\n  background-color: #080808;\n  color: #ffffff;\n}\n@media (max-width: 767px) {\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {\n    border-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\n    color: #777777;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #ffffff;\n    background-color: transparent;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #ffffff;\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #444444;\n    background-color: transparent;\n  }\n}\n.navbar-inverse .navbar-link {\n  color: #777777;\n}\n.navbar-inverse .navbar-link:hover {\n  color: #ffffff;\n}\n.navbar-inverse .btn-link {\n  color: #777777;\n}\n.navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link:focus {\n  color: #ffffff;\n}\n.navbar-inverse .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-inverse .btn-link:focus {\n  color: #444444;\n}\n.breadcrumb {\n  padding: 8px 15px;\n  margin-bottom: 20px;\n  list-style: none;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n.breadcrumb > li {\n  display: inline-block;\n}\n.breadcrumb > li + li:before {\n  content: \"/\\00a0\";\n  padding: 0 5px;\n  color: #cccccc;\n}\n.breadcrumb > .active {\n  color: #777777;\n}\n.pagination {\n  display: inline-block;\n  padding-left: 0;\n  margin: 20px 0;\n  border-radius: 4px;\n}\n.pagination > li {\n  display: inline;\n}\n.pagination > li > a,\n.pagination > li > span {\n  position: relative;\n  float: left;\n  padding: 6px 12px;\n  line-height: 1.42857143;\n  text-decoration: none;\n  color: #428bca;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  margin-left: -1px;\n}\n.pagination > li:first-child > a,\n.pagination > li:first-child > span {\n  margin-left: 0;\n  border-bottom-left-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.pagination > li:last-child > a,\n.pagination > li:last-child > span {\n  border-bottom-right-radius: 4px;\n  border-top-right-radius: 4px;\n}\n.pagination > li > a:hover,\n.pagination > li > span:hover,\n.pagination > li > a:focus,\n.pagination > li > span:focus {\n  color: #2a6496;\n  background-color: #eeeeee;\n  border-color: #dddddd;\n}\n.pagination > .active > a,\n.pagination > .active > span,\n.pagination > .active > a:hover,\n.pagination > .active > span:hover,\n.pagination > .active > a:focus,\n.pagination > .active > span:focus {\n  z-index: 2;\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n  cursor: default;\n}\n.pagination > .disabled > span,\n.pagination > .disabled > span:hover,\n.pagination > .disabled > span:focus,\n.pagination > .disabled > a,\n.pagination > .disabled > a:hover,\n.pagination > .disabled > a:focus {\n  color: #777777;\n  background-color: #ffffff;\n  border-color: #dddddd;\n  cursor: not-allowed;\n}\n.pagination-lg > li > a,\n.pagination-lg > li > span {\n  padding: 10px 16px;\n  font-size: 18px;\n}\n.pagination-lg > li:first-child > a,\n.pagination-lg > li:first-child > span {\n  border-bottom-left-radius: 6px;\n  border-top-left-radius: 6px;\n}\n.pagination-lg > li:last-child > a,\n.pagination-lg > li:last-child > span {\n  border-bottom-right-radius: 6px;\n  border-top-right-radius: 6px;\n}\n.pagination-sm > li > a,\n.pagination-sm > li > span {\n  padding: 5px 10px;\n  font-size: 12px;\n}\n.pagination-sm > li:first-child > a,\n.pagination-sm > li:first-child > span {\n  border-bottom-left-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.pagination-sm > li:last-child > a,\n.pagination-sm > li:last-child > span {\n  border-bottom-right-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.pager {\n  padding-left: 0;\n  margin: 20px 0;\n  list-style: none;\n  text-align: center;\n}\n.pager li {\n  display: inline;\n}\n.pager li > a,\n.pager li > span {\n  display: inline-block;\n  padding: 5px 14px;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 15px;\n}\n.pager li > a:hover,\n.pager li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.pager .next > a,\n.pager .next > span {\n  float: right;\n}\n.pager .previous > a,\n.pager .previous > span {\n  float: left;\n}\n.pager .disabled > a,\n.pager .disabled > a:hover,\n.pager .disabled > a:focus,\n.pager .disabled > span {\n  color: #777777;\n  background-color: #ffffff;\n  cursor: not-allowed;\n}\n.label {\n  display: inline;\n  padding: .2em .6em .3em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #ffffff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: .25em;\n}\na.label:hover,\na.label:focus {\n  color: #ffffff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.label:empty {\n  display: none;\n}\n.btn .label {\n  position: relative;\n  top: -1px;\n}\n.label-default {\n  background-color: #777777;\n}\n.label-default[href]:hover,\n.label-default[href]:focus {\n  background-color: #5e5e5e;\n}\n.label-primary {\n  background-color: #428bca;\n}\n.label-primary[href]:hover,\n.label-primary[href]:focus {\n  background-color: #3071a9;\n}\n.label-success {\n  background-color: #5cb85c;\n}\n.label-success[href]:hover,\n.label-success[href]:focus {\n  background-color: #449d44;\n}\n.label-info {\n  background-color: #5bc0de;\n}\n.label-info[href]:hover,\n.label-info[href]:focus {\n  background-color: #31b0d5;\n}\n.label-warning {\n  background-color: #f0ad4e;\n}\n.label-warning[href]:hover,\n.label-warning[href]:focus {\n  background-color: #ec971f;\n}\n.label-danger {\n  background-color: #d9534f;\n}\n.label-danger[href]:hover,\n.label-danger[href]:focus {\n  background-color: #c9302c;\n}\n.badge {\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: bold;\n  color: #ffffff;\n  line-height: 1;\n  vertical-align: baseline;\n  white-space: nowrap;\n  text-align: center;\n  background-color: #777777;\n  border-radius: 10px;\n}\n.badge:empty {\n  display: none;\n}\n.btn .badge {\n  position: relative;\n  top: -1px;\n}\n.btn-xs .badge {\n  top: 0;\n  padding: 1px 5px;\n}\na.badge:hover,\na.badge:focus {\n  color: #ffffff;\n  text-decoration: none;\n  cursor: pointer;\n}\na.list-group-item.active > .badge,\n.nav-pills > .active > a > .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.nav-pills > li > a > .badge {\n  margin-left: 3px;\n}\n.jumbotron {\n  padding: 30px;\n  margin-bottom: 30px;\n  color: inherit;\n  background-color: #eeeeee;\n}\n.jumbotron h1,\n.jumbotron .h1 {\n  color: inherit;\n}\n.jumbotron p {\n  margin-bottom: 15px;\n  font-size: 21px;\n  font-weight: 200;\n}\n.jumbotron > hr {\n  border-top-color: #d5d5d5;\n}\n.container .jumbotron {\n  border-radius: 6px;\n}\n.jumbotron .container {\n  max-width: 100%;\n}\n@media screen and (min-width: 768px) {\n  .jumbotron {\n    padding-top: 48px;\n    padding-bottom: 48px;\n  }\n  .container .jumbotron {\n    padding-left: 60px;\n    padding-right: 60px;\n  }\n  .jumbotron h1,\n  .jumbotron .h1 {\n    font-size: 63px;\n  }\n}\n.thumbnail {\n  display: block;\n  padding: 4px;\n  margin-bottom: 20px;\n  line-height: 1.42857143;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n}\n.thumbnail > img,\n.thumbnail a > img {\n  margin-left: auto;\n  margin-right: auto;\n}\na.thumbnail:hover,\na.thumbnail:focus,\na.thumbnail.active {\n  border-color: #428bca;\n}\n.thumbnail .caption {\n  padding: 9px;\n  color: #333333;\n}\n.alert {\n  padding: 15px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.alert h4 {\n  margin-top: 0;\n  color: inherit;\n}\n.alert .alert-link {\n  font-weight: bold;\n}\n.alert > p,\n.alert > ul {\n  margin-bottom: 0;\n}\n.alert > p + p {\n  margin-top: 5px;\n}\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n  color: #3c763d;\n}\n.alert-success hr {\n  border-top-color: #c9e2b3;\n}\n.alert-success .alert-link {\n  color: #2b542c;\n}\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n}\n.alert-info hr {\n  border-top-color: #a6e1ec;\n}\n.alert-info .alert-link {\n  color: #245269;\n}\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n  color: #8a6d3b;\n}\n.alert-warning hr {\n  border-top-color: #f7e1b5;\n}\n.alert-warning .alert-link {\n  color: #66512c;\n}\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebccd1;\n  color: #a94442;\n}\n.alert-danger hr {\n  border-top-color: #e4b9c0;\n}\n.alert-danger .alert-link {\n  color: #843534;\n}\n@-webkit-keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n@keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n.progress {\n  overflow: hidden;\n  height: 20px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n.progress-bar {\n  float: left;\n  width: 0%;\n  height: 100%;\n  font-size: 12px;\n  line-height: 20px;\n  color: #ffffff;\n  text-align: center;\n  background-color: #428bca;\n  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  -webkit-transition: width 0.6s ease;\n  -o-transition: width 0.6s ease;\n  transition: width 0.6s ease;\n}\n.progress-striped .progress-bar,\n.progress-bar-striped {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-size: 40px 40px;\n}\n.progress.active .progress-bar,\n.progress-bar.active {\n  -webkit-animation: progress-bar-stripes 2s linear infinite;\n  -o-animation: progress-bar-stripes 2s linear infinite;\n  animation: progress-bar-stripes 2s linear infinite;\n}\n.progress-bar[aria-valuenow=\"1\"],\n.progress-bar[aria-valuenow=\"2\"] {\n  min-width: 30px;\n}\n.progress-bar[aria-valuenow=\"0\"] {\n  color: #777777;\n  min-width: 30px;\n  background-color: transparent;\n  background-image: none;\n  box-shadow: none;\n}\n.progress-bar-success {\n  background-color: #5cb85c;\n}\n.progress-striped .progress-bar-success {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-info {\n  background-color: #5bc0de;\n}\n.progress-striped .progress-bar-info {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-warning {\n  background-color: #f0ad4e;\n}\n.progress-striped .progress-bar-warning {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-danger {\n  background-color: #d9534f;\n}\n.progress-striped .progress-bar-danger {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.media,\n.media-body {\n  overflow: hidden;\n  zoom: 1;\n}\n.media,\n.media .media {\n  margin-top: 15px;\n}\n.media:first-child {\n  margin-top: 0;\n}\n.media-object {\n  display: block;\n}\n.media-heading {\n  margin: 0 0 5px;\n}\n.media > .pull-left {\n  margin-right: 10px;\n}\n.media > .pull-right {\n  margin-left: 10px;\n}\n.media-list {\n  padding-left: 0;\n  list-style: none;\n}\n.list-group {\n  margin-bottom: 20px;\n  padding-left: 0;\n}\n.list-group-item {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  margin-bottom: -1px;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n}\n.list-group-item:first-child {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.list-group-item:last-child {\n  margin-bottom: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\n.list-group-item > .badge {\n  float: right;\n}\n.list-group-item > .badge + .badge {\n  margin-right: 5px;\n}\na.list-group-item {\n  color: #555555;\n}\na.list-group-item .list-group-item-heading {\n  color: #333333;\n}\na.list-group-item:hover,\na.list-group-item:focus {\n  text-decoration: none;\n  color: #555555;\n  background-color: #f5f5f5;\n}\n.list-group-item.disabled,\n.list-group-item.disabled:hover,\n.list-group-item.disabled:focus {\n  background-color: #eeeeee;\n  color: #777777;\n}\n.list-group-item.disabled .list-group-item-heading,\n.list-group-item.disabled:hover .list-group-item-heading,\n.list-group-item.disabled:focus .list-group-item-heading {\n  color: inherit;\n}\n.list-group-item.disabled .list-group-item-text,\n.list-group-item.disabled:hover .list-group-item-text,\n.list-group-item.disabled:focus .list-group-item-text {\n  color: #777777;\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  z-index: 2;\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n}\n.list-group-item.active .list-group-item-heading,\n.list-group-item.active:hover .list-group-item-heading,\n.list-group-item.active:focus .list-group-item-heading,\n.list-group-item.active .list-group-item-heading > small,\n.list-group-item.active:hover .list-group-item-heading > small,\n.list-group-item.active:focus .list-group-item-heading > small,\n.list-group-item.active .list-group-item-heading > .small,\n.list-group-item.active:hover .list-group-item-heading > .small,\n.list-group-item.active:focus .list-group-item-heading > .small {\n  color: inherit;\n}\n.list-group-item.active .list-group-item-text,\n.list-group-item.active:hover .list-group-item-text,\n.list-group-item.active:focus .list-group-item-text {\n  color: #e1edf7;\n}\n.list-group-item-success {\n  color: #3c763d;\n  background-color: #dff0d8;\n}\na.list-group-item-success {\n  color: #3c763d;\n}\na.list-group-item-success .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-success:hover,\na.list-group-item-success:focus {\n  color: #3c763d;\n  background-color: #d0e9c6;\n}\na.list-group-item-success.active,\na.list-group-item-success.active:hover,\na.list-group-item-success.active:focus {\n  color: #fff;\n  background-color: #3c763d;\n  border-color: #3c763d;\n}\n.list-group-item-info {\n  color: #31708f;\n  background-color: #d9edf7;\n}\na.list-group-item-info {\n  color: #31708f;\n}\na.list-group-item-info .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-info:hover,\na.list-group-item-info:focus {\n  color: #31708f;\n  background-color: #c4e3f3;\n}\na.list-group-item-info.active,\na.list-group-item-info.active:hover,\na.list-group-item-info.active:focus {\n  color: #fff;\n  background-color: #31708f;\n  border-color: #31708f;\n}\n.list-group-item-warning {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n}\na.list-group-item-warning {\n  color: #8a6d3b;\n}\na.list-group-item-warning .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-warning:hover,\na.list-group-item-warning:focus {\n  color: #8a6d3b;\n  background-color: #faf2cc;\n}\na.list-group-item-warning.active,\na.list-group-item-warning.active:hover,\na.list-group-item-warning.active:focus {\n  color: #fff;\n  background-color: #8a6d3b;\n  border-color: #8a6d3b;\n}\n.list-group-item-danger {\n  color: #a94442;\n  background-color: #f2dede;\n}\na.list-group-item-danger {\n  color: #a94442;\n}\na.list-group-item-danger .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-danger:hover,\na.list-group-item-danger:focus {\n  color: #a94442;\n  background-color: #ebcccc;\n}\na.list-group-item-danger.active,\na.list-group-item-danger.active:hover,\na.list-group-item-danger.active:focus {\n  color: #fff;\n  background-color: #a94442;\n  border-color: #a94442;\n}\n.list-group-item-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.list-group-item-text {\n  margin-bottom: 0;\n  line-height: 1.3;\n}\n.panel {\n  margin-bottom: 20px;\n  background-color: #ffffff;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.panel-body {\n  padding: 15px;\n}\n.panel-heading {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel-heading > .dropdown .dropdown-toggle {\n  color: inherit;\n}\n.panel-title {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-size: 16px;\n  color: inherit;\n}\n.panel-title > a {\n  color: inherit;\n}\n.panel-footer {\n  padding: 10px 15px;\n  background-color: #f5f5f5;\n  border-top: 1px solid #dddddd;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .list-group {\n  margin-bottom: 0;\n}\n.panel > .list-group .list-group-item {\n  border-width: 1px 0;\n  border-radius: 0;\n}\n.panel > .list-group:first-child .list-group-item:first-child {\n  border-top: 0;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .list-group:last-child .list-group-item:last-child {\n  border-bottom: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel-heading + .list-group .list-group-item:first-child {\n  border-top-width: 0;\n}\n.list-group + .panel-footer {\n  border-top-width: 0;\n}\n.panel > .table,\n.panel > .table-responsive > .table,\n.panel > .panel-collapse > .table {\n  margin-bottom: 0;\n}\n.panel > .table:first-child,\n.panel > .table-responsive:first-child > .table:first-child {\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {\n  border-top-right-radius: 3px;\n}\n.panel > .table:last-child,\n.panel > .table-responsive:last-child > .table:last-child {\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {\n  border-bottom-right-radius: 3px;\n}\n.panel > .panel-body + .table,\n.panel > .panel-body + .table-responsive {\n  border-top: 1px solid #dddddd;\n}\n.panel > .table > tbody:first-child > tr:first-child th,\n.panel > .table > tbody:first-child > tr:first-child td {\n  border-top: 0;\n}\n.panel > .table-bordered,\n.panel > .table-responsive > .table-bordered {\n  border: 0;\n}\n.panel > .table-bordered > thead > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,\n.panel > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-bordered > thead > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,\n.panel > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-bordered > tfoot > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n  border-left: 0;\n}\n.panel > .table-bordered > thead > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,\n.panel > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-bordered > thead > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,\n.panel > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-bordered > tfoot > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n  border-right: 0;\n}\n.panel > .table-bordered > thead > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,\n.panel > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-bordered > thead > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,\n.panel > .table-bordered > tbody > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {\n  border-bottom: 0;\n}\n.panel > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-bordered > tfoot > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {\n  border-bottom: 0;\n}\n.panel > .table-responsive {\n  border: 0;\n  margin-bottom: 0;\n}\n.panel-group {\n  margin-bottom: 20px;\n}\n.panel-group .panel {\n  margin-bottom: 0;\n  border-radius: 4px;\n}\n.panel-group .panel + .panel {\n  margin-top: 5px;\n}\n.panel-group .panel-heading {\n  border-bottom: 0;\n}\n.panel-group .panel-heading + .panel-collapse > .panel-body {\n  border-top: 1px solid #dddddd;\n}\n.panel-group .panel-footer {\n  border-top: 0;\n}\n.panel-group .panel-footer + .panel-collapse .panel-body {\n  border-bottom: 1px solid #dddddd;\n}\n.panel-default {\n  border-color: #dddddd;\n}\n.panel-default > .panel-heading {\n  color: #333333;\n  background-color: #f5f5f5;\n  border-color: #dddddd;\n}\n.panel-default > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #dddddd;\n}\n.panel-default > .panel-heading .badge {\n  color: #f5f5f5;\n  background-color: #333333;\n}\n.panel-default > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #dddddd;\n}\n.panel-primary {\n  border-color: #428bca;\n}\n.panel-primary > .panel-heading {\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n}\n.panel-primary > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #428bca;\n}\n.panel-primary > .panel-heading .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.panel-primary > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #428bca;\n}\n.panel-success {\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading {\n  color: #3c763d;\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #d6e9c6;\n}\n.panel-success > .panel-heading .badge {\n  color: #dff0d8;\n  background-color: #3c763d;\n}\n.panel-success > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #d6e9c6;\n}\n.panel-info {\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading {\n  color: #31708f;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #bce8f1;\n}\n.panel-info > .panel-heading .badge {\n  color: #d9edf7;\n  background-color: #31708f;\n}\n.panel-info > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #bce8f1;\n}\n.panel-warning {\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #faebcc;\n}\n.panel-warning > .panel-heading .badge {\n  color: #fcf8e3;\n  background-color: #8a6d3b;\n}\n.panel-warning > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #faebcc;\n}\n.panel-danger {\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading {\n  color: #a94442;\n  background-color: #f2dede;\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ebccd1;\n}\n.panel-danger > .panel-heading .badge {\n  color: #f2dede;\n  background-color: #a94442;\n}\n.panel-danger > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ebccd1;\n}\n.embed-responsive {\n  position: relative;\n  display: block;\n  height: 0;\n  padding: 0;\n  overflow: hidden;\n}\n.embed-responsive .embed-responsive-item,\n.embed-responsive iframe,\n.embed-responsive embed,\n.embed-responsive object {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  height: 100%;\n  width: 100%;\n  border: 0;\n}\n.embed-responsive.embed-responsive-16by9 {\n  padding-bottom: 56.25%;\n}\n.embed-responsive.embed-responsive-4by3 {\n  padding-bottom: 75%;\n}\n.well {\n  min-height: 20px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.well blockquote {\n  border-color: #ddd;\n  border-color: rgba(0, 0, 0, 0.15);\n}\n.well-lg {\n  padding: 24px;\n  border-radius: 6px;\n}\n.well-sm {\n  padding: 9px;\n  border-radius: 3px;\n}\n.close {\n  float: right;\n  font-size: 21px;\n  font-weight: bold;\n  line-height: 1;\n  color: #000000;\n  text-shadow: 0 1px 0 #ffffff;\n  opacity: 0.2;\n  filter: alpha(opacity=20);\n}\n.close:hover,\n.close:focus {\n  color: #000000;\n  text-decoration: none;\n  cursor: pointer;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\nbutton.close {\n  padding: 0;\n  cursor: pointer;\n  background: transparent;\n  border: 0;\n  -webkit-appearance: none;\n}\n.modal-open {\n  overflow: hidden;\n}\n.modal {\n  display: none;\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n}\n.modal.fade .modal-dialog {\n  -webkit-transform: translate3d(0, -25%, 0);\n  transform: translate3d(0, -25%, 0);\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  -moz-transition: -moz-transform 0.3s ease-out;\n  -o-transition: -o-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n}\n.modal.in .modal-dialog {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.modal-content {\n  position: relative;\n  background-color: #ffffff;\n  border: 1px solid #999999;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  background-clip: padding-box;\n  outline: 0;\n}\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000000;\n}\n.modal-backdrop.fade {\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.modal-backdrop.in {\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5;\n  min-height: 16.42857143px;\n}\n.modal-header .close {\n  margin-top: -2px;\n}\n.modal-title {\n  margin: 0;\n  line-height: 1.42857143;\n}\n.modal-body {\n  position: relative;\n  padding: 15px;\n}\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5;\n}\n.modal-footer .btn + .btn {\n  margin-left: 5px;\n  margin-bottom: 0;\n}\n.modal-footer .btn-group .btn + .btn {\n  margin-left: -1px;\n}\n.modal-footer .btn-block + .btn-block {\n  margin-left: 0;\n}\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n@media (min-width: 768px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto;\n  }\n  .modal-content {\n    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n  }\n  .modal-sm {\n    width: 300px;\n  }\n}\n@media (min-width: 992px) {\n  .modal-lg {\n    width: 900px;\n  }\n}\n.tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.4;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.tooltip.in {\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.tooltip.top {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip.right {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip.bottom {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip.left {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #ffffff;\n  text-align: center;\n  text-decoration: none;\n  background-color: #000000;\n  border-radius: 4px;\n}\n.tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip.top .tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.top-left .tooltip-arrow {\n  bottom: 0;\n  left: 5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.top-right .tooltip-arrow {\n  bottom: 0;\n  right: 5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.right .tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000000;\n}\n.tooltip.left .tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000000;\n}\n.tooltip.bottom .tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.tooltip.bottom-left .tooltip-arrow {\n  top: 0;\n  left: 5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.tooltip.bottom-right .tooltip-arrow {\n  top: 0;\n  right: 5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 276px;\n  padding: 1px;\n  text-align: left;\n  background-color: #ffffff;\n  background-clip: padding-box;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  white-space: normal;\n}\n.popover.top {\n  margin-top: -10px;\n}\n.popover.right {\n  margin-left: 10px;\n}\n.popover.bottom {\n  margin-top: 10px;\n}\n.popover.left {\n  margin-left: -10px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 18px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #ffffff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #ffffff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #ffffff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #ffffff;\n  bottom: -10px;\n}\n.carousel {\n  position: relative;\n}\n.carousel-inner {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n.carousel-inner > .item {\n  display: none;\n  position: relative;\n  -webkit-transition: 0.6s ease-in-out left;\n  -o-transition: 0.6s ease-in-out left;\n  transition: 0.6s ease-in-out left;\n}\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  line-height: 1;\n}\n.carousel-inner > .active,\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  display: block;\n}\n.carousel-inner > .active {\n  left: 0;\n}\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.carousel-inner > .next {\n  left: 100%;\n}\n.carousel-inner > .prev {\n  left: -100%;\n}\n.carousel-inner > .next.left,\n.carousel-inner > .prev.right {\n  left: 0;\n}\n.carousel-inner > .active.left {\n  left: -100%;\n}\n.carousel-inner > .active.right {\n  left: 100%;\n}\n.carousel-control {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 15%;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n  font-size: 20px;\n  color: #ffffff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-control.left {\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);\n}\n.carousel-control.right {\n  left: auto;\n  right: 0;\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);\n}\n.carousel-control:hover,\n.carousel-control:focus {\n  outline: 0;\n  color: #ffffff;\n  text-decoration: none;\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-left,\n.carousel-control .glyphicon-chevron-right {\n  position: absolute;\n  top: 50%;\n  z-index: 5;\n  display: inline-block;\n}\n.carousel-control .icon-prev,\n.carousel-control .glyphicon-chevron-left {\n  left: 50%;\n  margin-left: -10px;\n}\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-right {\n  right: 50%;\n  margin-right: -10px;\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next {\n  width: 20px;\n  height: 20px;\n  margin-top: -10px;\n  font-family: serif;\n}\n.carousel-control .icon-prev:before {\n  content: '\\2039';\n}\n.carousel-control .icon-next:before {\n  content: '\\203a';\n}\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  margin-left: -30%;\n  padding-left: 0;\n  list-style: none;\n  text-align: center;\n}\n.carousel-indicators li {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 1px;\n  text-indent: -999px;\n  border: 1px solid #ffffff;\n  border-radius: 10px;\n  cursor: pointer;\n  background-color: #000 \\9;\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-indicators .active {\n  margin: 0;\n  width: 12px;\n  height: 12px;\n  background-color: #ffffff;\n}\n.carousel-caption {\n  position: absolute;\n  left: 15%;\n  right: 15%;\n  bottom: 20px;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #ffffff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-caption .btn {\n  text-shadow: none;\n}\n@media screen and (min-width: 768px) {\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -15px;\n    font-size: 30px;\n  }\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .icon-prev {\n    margin-left: -15px;\n  }\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-next {\n    margin-right: -15px;\n  }\n  .carousel-caption {\n    left: 20%;\n    right: 20%;\n    padding-bottom: 30px;\n  }\n  .carousel-indicators {\n    bottom: 20px;\n  }\n}\n.clearfix:before,\n.clearfix:after,\n.dl-horizontal dd:before,\n.dl-horizontal dd:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after,\n.form-horizontal .form-group:before,\n.form-horizontal .form-group:after,\n.btn-toolbar:before,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:before,\n.btn-group-vertical > .btn-group:after,\n.nav:before,\n.nav:after,\n.navbar:before,\n.navbar:after,\n.navbar-header:before,\n.navbar-header:after,\n.navbar-collapse:before,\n.navbar-collapse:after,\n.pager:before,\n.pager:after,\n.panel-body:before,\n.panel-body:after,\n.modal-footer:before,\n.modal-footer:after {\n  content: \" \";\n  display: table;\n}\n.clearfix:after,\n.dl-horizontal dd:after,\n.container:after,\n.container-fluid:after,\n.row:after,\n.form-horizontal .form-group:after,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:after,\n.nav:after,\n.navbar:after,\n.navbar-header:after,\n.navbar-collapse:after,\n.pager:after,\n.panel-body:after,\n.modal-footer:after {\n  clear: both;\n}\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.pull-right {\n  float: right !important;\n}\n.pull-left {\n  float: left !important;\n}\n.hide {\n  display: none !important;\n}\n.show {\n  display: block !important;\n}\n.invisible {\n  visibility: hidden;\n}\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n.hidden {\n  display: none !important;\n  visibility: hidden !important;\n}\n.affix {\n  position: fixed;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n@-ms-viewport {\n  width: device-width;\n}\n.visible-xs,\n.visible-sm,\n.visible-md,\n.visible-lg {\n  display: none !important;\n}\n.visible-xs-block,\n.visible-xs-inline,\n.visible-xs-inline-block,\n.visible-sm-block,\n.visible-sm-inline,\n.visible-sm-inline-block,\n.visible-md-block,\n.visible-md-inline,\n.visible-md-inline-block,\n.visible-lg-block,\n.visible-lg-inline,\n.visible-lg-inline-block {\n  display: none !important;\n}\n@media (max-width: 767px) {\n  .visible-xs {\n    display: block !important;\n  }\n  table.visible-xs {\n    display: table;\n  }\n  tr.visible-xs {\n    display: table-row !important;\n  }\n  th.visible-xs,\n  td.visible-xs {\n    display: table-cell !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-block {\n    display: block !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline {\n    display: inline !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm {\n    display: block !important;\n  }\n  table.visible-sm {\n    display: table;\n  }\n  tr.visible-sm {\n    display: table-row !important;\n  }\n  th.visible-sm,\n  td.visible-sm {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-block {\n    display: block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md {\n    display: block !important;\n  }\n  table.visible-md {\n    display: table;\n  }\n  tr.visible-md {\n    display: table-row !important;\n  }\n  th.visible-md,\n  td.visible-md {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-block {\n    display: block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg {\n    display: block !important;\n  }\n  table.visible-lg {\n    display: table;\n  }\n  tr.visible-lg {\n    display: table-row !important;\n  }\n  th.visible-lg,\n  td.visible-lg {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-block {\n    display: block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (max-width: 767px) {\n  .hidden-xs {\n    display: none !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .hidden-sm {\n    display: none !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .hidden-md {\n    display: none !important;\n  }\n}\n@media (min-width: 1200px) {\n  .hidden-lg {\n    display: none !important;\n  }\n}\n.visible-print {\n  display: none !important;\n}\n@media print {\n  .visible-print {\n    display: block !important;\n  }\n  table.visible-print {\n    display: table;\n  }\n  tr.visible-print {\n    display: table-row !important;\n  }\n  th.visible-print,\n  td.visible-print {\n    display: table-cell !important;\n  }\n}\n.visible-print-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-block {\n    display: block !important;\n  }\n}\n.visible-print-inline {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline {\n    display: inline !important;\n  }\n}\n.visible-print-inline-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline-block {\n    display: inline-block !important;\n  }\n}\n@media print {\n  .hidden-print {\n    display: none !important;\n  }\n}\n";
-
-/***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -19424,6 +19425,26 @@
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	var dispose = __webpack_require__(11)
+		// The css code:
+		(__webpack_require__(13))
+	if(false) {
+		module.hot.accept();
+		module.hot.dispose(dispose);
+	}
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports =
+		"/*! normalize.css v3.0.1 | MIT License | git.io/normalize */\nhtml {\n  font-family: sans-serif;\n  -ms-text-size-adjust: 100%;\n  -webkit-text-size-adjust: 100%;\n}\nbody {\n  margin: 0;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nprogress,\nvideo {\n  display: inline-block;\n  vertical-align: baseline;\n}\naudio:not([controls]) {\n  display: none;\n  height: 0;\n}\n[hidden],\ntemplate {\n  display: none;\n}\na {\n  background: transparent;\n}\na:active,\na:hover {\n  outline: 0;\n}\nabbr[title] {\n  border-bottom: 1px dotted;\n}\nb,\nstrong {\n  font-weight: bold;\n}\ndfn {\n  font-style: italic;\n}\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0;\n}\nmark {\n  background: #ff0;\n  color: #000;\n}\nsmall {\n  font-size: 80%;\n}\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline;\n}\nsup {\n  top: -0.5em;\n}\nsub {\n  bottom: -0.25em;\n}\nimg {\n  border: 0;\n}\nsvg:not(:root) {\n  overflow: hidden;\n}\nfigure {\n  margin: 1em 40px;\n}\nhr {\n  -moz-box-sizing: content-box;\n  box-sizing: content-box;\n  height: 0;\n}\npre {\n  overflow: auto;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: monospace, monospace;\n  font-size: 1em;\n}\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  color: inherit;\n  font: inherit;\n  margin: 0;\n}\nbutton {\n  overflow: visible;\n}\nbutton,\nselect {\n  text-transform: none;\n}\nbutton,\nhtml input[type=\"button\"],\ninput[type=\"reset\"],\ninput[type=\"submit\"] {\n  -webkit-appearance: button;\n  cursor: pointer;\n}\nbutton[disabled],\nhtml input[disabled] {\n  cursor: default;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  border: 0;\n  padding: 0;\n}\ninput {\n  line-height: normal;\n}\ninput[type=\"checkbox\"],\ninput[type=\"radio\"] {\n  box-sizing: border-box;\n  padding: 0;\n}\ninput[type=\"number\"]::-webkit-inner-spin-button,\ninput[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  -moz-box-sizing: content-box;\n  -webkit-box-sizing: content-box;\n  box-sizing: content-box;\n}\ninput[type=\"search\"]::-webkit-search-cancel-button,\ninput[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\nfieldset {\n  border: 1px solid #c0c0c0;\n  margin: 0 2px;\n  padding: 0.35em 0.625em 0.75em;\n}\nlegend {\n  border: 0;\n  padding: 0;\n}\ntextarea {\n  overflow: auto;\n}\noptgroup {\n  font-weight: bold;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\ntd,\nth {\n  padding: 0;\n}\n@media print {\n  * {\n    text-shadow: none !important;\n    color: #000 !important;\n    background: transparent !important;\n    box-shadow: none !important;\n  }\n  a,\n  a:visited {\n    text-decoration: underline;\n  }\n  a[href]:after {\n    content: \" (\" attr(href) \")\";\n  }\n  abbr[title]:after {\n    content: \" (\" attr(title) \")\";\n  }\n  a[href^=\"javascript:\"]:after,\n  a[href^=\"#\"]:after {\n    content: \"\";\n  }\n  pre,\n  blockquote {\n    border: 1px solid #999;\n    page-break-inside: avoid;\n  }\n  thead {\n    display: table-header-group;\n  }\n  tr,\n  img {\n    page-break-inside: avoid;\n  }\n  img {\n    max-width: 100% !important;\n  }\n  p,\n  h2,\n  h3 {\n    orphans: 3;\n    widows: 3;\n  }\n  h2,\n  h3 {\n    page-break-after: avoid;\n  }\n  select {\n    background: #fff !important;\n  }\n  .navbar {\n    display: none;\n  }\n  .table td,\n  .table th {\n    background-color: #fff !important;\n  }\n  .btn > .caret,\n  .dropup > .btn > .caret {\n    border-top-color: #000 !important;\n  }\n  .label {\n    border: 1px solid #000;\n  }\n  .table {\n    border-collapse: collapse !important;\n  }\n  .table-bordered th,\n  .table-bordered td {\n    border: 1px solid #ddd !important;\n  }\n}\n@font-face {\n  font-family: 'Glyphicons Halflings';\n  src: url("+__webpack_require__(97)+");\n  src: url("+__webpack_require__(97)+"?#iefix) format('embedded-opentype'), url("+__webpack_require__(100)+") format('woff'), url("+__webpack_require__(98)+") format('truetype'), url("+__webpack_require__(99)+"#glyphicons_halflingsregular) format('svg');\n}\n.glyphicon {\n  position: relative;\n  top: 1px;\n  display: inline-block;\n  font-family: 'Glyphicons Halflings';\n  font-style: normal;\n  font-weight: normal;\n  line-height: 1;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n.glyphicon-asterisk:before {\n  content: \"\\2a\";\n}\n.glyphicon-plus:before {\n  content: \"\\2b\";\n}\n.glyphicon-euro:before {\n  content: \"\\20ac\";\n}\n.glyphicon-minus:before {\n  content: \"\\2212\";\n}\n.glyphicon-cloud:before {\n  content: \"\\2601\";\n}\n.glyphicon-envelope:before {\n  content: \"\\2709\";\n}\n.glyphicon-pencil:before {\n  content: \"\\270f\";\n}\n.glyphicon-glass:before {\n  content: \"\\e001\";\n}\n.glyphicon-music:before {\n  content: \"\\e002\";\n}\n.glyphicon-search:before {\n  content: \"\\e003\";\n}\n.glyphicon-heart:before {\n  content: \"\\e005\";\n}\n.glyphicon-star:before {\n  content: \"\\e006\";\n}\n.glyphicon-star-empty:before {\n  content: \"\\e007\";\n}\n.glyphicon-user:before {\n  content: \"\\e008\";\n}\n.glyphicon-film:before {\n  content: \"\\e009\";\n}\n.glyphicon-th-large:before {\n  content: \"\\e010\";\n}\n.glyphicon-th:before {\n  content: \"\\e011\";\n}\n.glyphicon-th-list:before {\n  content: \"\\e012\";\n}\n.glyphicon-ok:before {\n  content: \"\\e013\";\n}\n.glyphicon-remove:before {\n  content: \"\\e014\";\n}\n.glyphicon-zoom-in:before {\n  content: \"\\e015\";\n}\n.glyphicon-zoom-out:before {\n  content: \"\\e016\";\n}\n.glyphicon-off:before {\n  content: \"\\e017\";\n}\n.glyphicon-signal:before {\n  content: \"\\e018\";\n}\n.glyphicon-cog:before {\n  content: \"\\e019\";\n}\n.glyphicon-trash:before {\n  content: \"\\e020\";\n}\n.glyphicon-home:before {\n  content: \"\\e021\";\n}\n.glyphicon-file:before {\n  content: \"\\e022\";\n}\n.glyphicon-time:before {\n  content: \"\\e023\";\n}\n.glyphicon-road:before {\n  content: \"\\e024\";\n}\n.glyphicon-download-alt:before {\n  content: \"\\e025\";\n}\n.glyphicon-download:before {\n  content: \"\\e026\";\n}\n.glyphicon-upload:before {\n  content: \"\\e027\";\n}\n.glyphicon-inbox:before {\n  content: \"\\e028\";\n}\n.glyphicon-play-circle:before {\n  content: \"\\e029\";\n}\n.glyphicon-repeat:before {\n  content: \"\\e030\";\n}\n.glyphicon-refresh:before {\n  content: \"\\e031\";\n}\n.glyphicon-list-alt:before {\n  content: \"\\e032\";\n}\n.glyphicon-lock:before {\n  content: \"\\e033\";\n}\n.glyphicon-flag:before {\n  content: \"\\e034\";\n}\n.glyphicon-headphones:before {\n  content: \"\\e035\";\n}\n.glyphicon-volume-off:before {\n  content: \"\\e036\";\n}\n.glyphicon-volume-down:before {\n  content: \"\\e037\";\n}\n.glyphicon-volume-up:before {\n  content: \"\\e038\";\n}\n.glyphicon-qrcode:before {\n  content: \"\\e039\";\n}\n.glyphicon-barcode:before {\n  content: \"\\e040\";\n}\n.glyphicon-tag:before {\n  content: \"\\e041\";\n}\n.glyphicon-tags:before {\n  content: \"\\e042\";\n}\n.glyphicon-book:before {\n  content: \"\\e043\";\n}\n.glyphicon-bookmark:before {\n  content: \"\\e044\";\n}\n.glyphicon-print:before {\n  content: \"\\e045\";\n}\n.glyphicon-camera:before {\n  content: \"\\e046\";\n}\n.glyphicon-font:before {\n  content: \"\\e047\";\n}\n.glyphicon-bold:before {\n  content: \"\\e048\";\n}\n.glyphicon-italic:before {\n  content: \"\\e049\";\n}\n.glyphicon-text-height:before {\n  content: \"\\e050\";\n}\n.glyphicon-text-width:before {\n  content: \"\\e051\";\n}\n.glyphicon-align-left:before {\n  content: \"\\e052\";\n}\n.glyphicon-align-center:before {\n  content: \"\\e053\";\n}\n.glyphicon-align-right:before {\n  content: \"\\e054\";\n}\n.glyphicon-align-justify:before {\n  content: \"\\e055\";\n}\n.glyphicon-list:before {\n  content: \"\\e056\";\n}\n.glyphicon-indent-left:before {\n  content: \"\\e057\";\n}\n.glyphicon-indent-right:before {\n  content: \"\\e058\";\n}\n.glyphicon-facetime-video:before {\n  content: \"\\e059\";\n}\n.glyphicon-picture:before {\n  content: \"\\e060\";\n}\n.glyphicon-map-marker:before {\n  content: \"\\e062\";\n}\n.glyphicon-adjust:before {\n  content: \"\\e063\";\n}\n.glyphicon-tint:before {\n  content: \"\\e064\";\n}\n.glyphicon-edit:before {\n  content: \"\\e065\";\n}\n.glyphicon-share:before {\n  content: \"\\e066\";\n}\n.glyphicon-check:before {\n  content: \"\\e067\";\n}\n.glyphicon-move:before {\n  content: \"\\e068\";\n}\n.glyphicon-step-backward:before {\n  content: \"\\e069\";\n}\n.glyphicon-fast-backward:before {\n  content: \"\\e070\";\n}\n.glyphicon-backward:before {\n  content: \"\\e071\";\n}\n.glyphicon-play:before {\n  content: \"\\e072\";\n}\n.glyphicon-pause:before {\n  content: \"\\e073\";\n}\n.glyphicon-stop:before {\n  content: \"\\e074\";\n}\n.glyphicon-forward:before {\n  content: \"\\e075\";\n}\n.glyphicon-fast-forward:before {\n  content: \"\\e076\";\n}\n.glyphicon-step-forward:before {\n  content: \"\\e077\";\n}\n.glyphicon-eject:before {\n  content: \"\\e078\";\n}\n.glyphicon-chevron-left:before {\n  content: \"\\e079\";\n}\n.glyphicon-chevron-right:before {\n  content: \"\\e080\";\n}\n.glyphicon-plus-sign:before {\n  content: \"\\e081\";\n}\n.glyphicon-minus-sign:before {\n  content: \"\\e082\";\n}\n.glyphicon-remove-sign:before {\n  content: \"\\e083\";\n}\n.glyphicon-ok-sign:before {\n  content: \"\\e084\";\n}\n.glyphicon-question-sign:before {\n  content: \"\\e085\";\n}\n.glyphicon-info-sign:before {\n  content: \"\\e086\";\n}\n.glyphicon-screenshot:before {\n  content: \"\\e087\";\n}\n.glyphicon-remove-circle:before {\n  content: \"\\e088\";\n}\n.glyphicon-ok-circle:before {\n  content: \"\\e089\";\n}\n.glyphicon-ban-circle:before {\n  content: \"\\e090\";\n}\n.glyphicon-arrow-left:before {\n  content: \"\\e091\";\n}\n.glyphicon-arrow-right:before {\n  content: \"\\e092\";\n}\n.glyphicon-arrow-up:before {\n  content: \"\\e093\";\n}\n.glyphicon-arrow-down:before {\n  content: \"\\e094\";\n}\n.glyphicon-share-alt:before {\n  content: \"\\e095\";\n}\n.glyphicon-resize-full:before {\n  content: \"\\e096\";\n}\n.glyphicon-resize-small:before {\n  content: \"\\e097\";\n}\n.glyphicon-exclamation-sign:before {\n  content: \"\\e101\";\n}\n.glyphicon-gift:before {\n  content: \"\\e102\";\n}\n.glyphicon-leaf:before {\n  content: \"\\e103\";\n}\n.glyphicon-fire:before {\n  content: \"\\e104\";\n}\n.glyphicon-eye-open:before {\n  content: \"\\e105\";\n}\n.glyphicon-eye-close:before {\n  content: \"\\e106\";\n}\n.glyphicon-warning-sign:before {\n  content: \"\\e107\";\n}\n.glyphicon-plane:before {\n  content: \"\\e108\";\n}\n.glyphicon-calendar:before {\n  content: \"\\e109\";\n}\n.glyphicon-random:before {\n  content: \"\\e110\";\n}\n.glyphicon-comment:before {\n  content: \"\\e111\";\n}\n.glyphicon-magnet:before {\n  content: \"\\e112\";\n}\n.glyphicon-chevron-up:before {\n  content: \"\\e113\";\n}\n.glyphicon-chevron-down:before {\n  content: \"\\e114\";\n}\n.glyphicon-retweet:before {\n  content: \"\\e115\";\n}\n.glyphicon-shopping-cart:before {\n  content: \"\\e116\";\n}\n.glyphicon-folder-close:before {\n  content: \"\\e117\";\n}\n.glyphicon-folder-open:before {\n  content: \"\\e118\";\n}\n.glyphicon-resize-vertical:before {\n  content: \"\\e119\";\n}\n.glyphicon-resize-horizontal:before {\n  content: \"\\e120\";\n}\n.glyphicon-hdd:before {\n  content: \"\\e121\";\n}\n.glyphicon-bullhorn:before {\n  content: \"\\e122\";\n}\n.glyphicon-bell:before {\n  content: \"\\e123\";\n}\n.glyphicon-certificate:before {\n  content: \"\\e124\";\n}\n.glyphicon-thumbs-up:before {\n  content: \"\\e125\";\n}\n.glyphicon-thumbs-down:before {\n  content: \"\\e126\";\n}\n.glyphicon-hand-right:before {\n  content: \"\\e127\";\n}\n.glyphicon-hand-left:before {\n  content: \"\\e128\";\n}\n.glyphicon-hand-up:before {\n  content: \"\\e129\";\n}\n.glyphicon-hand-down:before {\n  content: \"\\e130\";\n}\n.glyphicon-circle-arrow-right:before {\n  content: \"\\e131\";\n}\n.glyphicon-circle-arrow-left:before {\n  content: \"\\e132\";\n}\n.glyphicon-circle-arrow-up:before {\n  content: \"\\e133\";\n}\n.glyphicon-circle-arrow-down:before {\n  content: \"\\e134\";\n}\n.glyphicon-globe:before {\n  content: \"\\e135\";\n}\n.glyphicon-wrench:before {\n  content: \"\\e136\";\n}\n.glyphicon-tasks:before {\n  content: \"\\e137\";\n}\n.glyphicon-filter:before {\n  content: \"\\e138\";\n}\n.glyphicon-briefcase:before {\n  content: \"\\e139\";\n}\n.glyphicon-fullscreen:before {\n  content: \"\\e140\";\n}\n.glyphicon-dashboard:before {\n  content: \"\\e141\";\n}\n.glyphicon-paperclip:before {\n  content: \"\\e142\";\n}\n.glyphicon-heart-empty:before {\n  content: \"\\e143\";\n}\n.glyphicon-link:before {\n  content: \"\\e144\";\n}\n.glyphicon-phone:before {\n  content: \"\\e145\";\n}\n.glyphicon-pushpin:before {\n  content: \"\\e146\";\n}\n.glyphicon-usd:before {\n  content: \"\\e148\";\n}\n.glyphicon-gbp:before {\n  content: \"\\e149\";\n}\n.glyphicon-sort:before {\n  content: \"\\e150\";\n}\n.glyphicon-sort-by-alphabet:before {\n  content: \"\\e151\";\n}\n.glyphicon-sort-by-alphabet-alt:before {\n  content: \"\\e152\";\n}\n.glyphicon-sort-by-order:before {\n  content: \"\\e153\";\n}\n.glyphicon-sort-by-order-alt:before {\n  content: \"\\e154\";\n}\n.glyphicon-sort-by-attributes:before {\n  content: \"\\e155\";\n}\n.glyphicon-sort-by-attributes-alt:before {\n  content: \"\\e156\";\n}\n.glyphicon-unchecked:before {\n  content: \"\\e157\";\n}\n.glyphicon-expand:before {\n  content: \"\\e158\";\n}\n.glyphicon-collapse-down:before {\n  content: \"\\e159\";\n}\n.glyphicon-collapse-up:before {\n  content: \"\\e160\";\n}\n.glyphicon-log-in:before {\n  content: \"\\e161\";\n}\n.glyphicon-flash:before {\n  content: \"\\e162\";\n}\n.glyphicon-log-out:before {\n  content: \"\\e163\";\n}\n.glyphicon-new-window:before {\n  content: \"\\e164\";\n}\n.glyphicon-record:before {\n  content: \"\\e165\";\n}\n.glyphicon-save:before {\n  content: \"\\e166\";\n}\n.glyphicon-open:before {\n  content: \"\\e167\";\n}\n.glyphicon-saved:before {\n  content: \"\\e168\";\n}\n.glyphicon-import:before {\n  content: \"\\e169\";\n}\n.glyphicon-export:before {\n  content: \"\\e170\";\n}\n.glyphicon-send:before {\n  content: \"\\e171\";\n}\n.glyphicon-floppy-disk:before {\n  content: \"\\e172\";\n}\n.glyphicon-floppy-saved:before {\n  content: \"\\e173\";\n}\n.glyphicon-floppy-remove:before {\n  content: \"\\e174\";\n}\n.glyphicon-floppy-save:before {\n  content: \"\\e175\";\n}\n.glyphicon-floppy-open:before {\n  content: \"\\e176\";\n}\n.glyphicon-credit-card:before {\n  content: \"\\e177\";\n}\n.glyphicon-transfer:before {\n  content: \"\\e178\";\n}\n.glyphicon-cutlery:before {\n  content: \"\\e179\";\n}\n.glyphicon-header:before {\n  content: \"\\e180\";\n}\n.glyphicon-compressed:before {\n  content: \"\\e181\";\n}\n.glyphicon-earphone:before {\n  content: \"\\e182\";\n}\n.glyphicon-phone-alt:before {\n  content: \"\\e183\";\n}\n.glyphicon-tower:before {\n  content: \"\\e184\";\n}\n.glyphicon-stats:before {\n  content: \"\\e185\";\n}\n.glyphicon-sd-video:before {\n  content: \"\\e186\";\n}\n.glyphicon-hd-video:before {\n  content: \"\\e187\";\n}\n.glyphicon-subtitles:before {\n  content: \"\\e188\";\n}\n.glyphicon-sound-stereo:before {\n  content: \"\\e189\";\n}\n.glyphicon-sound-dolby:before {\n  content: \"\\e190\";\n}\n.glyphicon-sound-5-1:before {\n  content: \"\\e191\";\n}\n.glyphicon-sound-6-1:before {\n  content: \"\\e192\";\n}\n.glyphicon-sound-7-1:before {\n  content: \"\\e193\";\n}\n.glyphicon-copyright-mark:before {\n  content: \"\\e194\";\n}\n.glyphicon-registration-mark:before {\n  content: \"\\e195\";\n}\n.glyphicon-cloud-download:before {\n  content: \"\\e197\";\n}\n.glyphicon-cloud-upload:before {\n  content: \"\\e198\";\n}\n.glyphicon-tree-conifer:before {\n  content: \"\\e199\";\n}\n.glyphicon-tree-deciduous:before {\n  content: \"\\e200\";\n}\n* {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n*:before,\n*:after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\nhtml {\n  font-size: 10px;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n}\nbody {\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #333333;\n  background-color: #ffffff;\n}\ninput,\nbutton,\nselect,\ntextarea {\n  font-family: inherit;\n  font-size: inherit;\n  line-height: inherit;\n}\na {\n  color: #428bca;\n  text-decoration: none;\n}\na:hover,\na:focus {\n  color: #2a6496;\n  text-decoration: underline;\n}\na:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\nfigure {\n  margin: 0;\n}\nimg {\n  vertical-align: middle;\n}\n.img-responsive,\n.thumbnail > img,\n.thumbnail a > img,\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  display: block;\n  width: 100% \\9;\n  max-width: 100%;\n  height: auto;\n}\n.img-rounded {\n  border-radius: 6px;\n}\n.img-thumbnail {\n  padding: 4px;\n  line-height: 1.42857143;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  display: inline-block;\n  width: 100% \\9;\n  max-width: 100%;\n  height: auto;\n}\n.img-circle {\n  border-radius: 50%;\n}\nhr {\n  margin-top: 20px;\n  margin-bottom: 20px;\n  border: 0;\n  border-top: 1px solid #eeeeee;\n}\n.sr-only {\n  position: absolute;\n  width: 1px;\n  height: 1px;\n  margin: -1px;\n  padding: 0;\n  overflow: hidden;\n  clip: rect(0, 0, 0, 0);\n  border: 0;\n}\n.sr-only-focusable:active,\n.sr-only-focusable:focus {\n  position: static;\n  width: auto;\n  height: auto;\n  margin: 0;\n  overflow: visible;\n  clip: auto;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\n.h1,\n.h2,\n.h3,\n.h4,\n.h5,\n.h6 {\n  font-family: inherit;\n  font-weight: 500;\n  line-height: 1.1;\n  color: inherit;\n}\nh1 small,\nh2 small,\nh3 small,\nh4 small,\nh5 small,\nh6 small,\n.h1 small,\n.h2 small,\n.h3 small,\n.h4 small,\n.h5 small,\n.h6 small,\nh1 .small,\nh2 .small,\nh3 .small,\nh4 .small,\nh5 .small,\nh6 .small,\n.h1 .small,\n.h2 .small,\n.h3 .small,\n.h4 .small,\n.h5 .small,\n.h6 .small {\n  font-weight: normal;\n  line-height: 1;\n  color: #777777;\n}\nh1,\n.h1,\nh2,\n.h2,\nh3,\n.h3 {\n  margin-top: 20px;\n  margin-bottom: 10px;\n}\nh1 small,\n.h1 small,\nh2 small,\n.h2 small,\nh3 small,\n.h3 small,\nh1 .small,\n.h1 .small,\nh2 .small,\n.h2 .small,\nh3 .small,\n.h3 .small {\n  font-size: 65%;\n}\nh4,\n.h4,\nh5,\n.h5,\nh6,\n.h6 {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\nh4 small,\n.h4 small,\nh5 small,\n.h5 small,\nh6 small,\n.h6 small,\nh4 .small,\n.h4 .small,\nh5 .small,\n.h5 .small,\nh6 .small,\n.h6 .small {\n  font-size: 75%;\n}\nh1,\n.h1 {\n  font-size: 36px;\n}\nh2,\n.h2 {\n  font-size: 30px;\n}\nh3,\n.h3 {\n  font-size: 24px;\n}\nh4,\n.h4 {\n  font-size: 18px;\n}\nh5,\n.h5 {\n  font-size: 14px;\n}\nh6,\n.h6 {\n  font-size: 12px;\n}\np {\n  margin: 0 0 10px;\n}\n.lead {\n  margin-bottom: 20px;\n  font-size: 16px;\n  font-weight: 300;\n  line-height: 1.4;\n}\n@media (min-width: 768px) {\n  .lead {\n    font-size: 21px;\n  }\n}\nsmall,\n.small {\n  font-size: 85%;\n}\ncite {\n  font-style: normal;\n}\nmark,\n.mark {\n  background-color: #fcf8e3;\n  padding: .2em;\n}\n.text-left {\n  text-align: left;\n}\n.text-right {\n  text-align: right;\n}\n.text-center {\n  text-align: center;\n}\n.text-justify {\n  text-align: justify;\n}\n.text-nowrap {\n  white-space: nowrap;\n}\n.text-lowercase {\n  text-transform: lowercase;\n}\n.text-uppercase {\n  text-transform: uppercase;\n}\n.text-capitalize {\n  text-transform: capitalize;\n}\n.text-muted {\n  color: #777777;\n}\n.text-primary {\n  color: #428bca;\n}\na.text-primary:hover {\n  color: #3071a9;\n}\n.text-success {\n  color: #3c763d;\n}\na.text-success:hover {\n  color: #2b542c;\n}\n.text-info {\n  color: #31708f;\n}\na.text-info:hover {\n  color: #245269;\n}\n.text-warning {\n  color: #8a6d3b;\n}\na.text-warning:hover {\n  color: #66512c;\n}\n.text-danger {\n  color: #a94442;\n}\na.text-danger:hover {\n  color: #843534;\n}\n.bg-primary {\n  color: #fff;\n  background-color: #428bca;\n}\na.bg-primary:hover {\n  background-color: #3071a9;\n}\n.bg-success {\n  background-color: #dff0d8;\n}\na.bg-success:hover {\n  background-color: #c1e2b3;\n}\n.bg-info {\n  background-color: #d9edf7;\n}\na.bg-info:hover {\n  background-color: #afd9ee;\n}\n.bg-warning {\n  background-color: #fcf8e3;\n}\na.bg-warning:hover {\n  background-color: #f7ecb5;\n}\n.bg-danger {\n  background-color: #f2dede;\n}\na.bg-danger:hover {\n  background-color: #e4b9b9;\n}\n.page-header {\n  padding-bottom: 9px;\n  margin: 40px 0 20px;\n  border-bottom: 1px solid #eeeeee;\n}\nul,\nol {\n  margin-top: 0;\n  margin-bottom: 10px;\n}\nul ul,\nol ul,\nul ol,\nol ol {\n  margin-bottom: 0;\n}\n.list-unstyled {\n  padding-left: 0;\n  list-style: none;\n}\n.list-inline {\n  padding-left: 0;\n  list-style: none;\n  margin-left: -5px;\n}\n.list-inline > li {\n  display: inline-block;\n  padding-left: 5px;\n  padding-right: 5px;\n}\ndl {\n  margin-top: 0;\n  margin-bottom: 20px;\n}\ndt,\ndd {\n  line-height: 1.42857143;\n}\ndt {\n  font-weight: bold;\n}\ndd {\n  margin-left: 0;\n}\n@media (min-width: 768px) {\n  .dl-horizontal dt {\n    float: left;\n    width: 160px;\n    clear: left;\n    text-align: right;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n  }\n  .dl-horizontal dd {\n    margin-left: 180px;\n  }\n}\nabbr[title],\nabbr[data-original-title] {\n  cursor: help;\n  border-bottom: 1px dotted #777777;\n}\n.initialism {\n  font-size: 90%;\n  text-transform: uppercase;\n}\nblockquote {\n  padding: 10px 20px;\n  margin: 0 0 20px;\n  font-size: 17.5px;\n  border-left: 5px solid #eeeeee;\n}\nblockquote p:last-child,\nblockquote ul:last-child,\nblockquote ol:last-child {\n  margin-bottom: 0;\n}\nblockquote footer,\nblockquote small,\nblockquote .small {\n  display: block;\n  font-size: 80%;\n  line-height: 1.42857143;\n  color: #777777;\n}\nblockquote footer:before,\nblockquote small:before,\nblockquote .small:before {\n  content: '\\2014 \\00A0';\n}\n.blockquote-reverse,\nblockquote.pull-right {\n  padding-right: 15px;\n  padding-left: 0;\n  border-right: 5px solid #eeeeee;\n  border-left: 0;\n  text-align: right;\n}\n.blockquote-reverse footer:before,\nblockquote.pull-right footer:before,\n.blockquote-reverse small:before,\nblockquote.pull-right small:before,\n.blockquote-reverse .small:before,\nblockquote.pull-right .small:before {\n  content: '';\n}\n.blockquote-reverse footer:after,\nblockquote.pull-right footer:after,\n.blockquote-reverse small:after,\nblockquote.pull-right small:after,\n.blockquote-reverse .small:after,\nblockquote.pull-right .small:after {\n  content: '\\00A0 \\2014';\n}\nblockquote:before,\nblockquote:after {\n  content: \"\";\n}\naddress {\n  margin-bottom: 20px;\n  font-style: normal;\n  line-height: 1.42857143;\n}\ncode,\nkbd,\npre,\nsamp {\n  font-family: Menlo, Monaco, Consolas, \"Courier New\", monospace;\n}\ncode {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #c7254e;\n  background-color: #f9f2f4;\n  border-radius: 4px;\n}\nkbd {\n  padding: 2px 4px;\n  font-size: 90%;\n  color: #ffffff;\n  background-color: #333333;\n  border-radius: 3px;\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);\n}\nkbd kbd {\n  padding: 0;\n  font-size: 100%;\n  box-shadow: none;\n}\npre {\n  display: block;\n  padding: 9.5px;\n  margin: 0 0 10px;\n  font-size: 13px;\n  line-height: 1.42857143;\n  word-break: break-all;\n  word-wrap: break-word;\n  color: #333333;\n  background-color: #f5f5f5;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n}\npre code {\n  padding: 0;\n  font-size: inherit;\n  color: inherit;\n  white-space: pre-wrap;\n  background-color: transparent;\n  border-radius: 0;\n}\n.pre-scrollable {\n  max-height: 340px;\n  overflow-y: scroll;\n}\n.container {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n@media (min-width: 768px) {\n  .container {\n    width: 750px;\n  }\n}\n@media (min-width: 992px) {\n  .container {\n    width: 970px;\n  }\n}\n@media (min-width: 1200px) {\n  .container {\n    width: 1170px;\n  }\n}\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {\n  position: relative;\n  min-height: 1px;\n  padding-left: 15px;\n  padding-right: 15px;\n}\n.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {\n  float: left;\n}\n.col-xs-12 {\n  width: 100%;\n}\n.col-xs-11 {\n  width: 91.66666667%;\n}\n.col-xs-10 {\n  width: 83.33333333%;\n}\n.col-xs-9 {\n  width: 75%;\n}\n.col-xs-8 {\n  width: 66.66666667%;\n}\n.col-xs-7 {\n  width: 58.33333333%;\n}\n.col-xs-6 {\n  width: 50%;\n}\n.col-xs-5 {\n  width: 41.66666667%;\n}\n.col-xs-4 {\n  width: 33.33333333%;\n}\n.col-xs-3 {\n  width: 25%;\n}\n.col-xs-2 {\n  width: 16.66666667%;\n}\n.col-xs-1 {\n  width: 8.33333333%;\n}\n.col-xs-pull-12 {\n  right: 100%;\n}\n.col-xs-pull-11 {\n  right: 91.66666667%;\n}\n.col-xs-pull-10 {\n  right: 83.33333333%;\n}\n.col-xs-pull-9 {\n  right: 75%;\n}\n.col-xs-pull-8 {\n  right: 66.66666667%;\n}\n.col-xs-pull-7 {\n  right: 58.33333333%;\n}\n.col-xs-pull-6 {\n  right: 50%;\n}\n.col-xs-pull-5 {\n  right: 41.66666667%;\n}\n.col-xs-pull-4 {\n  right: 33.33333333%;\n}\n.col-xs-pull-3 {\n  right: 25%;\n}\n.col-xs-pull-2 {\n  right: 16.66666667%;\n}\n.col-xs-pull-1 {\n  right: 8.33333333%;\n}\n.col-xs-pull-0 {\n  right: auto;\n}\n.col-xs-push-12 {\n  left: 100%;\n}\n.col-xs-push-11 {\n  left: 91.66666667%;\n}\n.col-xs-push-10 {\n  left: 83.33333333%;\n}\n.col-xs-push-9 {\n  left: 75%;\n}\n.col-xs-push-8 {\n  left: 66.66666667%;\n}\n.col-xs-push-7 {\n  left: 58.33333333%;\n}\n.col-xs-push-6 {\n  left: 50%;\n}\n.col-xs-push-5 {\n  left: 41.66666667%;\n}\n.col-xs-push-4 {\n  left: 33.33333333%;\n}\n.col-xs-push-3 {\n  left: 25%;\n}\n.col-xs-push-2 {\n  left: 16.66666667%;\n}\n.col-xs-push-1 {\n  left: 8.33333333%;\n}\n.col-xs-push-0 {\n  left: auto;\n}\n.col-xs-offset-12 {\n  margin-left: 100%;\n}\n.col-xs-offset-11 {\n  margin-left: 91.66666667%;\n}\n.col-xs-offset-10 {\n  margin-left: 83.33333333%;\n}\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n.col-xs-offset-8 {\n  margin-left: 66.66666667%;\n}\n.col-xs-offset-7 {\n  margin-left: 58.33333333%;\n}\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n.col-xs-offset-5 {\n  margin-left: 41.66666667%;\n}\n.col-xs-offset-4 {\n  margin-left: 33.33333333%;\n}\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n.col-xs-offset-2 {\n  margin-left: 16.66666667%;\n}\n.col-xs-offset-1 {\n  margin-left: 8.33333333%;\n}\n.col-xs-offset-0 {\n  margin-left: 0%;\n}\n@media (min-width: 768px) {\n  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {\n    float: left;\n  }\n  .col-sm-12 {\n    width: 100%;\n  }\n  .col-sm-11 {\n    width: 91.66666667%;\n  }\n  .col-sm-10 {\n    width: 83.33333333%;\n  }\n  .col-sm-9 {\n    width: 75%;\n  }\n  .col-sm-8 {\n    width: 66.66666667%;\n  }\n  .col-sm-7 {\n    width: 58.33333333%;\n  }\n  .col-sm-6 {\n    width: 50%;\n  }\n  .col-sm-5 {\n    width: 41.66666667%;\n  }\n  .col-sm-4 {\n    width: 33.33333333%;\n  }\n  .col-sm-3 {\n    width: 25%;\n  }\n  .col-sm-2 {\n    width: 16.66666667%;\n  }\n  .col-sm-1 {\n    width: 8.33333333%;\n  }\n  .col-sm-pull-12 {\n    right: 100%;\n  }\n  .col-sm-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-sm-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-sm-pull-9 {\n    right: 75%;\n  }\n  .col-sm-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-sm-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-sm-pull-6 {\n    right: 50%;\n  }\n  .col-sm-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-sm-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-sm-pull-3 {\n    right: 25%;\n  }\n  .col-sm-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-sm-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-sm-pull-0 {\n    right: auto;\n  }\n  .col-sm-push-12 {\n    left: 100%;\n  }\n  .col-sm-push-11 {\n    left: 91.66666667%;\n  }\n  .col-sm-push-10 {\n    left: 83.33333333%;\n  }\n  .col-sm-push-9 {\n    left: 75%;\n  }\n  .col-sm-push-8 {\n    left: 66.66666667%;\n  }\n  .col-sm-push-7 {\n    left: 58.33333333%;\n  }\n  .col-sm-push-6 {\n    left: 50%;\n  }\n  .col-sm-push-5 {\n    left: 41.66666667%;\n  }\n  .col-sm-push-4 {\n    left: 33.33333333%;\n  }\n  .col-sm-push-3 {\n    left: 25%;\n  }\n  .col-sm-push-2 {\n    left: 16.66666667%;\n  }\n  .col-sm-push-1 {\n    left: 8.33333333%;\n  }\n  .col-sm-push-0 {\n    left: auto;\n  }\n  .col-sm-offset-12 {\n    margin-left: 100%;\n  }\n  .col-sm-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-sm-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n  .col-sm-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-sm-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n  .col-sm-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-sm-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n  .col-sm-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-sm-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-sm-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 992px) {\n  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {\n    float: left;\n  }\n  .col-md-12 {\n    width: 100%;\n  }\n  .col-md-11 {\n    width: 91.66666667%;\n  }\n  .col-md-10 {\n    width: 83.33333333%;\n  }\n  .col-md-9 {\n    width: 75%;\n  }\n  .col-md-8 {\n    width: 66.66666667%;\n  }\n  .col-md-7 {\n    width: 58.33333333%;\n  }\n  .col-md-6 {\n    width: 50%;\n  }\n  .col-md-5 {\n    width: 41.66666667%;\n  }\n  .col-md-4 {\n    width: 33.33333333%;\n  }\n  .col-md-3 {\n    width: 25%;\n  }\n  .col-md-2 {\n    width: 16.66666667%;\n  }\n  .col-md-1 {\n    width: 8.33333333%;\n  }\n  .col-md-pull-12 {\n    right: 100%;\n  }\n  .col-md-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-md-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-md-pull-9 {\n    right: 75%;\n  }\n  .col-md-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-md-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-md-pull-6 {\n    right: 50%;\n  }\n  .col-md-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-md-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-md-pull-3 {\n    right: 25%;\n  }\n  .col-md-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-md-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-md-pull-0 {\n    right: auto;\n  }\n  .col-md-push-12 {\n    left: 100%;\n  }\n  .col-md-push-11 {\n    left: 91.66666667%;\n  }\n  .col-md-push-10 {\n    left: 83.33333333%;\n  }\n  .col-md-push-9 {\n    left: 75%;\n  }\n  .col-md-push-8 {\n    left: 66.66666667%;\n  }\n  .col-md-push-7 {\n    left: 58.33333333%;\n  }\n  .col-md-push-6 {\n    left: 50%;\n  }\n  .col-md-push-5 {\n    left: 41.66666667%;\n  }\n  .col-md-push-4 {\n    left: 33.33333333%;\n  }\n  .col-md-push-3 {\n    left: 25%;\n  }\n  .col-md-push-2 {\n    left: 16.66666667%;\n  }\n  .col-md-push-1 {\n    left: 8.33333333%;\n  }\n  .col-md-push-0 {\n    left: auto;\n  }\n  .col-md-offset-12 {\n    margin-left: 100%;\n  }\n  .col-md-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-md-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n  .col-md-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-md-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n  .col-md-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-md-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n  .col-md-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-md-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-md-offset-0 {\n    margin-left: 0%;\n  }\n}\n@media (min-width: 1200px) {\n  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {\n    float: left;\n  }\n  .col-lg-12 {\n    width: 100%;\n  }\n  .col-lg-11 {\n    width: 91.66666667%;\n  }\n  .col-lg-10 {\n    width: 83.33333333%;\n  }\n  .col-lg-9 {\n    width: 75%;\n  }\n  .col-lg-8 {\n    width: 66.66666667%;\n  }\n  .col-lg-7 {\n    width: 58.33333333%;\n  }\n  .col-lg-6 {\n    width: 50%;\n  }\n  .col-lg-5 {\n    width: 41.66666667%;\n  }\n  .col-lg-4 {\n    width: 33.33333333%;\n  }\n  .col-lg-3 {\n    width: 25%;\n  }\n  .col-lg-2 {\n    width: 16.66666667%;\n  }\n  .col-lg-1 {\n    width: 8.33333333%;\n  }\n  .col-lg-pull-12 {\n    right: 100%;\n  }\n  .col-lg-pull-11 {\n    right: 91.66666667%;\n  }\n  .col-lg-pull-10 {\n    right: 83.33333333%;\n  }\n  .col-lg-pull-9 {\n    right: 75%;\n  }\n  .col-lg-pull-8 {\n    right: 66.66666667%;\n  }\n  .col-lg-pull-7 {\n    right: 58.33333333%;\n  }\n  .col-lg-pull-6 {\n    right: 50%;\n  }\n  .col-lg-pull-5 {\n    right: 41.66666667%;\n  }\n  .col-lg-pull-4 {\n    right: 33.33333333%;\n  }\n  .col-lg-pull-3 {\n    right: 25%;\n  }\n  .col-lg-pull-2 {\n    right: 16.66666667%;\n  }\n  .col-lg-pull-1 {\n    right: 8.33333333%;\n  }\n  .col-lg-pull-0 {\n    right: auto;\n  }\n  .col-lg-push-12 {\n    left: 100%;\n  }\n  .col-lg-push-11 {\n    left: 91.66666667%;\n  }\n  .col-lg-push-10 {\n    left: 83.33333333%;\n  }\n  .col-lg-push-9 {\n    left: 75%;\n  }\n  .col-lg-push-8 {\n    left: 66.66666667%;\n  }\n  .col-lg-push-7 {\n    left: 58.33333333%;\n  }\n  .col-lg-push-6 {\n    left: 50%;\n  }\n  .col-lg-push-5 {\n    left: 41.66666667%;\n  }\n  .col-lg-push-4 {\n    left: 33.33333333%;\n  }\n  .col-lg-push-3 {\n    left: 25%;\n  }\n  .col-lg-push-2 {\n    left: 16.66666667%;\n  }\n  .col-lg-push-1 {\n    left: 8.33333333%;\n  }\n  .col-lg-push-0 {\n    left: auto;\n  }\n  .col-lg-offset-12 {\n    margin-left: 100%;\n  }\n  .col-lg-offset-11 {\n    margin-left: 91.66666667%;\n  }\n  .col-lg-offset-10 {\n    margin-left: 83.33333333%;\n  }\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n  .col-lg-offset-8 {\n    margin-left: 66.66666667%;\n  }\n  .col-lg-offset-7 {\n    margin-left: 58.33333333%;\n  }\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n  .col-lg-offset-5 {\n    margin-left: 41.66666667%;\n  }\n  .col-lg-offset-4 {\n    margin-left: 33.33333333%;\n  }\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n  .col-lg-offset-2 {\n    margin-left: 16.66666667%;\n  }\n  .col-lg-offset-1 {\n    margin-left: 8.33333333%;\n  }\n  .col-lg-offset-0 {\n    margin-left: 0%;\n  }\n}\ntable {\n  background-color: transparent;\n}\nth {\n  text-align: left;\n}\n.table {\n  width: 100%;\n  max-width: 100%;\n  margin-bottom: 20px;\n}\n.table > thead > tr > th,\n.table > tbody > tr > th,\n.table > tfoot > tr > th,\n.table > thead > tr > td,\n.table > tbody > tr > td,\n.table > tfoot > tr > td {\n  padding: 8px;\n  line-height: 1.42857143;\n  vertical-align: top;\n  border-top: 1px solid #dddddd;\n}\n.table > thead > tr > th {\n  vertical-align: bottom;\n  border-bottom: 2px solid #dddddd;\n}\n.table > caption + thead > tr:first-child > th,\n.table > colgroup + thead > tr:first-child > th,\n.table > thead:first-child > tr:first-child > th,\n.table > caption + thead > tr:first-child > td,\n.table > colgroup + thead > tr:first-child > td,\n.table > thead:first-child > tr:first-child > td {\n  border-top: 0;\n}\n.table > tbody + tbody {\n  border-top: 2px solid #dddddd;\n}\n.table .table {\n  background-color: #ffffff;\n}\n.table-condensed > thead > tr > th,\n.table-condensed > tbody > tr > th,\n.table-condensed > tfoot > tr > th,\n.table-condensed > thead > tr > td,\n.table-condensed > tbody > tr > td,\n.table-condensed > tfoot > tr > td {\n  padding: 5px;\n}\n.table-bordered {\n  border: 1px solid #dddddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > tbody > tr > th,\n.table-bordered > tfoot > tr > th,\n.table-bordered > thead > tr > td,\n.table-bordered > tbody > tr > td,\n.table-bordered > tfoot > tr > td {\n  border: 1px solid #dddddd;\n}\n.table-bordered > thead > tr > th,\n.table-bordered > thead > tr > td {\n  border-bottom-width: 2px;\n}\n.table-striped > tbody > tr:nth-child(odd) > td,\n.table-striped > tbody > tr:nth-child(odd) > th {\n  background-color: #f9f9f9;\n}\n.table-hover > tbody > tr:hover > td,\n.table-hover > tbody > tr:hover > th {\n  background-color: #f5f5f5;\n}\ntable col[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-column;\n}\ntable td[class*=\"col-\"],\ntable th[class*=\"col-\"] {\n  position: static;\n  float: none;\n  display: table-cell;\n}\n.table > thead > tr > td.active,\n.table > tbody > tr > td.active,\n.table > tfoot > tr > td.active,\n.table > thead > tr > th.active,\n.table > tbody > tr > th.active,\n.table > tfoot > tr > th.active,\n.table > thead > tr.active > td,\n.table > tbody > tr.active > td,\n.table > tfoot > tr.active > td,\n.table > thead > tr.active > th,\n.table > tbody > tr.active > th,\n.table > tfoot > tr.active > th {\n  background-color: #f5f5f5;\n}\n.table-hover > tbody > tr > td.active:hover,\n.table-hover > tbody > tr > th.active:hover,\n.table-hover > tbody > tr.active:hover > td,\n.table-hover > tbody > tr:hover > .active,\n.table-hover > tbody > tr.active:hover > th {\n  background-color: #e8e8e8;\n}\n.table > thead > tr > td.success,\n.table > tbody > tr > td.success,\n.table > tfoot > tr > td.success,\n.table > thead > tr > th.success,\n.table > tbody > tr > th.success,\n.table > tfoot > tr > th.success,\n.table > thead > tr.success > td,\n.table > tbody > tr.success > td,\n.table > tfoot > tr.success > td,\n.table > thead > tr.success > th,\n.table > tbody > tr.success > th,\n.table > tfoot > tr.success > th {\n  background-color: #dff0d8;\n}\n.table-hover > tbody > tr > td.success:hover,\n.table-hover > tbody > tr > th.success:hover,\n.table-hover > tbody > tr.success:hover > td,\n.table-hover > tbody > tr:hover > .success,\n.table-hover > tbody > tr.success:hover > th {\n  background-color: #d0e9c6;\n}\n.table > thead > tr > td.info,\n.table > tbody > tr > td.info,\n.table > tfoot > tr > td.info,\n.table > thead > tr > th.info,\n.table > tbody > tr > th.info,\n.table > tfoot > tr > th.info,\n.table > thead > tr.info > td,\n.table > tbody > tr.info > td,\n.table > tfoot > tr.info > td,\n.table > thead > tr.info > th,\n.table > tbody > tr.info > th,\n.table > tfoot > tr.info > th {\n  background-color: #d9edf7;\n}\n.table-hover > tbody > tr > td.info:hover,\n.table-hover > tbody > tr > th.info:hover,\n.table-hover > tbody > tr.info:hover > td,\n.table-hover > tbody > tr:hover > .info,\n.table-hover > tbody > tr.info:hover > th {\n  background-color: #c4e3f3;\n}\n.table > thead > tr > td.warning,\n.table > tbody > tr > td.warning,\n.table > tfoot > tr > td.warning,\n.table > thead > tr > th.warning,\n.table > tbody > tr > th.warning,\n.table > tfoot > tr > th.warning,\n.table > thead > tr.warning > td,\n.table > tbody > tr.warning > td,\n.table > tfoot > tr.warning > td,\n.table > thead > tr.warning > th,\n.table > tbody > tr.warning > th,\n.table > tfoot > tr.warning > th {\n  background-color: #fcf8e3;\n}\n.table-hover > tbody > tr > td.warning:hover,\n.table-hover > tbody > tr > th.warning:hover,\n.table-hover > tbody > tr.warning:hover > td,\n.table-hover > tbody > tr:hover > .warning,\n.table-hover > tbody > tr.warning:hover > th {\n  background-color: #faf2cc;\n}\n.table > thead > tr > td.danger,\n.table > tbody > tr > td.danger,\n.table > tfoot > tr > td.danger,\n.table > thead > tr > th.danger,\n.table > tbody > tr > th.danger,\n.table > tfoot > tr > th.danger,\n.table > thead > tr.danger > td,\n.table > tbody > tr.danger > td,\n.table > tfoot > tr.danger > td,\n.table > thead > tr.danger > th,\n.table > tbody > tr.danger > th,\n.table > tfoot > tr.danger > th {\n  background-color: #f2dede;\n}\n.table-hover > tbody > tr > td.danger:hover,\n.table-hover > tbody > tr > th.danger:hover,\n.table-hover > tbody > tr.danger:hover > td,\n.table-hover > tbody > tr:hover > .danger,\n.table-hover > tbody > tr.danger:hover > th {\n  background-color: #ebcccc;\n}\n@media screen and (max-width: 767px) {\n  .table-responsive {\n    width: 100%;\n    margin-bottom: 15px;\n    overflow-y: hidden;\n    overflow-x: auto;\n    -ms-overflow-style: -ms-autohiding-scrollbar;\n    border: 1px solid #dddddd;\n    -webkit-overflow-scrolling: touch;\n  }\n  .table-responsive > .table {\n    margin-bottom: 0;\n  }\n  .table-responsive > .table > thead > tr > th,\n  .table-responsive > .table > tbody > tr > th,\n  .table-responsive > .table > tfoot > tr > th,\n  .table-responsive > .table > thead > tr > td,\n  .table-responsive > .table > tbody > tr > td,\n  .table-responsive > .table > tfoot > tr > td {\n    white-space: nowrap;\n  }\n  .table-responsive > .table-bordered {\n    border: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:first-child,\n  .table-responsive > .table-bordered > tbody > tr > th:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n  .table-responsive > .table-bordered > thead > tr > td:first-child,\n  .table-responsive > .table-bordered > tbody > tr > td:first-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n    border-left: 0;\n  }\n  .table-responsive > .table-bordered > thead > tr > th:last-child,\n  .table-responsive > .table-bordered > tbody > tr > th:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n  .table-responsive > .table-bordered > thead > tr > td:last-child,\n  .table-responsive > .table-bordered > tbody > tr > td:last-child,\n  .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n    border-right: 0;\n  }\n  .table-responsive > .table-bordered > tbody > tr:last-child > th,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > th,\n  .table-responsive > .table-bordered > tbody > tr:last-child > td,\n  .table-responsive > .table-bordered > tfoot > tr:last-child > td {\n    border-bottom: 0;\n  }\n}\nfieldset {\n  padding: 0;\n  margin: 0;\n  border: 0;\n  min-width: 0;\n}\nlegend {\n  display: block;\n  width: 100%;\n  padding: 0;\n  margin-bottom: 20px;\n  font-size: 21px;\n  line-height: inherit;\n  color: #333333;\n  border: 0;\n  border-bottom: 1px solid #e5e5e5;\n}\nlabel {\n  display: inline-block;\n  max-width: 100%;\n  margin-bottom: 5px;\n  font-weight: bold;\n}\ninput[type=\"search\"] {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\ninput[type=\"radio\"],\ninput[type=\"checkbox\"] {\n  margin: 4px 0 0;\n  margin-top: 1px \\9;\n  line-height: normal;\n}\ninput[type=\"file\"] {\n  display: block;\n}\ninput[type=\"range\"] {\n  display: block;\n  width: 100%;\n}\nselect[multiple],\nselect[size] {\n  height: auto;\n}\ninput[type=\"file\"]:focus,\ninput[type=\"radio\"]:focus,\ninput[type=\"checkbox\"]:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\noutput {\n  display: block;\n  padding-top: 7px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n}\n.form-control {\n  display: block;\n  width: 100%;\n  height: 34px;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  color: #555555;\n  background-color: #ffffff;\n  background-image: none;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;\n}\n.form-control:focus {\n  border-color: #66afe9;\n  outline: 0;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);\n}\n.form-control::-moz-placeholder {\n  color: #777777;\n  opacity: 1;\n}\n.form-control:-ms-input-placeholder {\n  color: #777777;\n}\n.form-control::-webkit-input-placeholder {\n  color: #777777;\n}\n.form-control[disabled],\n.form-control[readonly],\nfieldset[disabled] .form-control {\n  cursor: not-allowed;\n  background-color: #eeeeee;\n  opacity: 1;\n}\ntextarea.form-control {\n  height: auto;\n}\ninput[type=\"search\"] {\n  -webkit-appearance: none;\n}\ninput[type=\"date\"],\ninput[type=\"time\"],\ninput[type=\"datetime-local\"],\ninput[type=\"month\"] {\n  line-height: 34px;\n  line-height: 1.42857143 \\0;\n}\ninput[type=\"date\"].input-sm,\ninput[type=\"time\"].input-sm,\ninput[type=\"datetime-local\"].input-sm,\ninput[type=\"month\"].input-sm {\n  line-height: 30px;\n}\ninput[type=\"date\"].input-lg,\ninput[type=\"time\"].input-lg,\ninput[type=\"datetime-local\"].input-lg,\ninput[type=\"month\"].input-lg {\n  line-height: 46px;\n}\n.form-group {\n  margin-bottom: 15px;\n}\n.radio,\n.checkbox {\n  position: relative;\n  display: block;\n  min-height: 20px;\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.radio label,\n.checkbox label {\n  padding-left: 20px;\n  margin-bottom: 0;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio input[type=\"radio\"],\n.radio-inline input[type=\"radio\"],\n.checkbox input[type=\"checkbox\"],\n.checkbox-inline input[type=\"checkbox\"] {\n  position: absolute;\n  margin-left: -20px;\n  margin-top: 4px \\9;\n}\n.radio + .radio,\n.checkbox + .checkbox {\n  margin-top: -5px;\n}\n.radio-inline,\n.checkbox-inline {\n  display: inline-block;\n  padding-left: 20px;\n  margin-bottom: 0;\n  vertical-align: middle;\n  font-weight: normal;\n  cursor: pointer;\n}\n.radio-inline + .radio-inline,\n.checkbox-inline + .checkbox-inline {\n  margin-top: 0;\n  margin-left: 10px;\n}\ninput[type=\"radio\"][disabled],\ninput[type=\"checkbox\"][disabled],\ninput[type=\"radio\"].disabled,\ninput[type=\"checkbox\"].disabled,\nfieldset[disabled] input[type=\"radio\"],\nfieldset[disabled] input[type=\"checkbox\"] {\n  cursor: not-allowed;\n}\n.radio-inline.disabled,\n.checkbox-inline.disabled,\nfieldset[disabled] .radio-inline,\nfieldset[disabled] .checkbox-inline {\n  cursor: not-allowed;\n}\n.radio.disabled label,\n.checkbox.disabled label,\nfieldset[disabled] .radio label,\nfieldset[disabled] .checkbox label {\n  cursor: not-allowed;\n}\n.form-control-static {\n  padding-top: 7px;\n  padding-bottom: 7px;\n  margin-bottom: 0;\n}\n.form-control-static.input-lg,\n.form-control-static.input-sm {\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-sm,\n.form-horizontal .form-group-sm .form-control {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-sm {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-sm,\nselect[multiple].input-sm {\n  height: auto;\n}\n.input-lg,\n.form-horizontal .form-group-lg .form-control {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\nselect.input-lg {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-lg,\nselect[multiple].input-lg {\n  height: auto;\n}\n.has-feedback {\n  position: relative;\n}\n.has-feedback .form-control {\n  padding-right: 42.5px;\n}\n.form-control-feedback {\n  position: absolute;\n  top: 25px;\n  right: 0;\n  z-index: 2;\n  display: block;\n  width: 34px;\n  height: 34px;\n  line-height: 34px;\n  text-align: center;\n}\n.input-lg + .form-control-feedback {\n  width: 46px;\n  height: 46px;\n  line-height: 46px;\n}\n.input-sm + .form-control-feedback {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n}\n.has-success .help-block,\n.has-success .control-label,\n.has-success .radio,\n.has-success .checkbox,\n.has-success .radio-inline,\n.has-success .checkbox-inline {\n  color: #3c763d;\n}\n.has-success .form-control {\n  border-color: #3c763d;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-success .form-control:focus {\n  border-color: #2b542c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;\n}\n.has-success .input-group-addon {\n  color: #3c763d;\n  border-color: #3c763d;\n  background-color: #dff0d8;\n}\n.has-success .form-control-feedback {\n  color: #3c763d;\n}\n.has-warning .help-block,\n.has-warning .control-label,\n.has-warning .radio,\n.has-warning .checkbox,\n.has-warning .radio-inline,\n.has-warning .checkbox-inline {\n  color: #8a6d3b;\n}\n.has-warning .form-control {\n  border-color: #8a6d3b;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-warning .form-control:focus {\n  border-color: #66512c;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;\n}\n.has-warning .input-group-addon {\n  color: #8a6d3b;\n  border-color: #8a6d3b;\n  background-color: #fcf8e3;\n}\n.has-warning .form-control-feedback {\n  color: #8a6d3b;\n}\n.has-error .help-block,\n.has-error .control-label,\n.has-error .radio,\n.has-error .checkbox,\n.has-error .radio-inline,\n.has-error .checkbox-inline {\n  color: #a94442;\n}\n.has-error .form-control {\n  border-color: #a94442;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n}\n.has-error .form-control:focus {\n  border-color: #843534;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;\n}\n.has-error .input-group-addon {\n  color: #a94442;\n  border-color: #a94442;\n  background-color: #f2dede;\n}\n.has-error .form-control-feedback {\n  color: #a94442;\n}\n.has-feedback label.sr-only ~ .form-control-feedback {\n  top: 0;\n}\n.help-block {\n  display: block;\n  margin-top: 5px;\n  margin-bottom: 10px;\n  color: #737373;\n}\n@media (min-width: 768px) {\n  .form-inline .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .form-inline .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .form-inline .input-group .input-group-addon,\n  .form-inline .input-group .input-group-btn,\n  .form-inline .input-group .form-control {\n    width: auto;\n  }\n  .form-inline .input-group > .form-control {\n    width: 100%;\n  }\n  .form-inline .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio,\n  .form-inline .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .form-inline .radio label,\n  .form-inline .checkbox label {\n    padding-left: 0;\n  }\n  .form-inline .radio input[type=\"radio\"],\n  .form-inline .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .form-inline .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox,\n.form-horizontal .radio-inline,\n.form-horizontal .checkbox-inline {\n  margin-top: 0;\n  margin-bottom: 0;\n  padding-top: 7px;\n}\n.form-horizontal .radio,\n.form-horizontal .checkbox {\n  min-height: 27px;\n}\n.form-horizontal .form-group {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .control-label {\n    text-align: right;\n    margin-bottom: 0;\n    padding-top: 7px;\n  }\n}\n.form-horizontal .has-feedback .form-control-feedback {\n  top: 0;\n  right: 15px;\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-lg .control-label {\n    padding-top: 14.3px;\n  }\n}\n@media (min-width: 768px) {\n  .form-horizontal .form-group-sm .control-label {\n    padding-top: 6px;\n  }\n}\n.btn {\n  display: inline-block;\n  margin-bottom: 0;\n  font-weight: normal;\n  text-align: center;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border: 1px solid transparent;\n  white-space: nowrap;\n  padding: 6px 12px;\n  font-size: 14px;\n  line-height: 1.42857143;\n  border-radius: 4px;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n}\n.btn:focus,\n.btn:active:focus,\n.btn.active:focus {\n  outline: thin dotted;\n  outline: 5px auto -webkit-focus-ring-color;\n  outline-offset: -2px;\n}\n.btn:hover,\n.btn:focus {\n  color: #333333;\n  text-decoration: none;\n}\n.btn:active,\n.btn.active {\n  outline: 0;\n  background-image: none;\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn.disabled,\n.btn[disabled],\nfieldset[disabled] .btn {\n  cursor: not-allowed;\n  pointer-events: none;\n  opacity: 0.65;\n  filter: alpha(opacity=65);\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-default {\n  color: #333333;\n  background-color: #ffffff;\n  border-color: #cccccc;\n}\n.btn-default:hover,\n.btn-default:focus,\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  color: #333333;\n  background-color: #e6e6e6;\n  border-color: #adadad;\n}\n.btn-default:active,\n.btn-default.active,\n.open > .dropdown-toggle.btn-default {\n  background-image: none;\n}\n.btn-default.disabled,\n.btn-default[disabled],\nfieldset[disabled] .btn-default,\n.btn-default.disabled:hover,\n.btn-default[disabled]:hover,\nfieldset[disabled] .btn-default:hover,\n.btn-default.disabled:focus,\n.btn-default[disabled]:focus,\nfieldset[disabled] .btn-default:focus,\n.btn-default.disabled:active,\n.btn-default[disabled]:active,\nfieldset[disabled] .btn-default:active,\n.btn-default.disabled.active,\n.btn-default[disabled].active,\nfieldset[disabled] .btn-default.active {\n  background-color: #ffffff;\n  border-color: #cccccc;\n}\n.btn-default .badge {\n  color: #ffffff;\n  background-color: #333333;\n}\n.btn-primary {\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #357ebd;\n}\n.btn-primary:hover,\n.btn-primary:focus,\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  color: #ffffff;\n  background-color: #3071a9;\n  border-color: #285e8e;\n}\n.btn-primary:active,\n.btn-primary.active,\n.open > .dropdown-toggle.btn-primary {\n  background-image: none;\n}\n.btn-primary.disabled,\n.btn-primary[disabled],\nfieldset[disabled] .btn-primary,\n.btn-primary.disabled:hover,\n.btn-primary[disabled]:hover,\nfieldset[disabled] .btn-primary:hover,\n.btn-primary.disabled:focus,\n.btn-primary[disabled]:focus,\nfieldset[disabled] .btn-primary:focus,\n.btn-primary.disabled:active,\n.btn-primary[disabled]:active,\nfieldset[disabled] .btn-primary:active,\n.btn-primary.disabled.active,\n.btn-primary[disabled].active,\nfieldset[disabled] .btn-primary.active {\n  background-color: #428bca;\n  border-color: #357ebd;\n}\n.btn-primary .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.btn-success {\n  color: #ffffff;\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success:hover,\n.btn-success:focus,\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  color: #ffffff;\n  background-color: #449d44;\n  border-color: #398439;\n}\n.btn-success:active,\n.btn-success.active,\n.open > .dropdown-toggle.btn-success {\n  background-image: none;\n}\n.btn-success.disabled,\n.btn-success[disabled],\nfieldset[disabled] .btn-success,\n.btn-success.disabled:hover,\n.btn-success[disabled]:hover,\nfieldset[disabled] .btn-success:hover,\n.btn-success.disabled:focus,\n.btn-success[disabled]:focus,\nfieldset[disabled] .btn-success:focus,\n.btn-success.disabled:active,\n.btn-success[disabled]:active,\nfieldset[disabled] .btn-success:active,\n.btn-success.disabled.active,\n.btn-success[disabled].active,\nfieldset[disabled] .btn-success.active {\n  background-color: #5cb85c;\n  border-color: #4cae4c;\n}\n.btn-success .badge {\n  color: #5cb85c;\n  background-color: #ffffff;\n}\n.btn-info {\n  color: #ffffff;\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info:hover,\n.btn-info:focus,\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  color: #ffffff;\n  background-color: #31b0d5;\n  border-color: #269abc;\n}\n.btn-info:active,\n.btn-info.active,\n.open > .dropdown-toggle.btn-info {\n  background-image: none;\n}\n.btn-info.disabled,\n.btn-info[disabled],\nfieldset[disabled] .btn-info,\n.btn-info.disabled:hover,\n.btn-info[disabled]:hover,\nfieldset[disabled] .btn-info:hover,\n.btn-info.disabled:focus,\n.btn-info[disabled]:focus,\nfieldset[disabled] .btn-info:focus,\n.btn-info.disabled:active,\n.btn-info[disabled]:active,\nfieldset[disabled] .btn-info:active,\n.btn-info.disabled.active,\n.btn-info[disabled].active,\nfieldset[disabled] .btn-info.active {\n  background-color: #5bc0de;\n  border-color: #46b8da;\n}\n.btn-info .badge {\n  color: #5bc0de;\n  background-color: #ffffff;\n}\n.btn-warning {\n  color: #ffffff;\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning:hover,\n.btn-warning:focus,\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  color: #ffffff;\n  background-color: #ec971f;\n  border-color: #d58512;\n}\n.btn-warning:active,\n.btn-warning.active,\n.open > .dropdown-toggle.btn-warning {\n  background-image: none;\n}\n.btn-warning.disabled,\n.btn-warning[disabled],\nfieldset[disabled] .btn-warning,\n.btn-warning.disabled:hover,\n.btn-warning[disabled]:hover,\nfieldset[disabled] .btn-warning:hover,\n.btn-warning.disabled:focus,\n.btn-warning[disabled]:focus,\nfieldset[disabled] .btn-warning:focus,\n.btn-warning.disabled:active,\n.btn-warning[disabled]:active,\nfieldset[disabled] .btn-warning:active,\n.btn-warning.disabled.active,\n.btn-warning[disabled].active,\nfieldset[disabled] .btn-warning.active {\n  background-color: #f0ad4e;\n  border-color: #eea236;\n}\n.btn-warning .badge {\n  color: #f0ad4e;\n  background-color: #ffffff;\n}\n.btn-danger {\n  color: #ffffff;\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger:hover,\n.btn-danger:focus,\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  color: #ffffff;\n  background-color: #c9302c;\n  border-color: #ac2925;\n}\n.btn-danger:active,\n.btn-danger.active,\n.open > .dropdown-toggle.btn-danger {\n  background-image: none;\n}\n.btn-danger.disabled,\n.btn-danger[disabled],\nfieldset[disabled] .btn-danger,\n.btn-danger.disabled:hover,\n.btn-danger[disabled]:hover,\nfieldset[disabled] .btn-danger:hover,\n.btn-danger.disabled:focus,\n.btn-danger[disabled]:focus,\nfieldset[disabled] .btn-danger:focus,\n.btn-danger.disabled:active,\n.btn-danger[disabled]:active,\nfieldset[disabled] .btn-danger:active,\n.btn-danger.disabled.active,\n.btn-danger[disabled].active,\nfieldset[disabled] .btn-danger.active {\n  background-color: #d9534f;\n  border-color: #d43f3a;\n}\n.btn-danger .badge {\n  color: #d9534f;\n  background-color: #ffffff;\n}\n.btn-link {\n  color: #428bca;\n  font-weight: normal;\n  cursor: pointer;\n  border-radius: 0;\n}\n.btn-link,\n.btn-link:active,\n.btn-link[disabled],\nfieldset[disabled] .btn-link {\n  background-color: transparent;\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn-link,\n.btn-link:hover,\n.btn-link:focus,\n.btn-link:active {\n  border-color: transparent;\n}\n.btn-link:hover,\n.btn-link:focus {\n  color: #2a6496;\n  text-decoration: underline;\n  background-color: transparent;\n}\n.btn-link[disabled]:hover,\nfieldset[disabled] .btn-link:hover,\n.btn-link[disabled]:focus,\nfieldset[disabled] .btn-link:focus {\n  color: #777777;\n  text-decoration: none;\n}\n.btn-lg,\n.btn-group-lg > .btn {\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\n.btn-sm,\n.btn-group-sm > .btn {\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-xs,\n.btn-group-xs > .btn {\n  padding: 1px 5px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\n.btn-block {\n  display: block;\n  width: 100%;\n}\n.btn-block + .btn-block {\n  margin-top: 5px;\n}\ninput[type=\"submit\"].btn-block,\ninput[type=\"reset\"].btn-block,\ninput[type=\"button\"].btn-block {\n  width: 100%;\n}\n.fade {\n  opacity: 0;\n  -webkit-transition: opacity 0.15s linear;\n  -o-transition: opacity 0.15s linear;\n  transition: opacity 0.15s linear;\n}\n.fade.in {\n  opacity: 1;\n}\n.collapse {\n  display: none;\n}\n.collapse.in {\n  display: block;\n}\ntr.collapse.in {\n  display: table-row;\n}\ntbody.collapse.in {\n  display: table-row-group;\n}\n.collapsing {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition: height 0.35s ease;\n  -o-transition: height 0.35s ease;\n  transition: height 0.35s ease;\n}\n.caret {\n  display: inline-block;\n  width: 0;\n  height: 0;\n  margin-left: 2px;\n  vertical-align: middle;\n  border-top: 4px solid;\n  border-right: 4px solid transparent;\n  border-left: 4px solid transparent;\n}\n.dropdown {\n  position: relative;\n}\n.dropdown-toggle:focus {\n  outline: 0;\n}\n.dropdown-menu {\n  position: absolute;\n  top: 100%;\n  left: 0;\n  z-index: 1000;\n  display: none;\n  float: left;\n  min-width: 160px;\n  padding: 5px 0;\n  margin: 2px 0 0;\n  list-style: none;\n  font-size: 14px;\n  text-align: left;\n  background-color: #ffffff;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.15);\n  border-radius: 4px;\n  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);\n  background-clip: padding-box;\n}\n.dropdown-menu.pull-right {\n  right: 0;\n  left: auto;\n}\n.dropdown-menu .divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.dropdown-menu > li > a {\n  display: block;\n  padding: 3px 20px;\n  clear: both;\n  font-weight: normal;\n  line-height: 1.42857143;\n  color: #333333;\n  white-space: nowrap;\n}\n.dropdown-menu > li > a:hover,\n.dropdown-menu > li > a:focus {\n  text-decoration: none;\n  color: #262626;\n  background-color: #f5f5f5;\n}\n.dropdown-menu > .active > a,\n.dropdown-menu > .active > a:hover,\n.dropdown-menu > .active > a:focus {\n  color: #ffffff;\n  text-decoration: none;\n  outline: 0;\n  background-color: #428bca;\n}\n.dropdown-menu > .disabled > a,\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  color: #777777;\n}\n.dropdown-menu > .disabled > a:hover,\n.dropdown-menu > .disabled > a:focus {\n  text-decoration: none;\n  background-color: transparent;\n  background-image: none;\n  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);\n  cursor: not-allowed;\n}\n.open > .dropdown-menu {\n  display: block;\n}\n.open > a {\n  outline: 0;\n}\n.dropdown-menu-right {\n  left: auto;\n  right: 0;\n}\n.dropdown-menu-left {\n  left: 0;\n  right: auto;\n}\n.dropdown-header {\n  display: block;\n  padding: 3px 20px;\n  font-size: 12px;\n  line-height: 1.42857143;\n  color: #777777;\n  white-space: nowrap;\n}\n.dropdown-backdrop {\n  position: fixed;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  top: 0;\n  z-index: 990;\n}\n.pull-right > .dropdown-menu {\n  right: 0;\n  left: auto;\n}\n.dropup .caret,\n.navbar-fixed-bottom .dropdown .caret {\n  border-top: 0;\n  border-bottom: 4px solid;\n  content: \"\";\n}\n.dropup .dropdown-menu,\n.navbar-fixed-bottom .dropdown .dropdown-menu {\n  top: auto;\n  bottom: 100%;\n  margin-bottom: 1px;\n}\n@media (min-width: 768px) {\n  .navbar-right .dropdown-menu {\n    left: auto;\n    right: 0;\n  }\n  .navbar-right .dropdown-menu-left {\n    left: 0;\n    right: auto;\n  }\n}\n.btn-group,\n.btn-group-vertical {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.btn-group > .btn,\n.btn-group-vertical > .btn {\n  position: relative;\n  float: left;\n}\n.btn-group > .btn:hover,\n.btn-group-vertical > .btn:hover,\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus,\n.btn-group > .btn:active,\n.btn-group-vertical > .btn:active,\n.btn-group > .btn.active,\n.btn-group-vertical > .btn.active {\n  z-index: 2;\n}\n.btn-group > .btn:focus,\n.btn-group-vertical > .btn:focus {\n  outline: 0;\n}\n.btn-group .btn + .btn,\n.btn-group .btn + .btn-group,\n.btn-group .btn-group + .btn,\n.btn-group .btn-group + .btn-group {\n  margin-left: -1px;\n}\n.btn-toolbar {\n  margin-left: -5px;\n}\n.btn-toolbar .btn-group,\n.btn-toolbar .input-group {\n  float: left;\n}\n.btn-toolbar > .btn,\n.btn-toolbar > .btn-group,\n.btn-toolbar > .input-group {\n  margin-left: 5px;\n}\n.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {\n  border-radius: 0;\n}\n.btn-group > .btn:first-child {\n  margin-left: 0;\n}\n.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn:last-child:not(:first-child),\n.btn-group > .dropdown-toggle:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group > .btn-group {\n  float: left;\n}\n.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group > .btn-group:first-child > .btn:last-child,\n.btn-group > .btn-group:first-child > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.btn-group > .btn-group:last-child > .btn:first-child {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group .dropdown-toggle:active,\n.btn-group.open .dropdown-toggle {\n  outline: 0;\n}\n.btn-group > .btn + .dropdown-toggle {\n  padding-left: 8px;\n  padding-right: 8px;\n}\n.btn-group > .btn-lg + .dropdown-toggle {\n  padding-left: 12px;\n  padding-right: 12px;\n}\n.btn-group.open .dropdown-toggle {\n  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);\n}\n.btn-group.open .dropdown-toggle.btn-link {\n  -webkit-box-shadow: none;\n  box-shadow: none;\n}\n.btn .caret {\n  margin-left: 0;\n}\n.btn-lg .caret {\n  border-width: 5px 5px 0;\n  border-bottom-width: 0;\n}\n.dropup .btn-lg .caret {\n  border-width: 0 5px 5px;\n}\n.btn-group-vertical > .btn,\n.btn-group-vertical > .btn-group,\n.btn-group-vertical > .btn-group > .btn {\n  display: block;\n  float: none;\n  width: 100%;\n  max-width: 100%;\n}\n.btn-group-vertical > .btn-group > .btn {\n  float: none;\n}\n.btn-group-vertical > .btn + .btn,\n.btn-group-vertical > .btn + .btn-group,\n.btn-group-vertical > .btn-group + .btn,\n.btn-group-vertical > .btn-group + .btn-group {\n  margin-top: -1px;\n  margin-left: 0;\n}\n.btn-group-vertical > .btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn:first-child:not(:last-child) {\n  border-top-right-radius: 4px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 4px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {\n  border-radius: 0;\n}\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,\n.btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.btn-group-justified {\n  display: table;\n  width: 100%;\n  table-layout: fixed;\n  border-collapse: separate;\n}\n.btn-group-justified > .btn,\n.btn-group-justified > .btn-group {\n  float: none;\n  display: table-cell;\n  width: 1%;\n}\n.btn-group-justified > .btn-group .btn {\n  width: 100%;\n}\n.btn-group-justified > .btn-group .dropdown-menu {\n  left: auto;\n}\n[data-toggle=\"buttons\"] > .btn > input[type=\"radio\"],\n[data-toggle=\"buttons\"] > .btn > input[type=\"checkbox\"] {\n  position: absolute;\n  z-index: -1;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.input-group {\n  position: relative;\n  display: table;\n  border-collapse: separate;\n}\n.input-group[class*=\"col-\"] {\n  float: none;\n  padding-left: 0;\n  padding-right: 0;\n}\n.input-group .form-control {\n  position: relative;\n  z-index: 2;\n  float: left;\n  width: 100%;\n  margin-bottom: 0;\n}\n.input-group-lg > .form-control,\n.input-group-lg > .input-group-addon,\n.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  padding: 10px 16px;\n  font-size: 18px;\n  line-height: 1.33;\n  border-radius: 6px;\n}\nselect.input-group-lg > .form-control,\nselect.input-group-lg > .input-group-addon,\nselect.input-group-lg > .input-group-btn > .btn {\n  height: 46px;\n  line-height: 46px;\n}\ntextarea.input-group-lg > .form-control,\ntextarea.input-group-lg > .input-group-addon,\ntextarea.input-group-lg > .input-group-btn > .btn,\nselect[multiple].input-group-lg > .form-control,\nselect[multiple].input-group-lg > .input-group-addon,\nselect[multiple].input-group-lg > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-sm > .form-control,\n.input-group-sm > .input-group-addon,\n.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  padding: 5px 10px;\n  font-size: 12px;\n  line-height: 1.5;\n  border-radius: 3px;\n}\nselect.input-group-sm > .form-control,\nselect.input-group-sm > .input-group-addon,\nselect.input-group-sm > .input-group-btn > .btn {\n  height: 30px;\n  line-height: 30px;\n}\ntextarea.input-group-sm > .form-control,\ntextarea.input-group-sm > .input-group-addon,\ntextarea.input-group-sm > .input-group-btn > .btn,\nselect[multiple].input-group-sm > .form-control,\nselect[multiple].input-group-sm > .input-group-addon,\nselect[multiple].input-group-sm > .input-group-btn > .btn {\n  height: auto;\n}\n.input-group-addon,\n.input-group-btn,\n.input-group .form-control {\n  display: table-cell;\n}\n.input-group-addon:not(:first-child):not(:last-child),\n.input-group-btn:not(:first-child):not(:last-child),\n.input-group .form-control:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.input-group-addon,\n.input-group-btn {\n  width: 1%;\n  white-space: nowrap;\n  vertical-align: middle;\n}\n.input-group-addon {\n  padding: 6px 12px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 1;\n  color: #555555;\n  text-align: center;\n  background-color: #eeeeee;\n  border: 1px solid #cccccc;\n  border-radius: 4px;\n}\n.input-group-addon.input-sm {\n  padding: 5px 10px;\n  font-size: 12px;\n  border-radius: 3px;\n}\n.input-group-addon.input-lg {\n  padding: 10px 16px;\n  font-size: 18px;\n  border-radius: 6px;\n}\n.input-group-addon input[type=\"radio\"],\n.input-group-addon input[type=\"checkbox\"] {\n  margin-top: 0;\n}\n.input-group .form-control:first-child,\n.input-group-addon:first-child,\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group > .btn,\n.input-group-btn:first-child > .dropdown-toggle,\n.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),\n.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.input-group-addon:first-child {\n  border-right: 0;\n}\n.input-group .form-control:last-child,\n.input-group-addon:last-child,\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group > .btn,\n.input-group-btn:last-child > .dropdown-toggle,\n.input-group-btn:first-child > .btn:not(:first-child),\n.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.input-group-addon:last-child {\n  border-left: 0;\n}\n.input-group-btn {\n  position: relative;\n  font-size: 0;\n  white-space: nowrap;\n}\n.input-group-btn > .btn {\n  position: relative;\n}\n.input-group-btn > .btn + .btn {\n  margin-left: -1px;\n}\n.input-group-btn > .btn:hover,\n.input-group-btn > .btn:focus,\n.input-group-btn > .btn:active {\n  z-index: 2;\n}\n.input-group-btn:first-child > .btn,\n.input-group-btn:first-child > .btn-group {\n  margin-right: -1px;\n}\n.input-group-btn:last-child > .btn,\n.input-group-btn:last-child > .btn-group {\n  margin-left: -1px;\n}\n.nav {\n  margin-bottom: 0;\n  padding-left: 0;\n  list-style: none;\n}\n.nav > li {\n  position: relative;\n  display: block;\n}\n.nav > li > a {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n}\n.nav > li > a:hover,\n.nav > li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.nav > li.disabled > a {\n  color: #777777;\n}\n.nav > li.disabled > a:hover,\n.nav > li.disabled > a:focus {\n  color: #777777;\n  text-decoration: none;\n  background-color: transparent;\n  cursor: not-allowed;\n}\n.nav .open > a,\n.nav .open > a:hover,\n.nav .open > a:focus {\n  background-color: #eeeeee;\n  border-color: #428bca;\n}\n.nav .nav-divider {\n  height: 1px;\n  margin: 9px 0;\n  overflow: hidden;\n  background-color: #e5e5e5;\n}\n.nav > li > a > img {\n  max-width: none;\n}\n.nav-tabs {\n  border-bottom: 1px solid #dddddd;\n}\n.nav-tabs > li {\n  float: left;\n  margin-bottom: -1px;\n}\n.nav-tabs > li > a {\n  margin-right: 2px;\n  line-height: 1.42857143;\n  border: 1px solid transparent;\n  border-radius: 4px 4px 0 0;\n}\n.nav-tabs > li > a:hover {\n  border-color: #eeeeee #eeeeee #dddddd;\n}\n.nav-tabs > li.active > a,\n.nav-tabs > li.active > a:hover,\n.nav-tabs > li.active > a:focus {\n  color: #555555;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-bottom-color: transparent;\n  cursor: default;\n}\n.nav-tabs.nav-justified {\n  width: 100%;\n  border-bottom: 0;\n}\n.nav-tabs.nav-justified > li {\n  float: none;\n}\n.nav-tabs.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-tabs.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-tabs.nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs.nav-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs.nav-justified > .active > a,\n.nav-tabs.nav-justified > .active > a:hover,\n.nav-tabs.nav-justified > .active > a:focus {\n  border: 1px solid #dddddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs.nav-justified > li > a {\n    border-bottom: 1px solid #dddddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs.nav-justified > .active > a,\n  .nav-tabs.nav-justified > .active > a:hover,\n  .nav-tabs.nav-justified > .active > a:focus {\n    border-bottom-color: #ffffff;\n  }\n}\n.nav-pills > li {\n  float: left;\n}\n.nav-pills > li > a {\n  border-radius: 4px;\n}\n.nav-pills > li + li {\n  margin-left: 2px;\n}\n.nav-pills > li.active > a,\n.nav-pills > li.active > a:hover,\n.nav-pills > li.active > a:focus {\n  color: #ffffff;\n  background-color: #428bca;\n}\n.nav-stacked > li {\n  float: none;\n}\n.nav-stacked > li + li {\n  margin-top: 2px;\n  margin-left: 0;\n}\n.nav-justified {\n  width: 100%;\n}\n.nav-justified > li {\n  float: none;\n}\n.nav-justified > li > a {\n  text-align: center;\n  margin-bottom: 5px;\n}\n.nav-justified > .dropdown .dropdown-menu {\n  top: auto;\n  left: auto;\n}\n@media (min-width: 768px) {\n  .nav-justified > li {\n    display: table-cell;\n    width: 1%;\n  }\n  .nav-justified > li > a {\n    margin-bottom: 0;\n  }\n}\n.nav-tabs-justified {\n  border-bottom: 0;\n}\n.nav-tabs-justified > li > a {\n  margin-right: 0;\n  border-radius: 4px;\n}\n.nav-tabs-justified > .active > a,\n.nav-tabs-justified > .active > a:hover,\n.nav-tabs-justified > .active > a:focus {\n  border: 1px solid #dddddd;\n}\n@media (min-width: 768px) {\n  .nav-tabs-justified > li > a {\n    border-bottom: 1px solid #dddddd;\n    border-radius: 4px 4px 0 0;\n  }\n  .nav-tabs-justified > .active > a,\n  .nav-tabs-justified > .active > a:hover,\n  .nav-tabs-justified > .active > a:focus {\n    border-bottom-color: #ffffff;\n  }\n}\n.tab-content > .tab-pane {\n  display: none;\n}\n.tab-content > .active {\n  display: block;\n}\n.nav-tabs .dropdown-menu {\n  margin-top: -1px;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar {\n  position: relative;\n  min-height: 50px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n}\n@media (min-width: 768px) {\n  .navbar {\n    border-radius: 4px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-header {\n    float: left;\n  }\n}\n.navbar-collapse {\n  overflow-x: visible;\n  padding-right: 15px;\n  padding-left: 15px;\n  border-top: 1px solid transparent;\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);\n  -webkit-overflow-scrolling: touch;\n}\n.navbar-collapse.in {\n  overflow-y: auto;\n}\n@media (min-width: 768px) {\n  .navbar-collapse {\n    width: auto;\n    border-top: 0;\n    box-shadow: none;\n  }\n  .navbar-collapse.collapse {\n    display: block !important;\n    height: auto !important;\n    padding-bottom: 0;\n    overflow: visible !important;\n  }\n  .navbar-collapse.in {\n    overflow-y: visible;\n  }\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-static-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    padding-left: 0;\n    padding-right: 0;\n  }\n}\n.navbar-fixed-top .navbar-collapse,\n.navbar-fixed-bottom .navbar-collapse {\n  max-height: 340px;\n}\n@media (max-width: 480px) and (orientation: landscape) {\n  .navbar-fixed-top .navbar-collapse,\n  .navbar-fixed-bottom .navbar-collapse {\n    max-height: 200px;\n  }\n}\n.container > .navbar-header,\n.container-fluid > .navbar-header,\n.container > .navbar-collapse,\n.container-fluid > .navbar-collapse {\n  margin-right: -15px;\n  margin-left: -15px;\n}\n@media (min-width: 768px) {\n  .container > .navbar-header,\n  .container-fluid > .navbar-header,\n  .container > .navbar-collapse,\n  .container-fluid > .navbar-collapse {\n    margin-right: 0;\n    margin-left: 0;\n  }\n}\n.navbar-static-top {\n  z-index: 1000;\n  border-width: 0 0 1px;\n}\n@media (min-width: 768px) {\n  .navbar-static-top {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top,\n.navbar-fixed-bottom {\n  position: fixed;\n  right: 0;\n  left: 0;\n  z-index: 1030;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n@media (min-width: 768px) {\n  .navbar-fixed-top,\n  .navbar-fixed-bottom {\n    border-radius: 0;\n  }\n}\n.navbar-fixed-top {\n  top: 0;\n  border-width: 0 0 1px;\n}\n.navbar-fixed-bottom {\n  bottom: 0;\n  margin-bottom: 0;\n  border-width: 1px 0 0;\n}\n.navbar-brand {\n  float: left;\n  padding: 15px 15px;\n  font-size: 18px;\n  line-height: 20px;\n  height: 50px;\n}\n.navbar-brand:hover,\n.navbar-brand:focus {\n  text-decoration: none;\n}\n@media (min-width: 768px) {\n  .navbar > .container .navbar-brand,\n  .navbar > .container-fluid .navbar-brand {\n    margin-left: -15px;\n  }\n}\n.navbar-toggle {\n  position: relative;\n  float: right;\n  margin-right: 15px;\n  padding: 9px 10px;\n  margin-top: 8px;\n  margin-bottom: 8px;\n  background-color: transparent;\n  background-image: none;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.navbar-toggle:focus {\n  outline: 0;\n}\n.navbar-toggle .icon-bar {\n  display: block;\n  width: 22px;\n  height: 2px;\n  border-radius: 1px;\n}\n.navbar-toggle .icon-bar + .icon-bar {\n  margin-top: 4px;\n}\n@media (min-width: 768px) {\n  .navbar-toggle {\n    display: none;\n  }\n}\n.navbar-nav {\n  margin: 7.5px -15px;\n}\n.navbar-nav > li > a {\n  padding-top: 10px;\n  padding-bottom: 10px;\n  line-height: 20px;\n}\n@media (max-width: 767px) {\n  .navbar-nav .open .dropdown-menu {\n    position: static;\n    float: none;\n    width: auto;\n    margin-top: 0;\n    background-color: transparent;\n    border: 0;\n    box-shadow: none;\n  }\n  .navbar-nav .open .dropdown-menu > li > a,\n  .navbar-nav .open .dropdown-menu .dropdown-header {\n    padding: 5px 15px 5px 25px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a {\n    line-height: 20px;\n  }\n  .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-nav .open .dropdown-menu > li > a:focus {\n    background-image: none;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-nav {\n    float: left;\n    margin: 0;\n  }\n  .navbar-nav > li {\n    float: left;\n  }\n  .navbar-nav > li > a {\n    padding-top: 15px;\n    padding-bottom: 15px;\n  }\n  .navbar-nav.navbar-right:last-child {\n    margin-right: -15px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-left {\n    float: left !important;\n  }\n  .navbar-right {\n    float: right !important;\n  }\n}\n.navbar-form {\n  margin-left: -15px;\n  margin-right: -15px;\n  padding: 10px 15px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n@media (min-width: 768px) {\n  .navbar-form .form-group {\n    display: inline-block;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .form-control {\n    display: inline-block;\n    width: auto;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group {\n    display: inline-table;\n    vertical-align: middle;\n  }\n  .navbar-form .input-group .input-group-addon,\n  .navbar-form .input-group .input-group-btn,\n  .navbar-form .input-group .form-control {\n    width: auto;\n  }\n  .navbar-form .input-group > .form-control {\n    width: 100%;\n  }\n  .navbar-form .control-label {\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio,\n  .navbar-form .checkbox {\n    display: inline-block;\n    margin-top: 0;\n    margin-bottom: 0;\n    vertical-align: middle;\n  }\n  .navbar-form .radio label,\n  .navbar-form .checkbox label {\n    padding-left: 0;\n  }\n  .navbar-form .radio input[type=\"radio\"],\n  .navbar-form .checkbox input[type=\"checkbox\"] {\n    position: relative;\n    margin-left: 0;\n  }\n  .navbar-form .has-feedback .form-control-feedback {\n    top: 0;\n  }\n}\n@media (max-width: 767px) {\n  .navbar-form .form-group {\n    margin-bottom: 5px;\n  }\n}\n@media (min-width: 768px) {\n  .navbar-form {\n    width: auto;\n    border: 0;\n    margin-left: 0;\n    margin-right: 0;\n    padding-top: 0;\n    padding-bottom: 0;\n    -webkit-box-shadow: none;\n    box-shadow: none;\n  }\n  .navbar-form.navbar-right:last-child {\n    margin-right: -15px;\n  }\n}\n.navbar-nav > li > .dropdown-menu {\n  margin-top: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.navbar-btn {\n  margin-top: 8px;\n  margin-bottom: 8px;\n}\n.navbar-btn.btn-sm {\n  margin-top: 10px;\n  margin-bottom: 10px;\n}\n.navbar-btn.btn-xs {\n  margin-top: 14px;\n  margin-bottom: 14px;\n}\n.navbar-text {\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n@media (min-width: 768px) {\n  .navbar-text {\n    float: left;\n    margin-left: 15px;\n    margin-right: 15px;\n  }\n  .navbar-text.navbar-right:last-child {\n    margin-right: 0;\n  }\n}\n.navbar-default {\n  background-color: #f8f8f8;\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-brand {\n  color: #777777;\n}\n.navbar-default .navbar-brand:hover,\n.navbar-default .navbar-brand:focus {\n  color: #5e5e5e;\n  background-color: transparent;\n}\n.navbar-default .navbar-text {\n  color: #777777;\n}\n.navbar-default .navbar-nav > li > a {\n  color: #777777;\n}\n.navbar-default .navbar-nav > li > a:hover,\n.navbar-default .navbar-nav > li > a:focus {\n  color: #333333;\n  background-color: transparent;\n}\n.navbar-default .navbar-nav > .active > a,\n.navbar-default .navbar-nav > .active > a:hover,\n.navbar-default .navbar-nav > .active > a:focus {\n  color: #555555;\n  background-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .disabled > a,\n.navbar-default .navbar-nav > .disabled > a:hover,\n.navbar-default .navbar-nav > .disabled > a:focus {\n  color: #cccccc;\n  background-color: transparent;\n}\n.navbar-default .navbar-toggle {\n  border-color: #dddddd;\n}\n.navbar-default .navbar-toggle:hover,\n.navbar-default .navbar-toggle:focus {\n  background-color: #dddddd;\n}\n.navbar-default .navbar-toggle .icon-bar {\n  background-color: #888888;\n}\n.navbar-default .navbar-collapse,\n.navbar-default .navbar-form {\n  border-color: #e7e7e7;\n}\n.navbar-default .navbar-nav > .open > a,\n.navbar-default .navbar-nav > .open > a:hover,\n.navbar-default .navbar-nav > .open > a:focus {\n  background-color: #e7e7e7;\n  color: #555555;\n}\n@media (max-width: 767px) {\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a {\n    color: #777777;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #333333;\n    background-color: transparent;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #555555;\n    background-color: #e7e7e7;\n  }\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #cccccc;\n    background-color: transparent;\n  }\n}\n.navbar-default .navbar-link {\n  color: #777777;\n}\n.navbar-default .navbar-link:hover {\n  color: #333333;\n}\n.navbar-default .btn-link {\n  color: #777777;\n}\n.navbar-default .btn-link:hover,\n.navbar-default .btn-link:focus {\n  color: #333333;\n}\n.navbar-default .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-default .btn-link:hover,\n.navbar-default .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-default .btn-link:focus {\n  color: #cccccc;\n}\n.navbar-inverse {\n  background-color: #222222;\n  border-color: #080808;\n}\n.navbar-inverse .navbar-brand {\n  color: #777777;\n}\n.navbar-inverse .navbar-brand:hover,\n.navbar-inverse .navbar-brand:focus {\n  color: #ffffff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-text {\n  color: #777777;\n}\n.navbar-inverse .navbar-nav > li > a {\n  color: #777777;\n}\n.navbar-inverse .navbar-nav > li > a:hover,\n.navbar-inverse .navbar-nav > li > a:focus {\n  color: #ffffff;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-nav > .active > a,\n.navbar-inverse .navbar-nav > .active > a:hover,\n.navbar-inverse .navbar-nav > .active > a:focus {\n  color: #ffffff;\n  background-color: #080808;\n}\n.navbar-inverse .navbar-nav > .disabled > a,\n.navbar-inverse .navbar-nav > .disabled > a:hover,\n.navbar-inverse .navbar-nav > .disabled > a:focus {\n  color: #444444;\n  background-color: transparent;\n}\n.navbar-inverse .navbar-toggle {\n  border-color: #333333;\n}\n.navbar-inverse .navbar-toggle:hover,\n.navbar-inverse .navbar-toggle:focus {\n  background-color: #333333;\n}\n.navbar-inverse .navbar-toggle .icon-bar {\n  background-color: #ffffff;\n}\n.navbar-inverse .navbar-collapse,\n.navbar-inverse .navbar-form {\n  border-color: #101010;\n}\n.navbar-inverse .navbar-nav > .open > a,\n.navbar-inverse .navbar-nav > .open > a:hover,\n.navbar-inverse .navbar-nav > .open > a:focus {\n  background-color: #080808;\n  color: #ffffff;\n}\n@media (max-width: 767px) {\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {\n    border-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu .divider {\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {\n    color: #777777;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {\n    color: #ffffff;\n    background-color: transparent;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {\n    color: #ffffff;\n    background-color: #080808;\n  }\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,\n  .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {\n    color: #444444;\n    background-color: transparent;\n  }\n}\n.navbar-inverse .navbar-link {\n  color: #777777;\n}\n.navbar-inverse .navbar-link:hover {\n  color: #ffffff;\n}\n.navbar-inverse .btn-link {\n  color: #777777;\n}\n.navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link:focus {\n  color: #ffffff;\n}\n.navbar-inverse .btn-link[disabled]:hover,\nfieldset[disabled] .navbar-inverse .btn-link:hover,\n.navbar-inverse .btn-link[disabled]:focus,\nfieldset[disabled] .navbar-inverse .btn-link:focus {\n  color: #444444;\n}\n.breadcrumb {\n  padding: 8px 15px;\n  margin-bottom: 20px;\n  list-style: none;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n}\n.breadcrumb > li {\n  display: inline-block;\n}\n.breadcrumb > li + li:before {\n  content: \"/\\00a0\";\n  padding: 0 5px;\n  color: #cccccc;\n}\n.breadcrumb > .active {\n  color: #777777;\n}\n.pagination {\n  display: inline-block;\n  padding-left: 0;\n  margin: 20px 0;\n  border-radius: 4px;\n}\n.pagination > li {\n  display: inline;\n}\n.pagination > li > a,\n.pagination > li > span {\n  position: relative;\n  float: left;\n  padding: 6px 12px;\n  line-height: 1.42857143;\n  text-decoration: none;\n  color: #428bca;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  margin-left: -1px;\n}\n.pagination > li:first-child > a,\n.pagination > li:first-child > span {\n  margin-left: 0;\n  border-bottom-left-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.pagination > li:last-child > a,\n.pagination > li:last-child > span {\n  border-bottom-right-radius: 4px;\n  border-top-right-radius: 4px;\n}\n.pagination > li > a:hover,\n.pagination > li > span:hover,\n.pagination > li > a:focus,\n.pagination > li > span:focus {\n  color: #2a6496;\n  background-color: #eeeeee;\n  border-color: #dddddd;\n}\n.pagination > .active > a,\n.pagination > .active > span,\n.pagination > .active > a:hover,\n.pagination > .active > span:hover,\n.pagination > .active > a:focus,\n.pagination > .active > span:focus {\n  z-index: 2;\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n  cursor: default;\n}\n.pagination > .disabled > span,\n.pagination > .disabled > span:hover,\n.pagination > .disabled > span:focus,\n.pagination > .disabled > a,\n.pagination > .disabled > a:hover,\n.pagination > .disabled > a:focus {\n  color: #777777;\n  background-color: #ffffff;\n  border-color: #dddddd;\n  cursor: not-allowed;\n}\n.pagination-lg > li > a,\n.pagination-lg > li > span {\n  padding: 10px 16px;\n  font-size: 18px;\n}\n.pagination-lg > li:first-child > a,\n.pagination-lg > li:first-child > span {\n  border-bottom-left-radius: 6px;\n  border-top-left-radius: 6px;\n}\n.pagination-lg > li:last-child > a,\n.pagination-lg > li:last-child > span {\n  border-bottom-right-radius: 6px;\n  border-top-right-radius: 6px;\n}\n.pagination-sm > li > a,\n.pagination-sm > li > span {\n  padding: 5px 10px;\n  font-size: 12px;\n}\n.pagination-sm > li:first-child > a,\n.pagination-sm > li:first-child > span {\n  border-bottom-left-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.pagination-sm > li:last-child > a,\n.pagination-sm > li:last-child > span {\n  border-bottom-right-radius: 3px;\n  border-top-right-radius: 3px;\n}\n.pager {\n  padding-left: 0;\n  margin: 20px 0;\n  list-style: none;\n  text-align: center;\n}\n.pager li {\n  display: inline;\n}\n.pager li > a,\n.pager li > span {\n  display: inline-block;\n  padding: 5px 14px;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 15px;\n}\n.pager li > a:hover,\n.pager li > a:focus {\n  text-decoration: none;\n  background-color: #eeeeee;\n}\n.pager .next > a,\n.pager .next > span {\n  float: right;\n}\n.pager .previous > a,\n.pager .previous > span {\n  float: left;\n}\n.pager .disabled > a,\n.pager .disabled > a:hover,\n.pager .disabled > a:focus,\n.pager .disabled > span {\n  color: #777777;\n  background-color: #ffffff;\n  cursor: not-allowed;\n}\n.label {\n  display: inline;\n  padding: .2em .6em .3em;\n  font-size: 75%;\n  font-weight: bold;\n  line-height: 1;\n  color: #ffffff;\n  text-align: center;\n  white-space: nowrap;\n  vertical-align: baseline;\n  border-radius: .25em;\n}\na.label:hover,\na.label:focus {\n  color: #ffffff;\n  text-decoration: none;\n  cursor: pointer;\n}\n.label:empty {\n  display: none;\n}\n.btn .label {\n  position: relative;\n  top: -1px;\n}\n.label-default {\n  background-color: #777777;\n}\n.label-default[href]:hover,\n.label-default[href]:focus {\n  background-color: #5e5e5e;\n}\n.label-primary {\n  background-color: #428bca;\n}\n.label-primary[href]:hover,\n.label-primary[href]:focus {\n  background-color: #3071a9;\n}\n.label-success {\n  background-color: #5cb85c;\n}\n.label-success[href]:hover,\n.label-success[href]:focus {\n  background-color: #449d44;\n}\n.label-info {\n  background-color: #5bc0de;\n}\n.label-info[href]:hover,\n.label-info[href]:focus {\n  background-color: #31b0d5;\n}\n.label-warning {\n  background-color: #f0ad4e;\n}\n.label-warning[href]:hover,\n.label-warning[href]:focus {\n  background-color: #ec971f;\n}\n.label-danger {\n  background-color: #d9534f;\n}\n.label-danger[href]:hover,\n.label-danger[href]:focus {\n  background-color: #c9302c;\n}\n.badge {\n  display: inline-block;\n  min-width: 10px;\n  padding: 3px 7px;\n  font-size: 12px;\n  font-weight: bold;\n  color: #ffffff;\n  line-height: 1;\n  vertical-align: baseline;\n  white-space: nowrap;\n  text-align: center;\n  background-color: #777777;\n  border-radius: 10px;\n}\n.badge:empty {\n  display: none;\n}\n.btn .badge {\n  position: relative;\n  top: -1px;\n}\n.btn-xs .badge {\n  top: 0;\n  padding: 1px 5px;\n}\na.badge:hover,\na.badge:focus {\n  color: #ffffff;\n  text-decoration: none;\n  cursor: pointer;\n}\na.list-group-item.active > .badge,\n.nav-pills > .active > a > .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.nav-pills > li > a > .badge {\n  margin-left: 3px;\n}\n.jumbotron {\n  padding: 30px;\n  margin-bottom: 30px;\n  color: inherit;\n  background-color: #eeeeee;\n}\n.jumbotron h1,\n.jumbotron .h1 {\n  color: inherit;\n}\n.jumbotron p {\n  margin-bottom: 15px;\n  font-size: 21px;\n  font-weight: 200;\n}\n.jumbotron > hr {\n  border-top-color: #d5d5d5;\n}\n.container .jumbotron {\n  border-radius: 6px;\n}\n.jumbotron .container {\n  max-width: 100%;\n}\n@media screen and (min-width: 768px) {\n  .jumbotron {\n    padding-top: 48px;\n    padding-bottom: 48px;\n  }\n  .container .jumbotron {\n    padding-left: 60px;\n    padding-right: 60px;\n  }\n  .jumbotron h1,\n  .jumbotron .h1 {\n    font-size: 63px;\n  }\n}\n.thumbnail {\n  display: block;\n  padding: 4px;\n  margin-bottom: 20px;\n  line-height: 1.42857143;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  -webkit-transition: all 0.2s ease-in-out;\n  -o-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n}\n.thumbnail > img,\n.thumbnail a > img {\n  margin-left: auto;\n  margin-right: auto;\n}\na.thumbnail:hover,\na.thumbnail:focus,\na.thumbnail.active {\n  border-color: #428bca;\n}\n.thumbnail .caption {\n  padding: 9px;\n  color: #333333;\n}\n.alert {\n  padding: 15px;\n  margin-bottom: 20px;\n  border: 1px solid transparent;\n  border-radius: 4px;\n}\n.alert h4 {\n  margin-top: 0;\n  color: inherit;\n}\n.alert .alert-link {\n  font-weight: bold;\n}\n.alert > p,\n.alert > ul {\n  margin-bottom: 0;\n}\n.alert > p + p {\n  margin-top: 5px;\n}\n.alert-dismissable,\n.alert-dismissible {\n  padding-right: 35px;\n}\n.alert-dismissable .close,\n.alert-dismissible .close {\n  position: relative;\n  top: -2px;\n  right: -21px;\n  color: inherit;\n}\n.alert-success {\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n  color: #3c763d;\n}\n.alert-success hr {\n  border-top-color: #c9e2b3;\n}\n.alert-success .alert-link {\n  color: #2b542c;\n}\n.alert-info {\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n  color: #31708f;\n}\n.alert-info hr {\n  border-top-color: #a6e1ec;\n}\n.alert-info .alert-link {\n  color: #245269;\n}\n.alert-warning {\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n  color: #8a6d3b;\n}\n.alert-warning hr {\n  border-top-color: #f7e1b5;\n}\n.alert-warning .alert-link {\n  color: #66512c;\n}\n.alert-danger {\n  background-color: #f2dede;\n  border-color: #ebccd1;\n  color: #a94442;\n}\n.alert-danger hr {\n  border-top-color: #e4b9c0;\n}\n.alert-danger .alert-link {\n  color: #843534;\n}\n@-webkit-keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n@keyframes progress-bar-stripes {\n  from {\n    background-position: 40px 0;\n  }\n  to {\n    background-position: 0 0;\n  }\n}\n.progress {\n  overflow: hidden;\n  height: 20px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);\n}\n.progress-bar {\n  float: left;\n  width: 0%;\n  height: 100%;\n  font-size: 12px;\n  line-height: 20px;\n  color: #ffffff;\n  text-align: center;\n  background-color: #428bca;\n  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);\n  -webkit-transition: width 0.6s ease;\n  -o-transition: width 0.6s ease;\n  transition: width 0.6s ease;\n}\n.progress-striped .progress-bar,\n.progress-bar-striped {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-size: 40px 40px;\n}\n.progress.active .progress-bar,\n.progress-bar.active {\n  -webkit-animation: progress-bar-stripes 2s linear infinite;\n  -o-animation: progress-bar-stripes 2s linear infinite;\n  animation: progress-bar-stripes 2s linear infinite;\n}\n.progress-bar[aria-valuenow=\"1\"],\n.progress-bar[aria-valuenow=\"2\"] {\n  min-width: 30px;\n}\n.progress-bar[aria-valuenow=\"0\"] {\n  color: #777777;\n  min-width: 30px;\n  background-color: transparent;\n  background-image: none;\n  box-shadow: none;\n}\n.progress-bar-success {\n  background-color: #5cb85c;\n}\n.progress-striped .progress-bar-success {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-info {\n  background-color: #5bc0de;\n}\n.progress-striped .progress-bar-info {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-warning {\n  background-color: #f0ad4e;\n}\n.progress-striped .progress-bar-warning {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.progress-bar-danger {\n  background-color: #d9534f;\n}\n.progress-striped .progress-bar-danger {\n  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);\n}\n.media,\n.media-body {\n  overflow: hidden;\n  zoom: 1;\n}\n.media,\n.media .media {\n  margin-top: 15px;\n}\n.media:first-child {\n  margin-top: 0;\n}\n.media-object {\n  display: block;\n}\n.media-heading {\n  margin: 0 0 5px;\n}\n.media > .pull-left {\n  margin-right: 10px;\n}\n.media > .pull-right {\n  margin-left: 10px;\n}\n.media-list {\n  padding-left: 0;\n  list-style: none;\n}\n.list-group {\n  margin-bottom: 20px;\n  padding-left: 0;\n}\n.list-group-item {\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  margin-bottom: -1px;\n  background-color: #ffffff;\n  border: 1px solid #dddddd;\n}\n.list-group-item:first-child {\n  border-top-right-radius: 4px;\n  border-top-left-radius: 4px;\n}\n.list-group-item:last-child {\n  margin-bottom: 0;\n  border-bottom-right-radius: 4px;\n  border-bottom-left-radius: 4px;\n}\n.list-group-item > .badge {\n  float: right;\n}\n.list-group-item > .badge + .badge {\n  margin-right: 5px;\n}\na.list-group-item {\n  color: #555555;\n}\na.list-group-item .list-group-item-heading {\n  color: #333333;\n}\na.list-group-item:hover,\na.list-group-item:focus {\n  text-decoration: none;\n  color: #555555;\n  background-color: #f5f5f5;\n}\n.list-group-item.disabled,\n.list-group-item.disabled:hover,\n.list-group-item.disabled:focus {\n  background-color: #eeeeee;\n  color: #777777;\n}\n.list-group-item.disabled .list-group-item-heading,\n.list-group-item.disabled:hover .list-group-item-heading,\n.list-group-item.disabled:focus .list-group-item-heading {\n  color: inherit;\n}\n.list-group-item.disabled .list-group-item-text,\n.list-group-item.disabled:hover .list-group-item-text,\n.list-group-item.disabled:focus .list-group-item-text {\n  color: #777777;\n}\n.list-group-item.active,\n.list-group-item.active:hover,\n.list-group-item.active:focus {\n  z-index: 2;\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n}\n.list-group-item.active .list-group-item-heading,\n.list-group-item.active:hover .list-group-item-heading,\n.list-group-item.active:focus .list-group-item-heading,\n.list-group-item.active .list-group-item-heading > small,\n.list-group-item.active:hover .list-group-item-heading > small,\n.list-group-item.active:focus .list-group-item-heading > small,\n.list-group-item.active .list-group-item-heading > .small,\n.list-group-item.active:hover .list-group-item-heading > .small,\n.list-group-item.active:focus .list-group-item-heading > .small {\n  color: inherit;\n}\n.list-group-item.active .list-group-item-text,\n.list-group-item.active:hover .list-group-item-text,\n.list-group-item.active:focus .list-group-item-text {\n  color: #e1edf7;\n}\n.list-group-item-success {\n  color: #3c763d;\n  background-color: #dff0d8;\n}\na.list-group-item-success {\n  color: #3c763d;\n}\na.list-group-item-success .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-success:hover,\na.list-group-item-success:focus {\n  color: #3c763d;\n  background-color: #d0e9c6;\n}\na.list-group-item-success.active,\na.list-group-item-success.active:hover,\na.list-group-item-success.active:focus {\n  color: #fff;\n  background-color: #3c763d;\n  border-color: #3c763d;\n}\n.list-group-item-info {\n  color: #31708f;\n  background-color: #d9edf7;\n}\na.list-group-item-info {\n  color: #31708f;\n}\na.list-group-item-info .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-info:hover,\na.list-group-item-info:focus {\n  color: #31708f;\n  background-color: #c4e3f3;\n}\na.list-group-item-info.active,\na.list-group-item-info.active:hover,\na.list-group-item-info.active:focus {\n  color: #fff;\n  background-color: #31708f;\n  border-color: #31708f;\n}\n.list-group-item-warning {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n}\na.list-group-item-warning {\n  color: #8a6d3b;\n}\na.list-group-item-warning .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-warning:hover,\na.list-group-item-warning:focus {\n  color: #8a6d3b;\n  background-color: #faf2cc;\n}\na.list-group-item-warning.active,\na.list-group-item-warning.active:hover,\na.list-group-item-warning.active:focus {\n  color: #fff;\n  background-color: #8a6d3b;\n  border-color: #8a6d3b;\n}\n.list-group-item-danger {\n  color: #a94442;\n  background-color: #f2dede;\n}\na.list-group-item-danger {\n  color: #a94442;\n}\na.list-group-item-danger .list-group-item-heading {\n  color: inherit;\n}\na.list-group-item-danger:hover,\na.list-group-item-danger:focus {\n  color: #a94442;\n  background-color: #ebcccc;\n}\na.list-group-item-danger.active,\na.list-group-item-danger.active:hover,\na.list-group-item-danger.active:focus {\n  color: #fff;\n  background-color: #a94442;\n  border-color: #a94442;\n}\n.list-group-item-heading {\n  margin-top: 0;\n  margin-bottom: 5px;\n}\n.list-group-item-text {\n  margin-bottom: 0;\n  line-height: 1.3;\n}\n.panel {\n  margin-bottom: 20px;\n  background-color: #ffffff;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.panel-body {\n  padding: 15px;\n}\n.panel-heading {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel-heading > .dropdown .dropdown-toggle {\n  color: inherit;\n}\n.panel-title {\n  margin-top: 0;\n  margin-bottom: 0;\n  font-size: 16px;\n  color: inherit;\n}\n.panel-title > a {\n  color: inherit;\n}\n.panel-footer {\n  padding: 10px 15px;\n  background-color: #f5f5f5;\n  border-top: 1px solid #dddddd;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .list-group {\n  margin-bottom: 0;\n}\n.panel > .list-group .list-group-item {\n  border-width: 1px 0;\n  border-radius: 0;\n}\n.panel > .list-group:first-child .list-group-item:first-child {\n  border-top: 0;\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .list-group:last-child .list-group-item:last-child {\n  border-bottom: 0;\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel-heading + .list-group .list-group-item:first-child {\n  border-top-width: 0;\n}\n.list-group + .panel-footer {\n  border-top-width: 0;\n}\n.panel > .table,\n.panel > .table-responsive > .table,\n.panel > .panel-collapse > .table {\n  margin-bottom: 0;\n}\n.panel > .table:first-child,\n.panel > .table-responsive:first-child > .table:first-child {\n  border-top-right-radius: 3px;\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:first-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:first-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:first-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:first-child {\n  border-top-left-radius: 3px;\n}\n.panel > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child td:last-child,\n.panel > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > thead:first-child > tr:first-child th:last-child,\n.panel > .table:first-child > tbody:first-child > tr:first-child th:last-child,\n.panel > .table-responsive:first-child > .table:first-child > tbody:first-child > tr:first-child th:last-child {\n  border-top-right-radius: 3px;\n}\n.panel > .table:last-child,\n.panel > .table-responsive:last-child > .table:last-child {\n  border-bottom-right-radius: 3px;\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:first-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:first-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:first-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:first-child {\n  border-bottom-left-radius: 3px;\n}\n.panel > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child td:last-child,\n.panel > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tbody:last-child > tr:last-child th:last-child,\n.panel > .table:last-child > tfoot:last-child > tr:last-child th:last-child,\n.panel > .table-responsive:last-child > .table:last-child > tfoot:last-child > tr:last-child th:last-child {\n  border-bottom-right-radius: 3px;\n}\n.panel > .panel-body + .table,\n.panel > .panel-body + .table-responsive {\n  border-top: 1px solid #dddddd;\n}\n.panel > .table > tbody:first-child > tr:first-child th,\n.panel > .table > tbody:first-child > tr:first-child td {\n  border-top: 0;\n}\n.panel > .table-bordered,\n.panel > .table-responsive > .table-bordered {\n  border: 0;\n}\n.panel > .table-bordered > thead > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:first-child,\n.panel > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:first-child,\n.panel > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:first-child,\n.panel > .table-bordered > thead > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:first-child,\n.panel > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:first-child,\n.panel > .table-bordered > tfoot > tr > td:first-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:first-child {\n  border-left: 0;\n}\n.panel > .table-bordered > thead > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > th:last-child,\n.panel > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > th:last-child,\n.panel > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > th:last-child,\n.panel > .table-bordered > thead > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > thead > tr > td:last-child,\n.panel > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tbody > tr > td:last-child,\n.panel > .table-bordered > tfoot > tr > td:last-child,\n.panel > .table-responsive > .table-bordered > tfoot > tr > td:last-child {\n  border-right: 0;\n}\n.panel > .table-bordered > thead > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > td,\n.panel > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > td,\n.panel > .table-bordered > thead > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > thead > tr:first-child > th,\n.panel > .table-bordered > tbody > tr:first-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:first-child > th {\n  border-bottom: 0;\n}\n.panel > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > td,\n.panel > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > td,\n.panel > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tbody > tr:last-child > th,\n.panel > .table-bordered > tfoot > tr:last-child > th,\n.panel > .table-responsive > .table-bordered > tfoot > tr:last-child > th {\n  border-bottom: 0;\n}\n.panel > .table-responsive {\n  border: 0;\n  margin-bottom: 0;\n}\n.panel-group {\n  margin-bottom: 20px;\n}\n.panel-group .panel {\n  margin-bottom: 0;\n  border-radius: 4px;\n}\n.panel-group .panel + .panel {\n  margin-top: 5px;\n}\n.panel-group .panel-heading {\n  border-bottom: 0;\n}\n.panel-group .panel-heading + .panel-collapse > .panel-body {\n  border-top: 1px solid #dddddd;\n}\n.panel-group .panel-footer {\n  border-top: 0;\n}\n.panel-group .panel-footer + .panel-collapse .panel-body {\n  border-bottom: 1px solid #dddddd;\n}\n.panel-default {\n  border-color: #dddddd;\n}\n.panel-default > .panel-heading {\n  color: #333333;\n  background-color: #f5f5f5;\n  border-color: #dddddd;\n}\n.panel-default > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #dddddd;\n}\n.panel-default > .panel-heading .badge {\n  color: #f5f5f5;\n  background-color: #333333;\n}\n.panel-default > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #dddddd;\n}\n.panel-primary {\n  border-color: #428bca;\n}\n.panel-primary > .panel-heading {\n  color: #ffffff;\n  background-color: #428bca;\n  border-color: #428bca;\n}\n.panel-primary > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #428bca;\n}\n.panel-primary > .panel-heading .badge {\n  color: #428bca;\n  background-color: #ffffff;\n}\n.panel-primary > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #428bca;\n}\n.panel-success {\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading {\n  color: #3c763d;\n  background-color: #dff0d8;\n  border-color: #d6e9c6;\n}\n.panel-success > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #d6e9c6;\n}\n.panel-success > .panel-heading .badge {\n  color: #dff0d8;\n  background-color: #3c763d;\n}\n.panel-success > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #d6e9c6;\n}\n.panel-info {\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading {\n  color: #31708f;\n  background-color: #d9edf7;\n  border-color: #bce8f1;\n}\n.panel-info > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #bce8f1;\n}\n.panel-info > .panel-heading .badge {\n  color: #d9edf7;\n  background-color: #31708f;\n}\n.panel-info > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #bce8f1;\n}\n.panel-warning {\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading {\n  color: #8a6d3b;\n  background-color: #fcf8e3;\n  border-color: #faebcc;\n}\n.panel-warning > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #faebcc;\n}\n.panel-warning > .panel-heading .badge {\n  color: #fcf8e3;\n  background-color: #8a6d3b;\n}\n.panel-warning > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #faebcc;\n}\n.panel-danger {\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading {\n  color: #a94442;\n  background-color: #f2dede;\n  border-color: #ebccd1;\n}\n.panel-danger > .panel-heading + .panel-collapse > .panel-body {\n  border-top-color: #ebccd1;\n}\n.panel-danger > .panel-heading .badge {\n  color: #f2dede;\n  background-color: #a94442;\n}\n.panel-danger > .panel-footer + .panel-collapse > .panel-body {\n  border-bottom-color: #ebccd1;\n}\n.embed-responsive {\n  position: relative;\n  display: block;\n  height: 0;\n  padding: 0;\n  overflow: hidden;\n}\n.embed-responsive .embed-responsive-item,\n.embed-responsive iframe,\n.embed-responsive embed,\n.embed-responsive object {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  height: 100%;\n  width: 100%;\n  border: 0;\n}\n.embed-responsive.embed-responsive-16by9 {\n  padding-bottom: 56.25%;\n}\n.embed-responsive.embed-responsive-4by3 {\n  padding-bottom: 75%;\n}\n.well {\n  min-height: 20px;\n  padding: 19px;\n  margin-bottom: 20px;\n  background-color: #f5f5f5;\n  border: 1px solid #e3e3e3;\n  border-radius: 4px;\n  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.well blockquote {\n  border-color: #ddd;\n  border-color: rgba(0, 0, 0, 0.15);\n}\n.well-lg {\n  padding: 24px;\n  border-radius: 6px;\n}\n.well-sm {\n  padding: 9px;\n  border-radius: 3px;\n}\n.close {\n  float: right;\n  font-size: 21px;\n  font-weight: bold;\n  line-height: 1;\n  color: #000000;\n  text-shadow: 0 1px 0 #ffffff;\n  opacity: 0.2;\n  filter: alpha(opacity=20);\n}\n.close:hover,\n.close:focus {\n  color: #000000;\n  text-decoration: none;\n  cursor: pointer;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\nbutton.close {\n  padding: 0;\n  cursor: pointer;\n  background: transparent;\n  border: 0;\n  -webkit-appearance: none;\n}\n.modal-open {\n  overflow: hidden;\n}\n.modal {\n  display: none;\n  overflow: hidden;\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1050;\n  -webkit-overflow-scrolling: touch;\n  outline: 0;\n}\n.modal.fade .modal-dialog {\n  -webkit-transform: translate3d(0, -25%, 0);\n  transform: translate3d(0, -25%, 0);\n  -webkit-transition: -webkit-transform 0.3s ease-out;\n  -moz-transition: -moz-transform 0.3s ease-out;\n  -o-transition: -o-transform 0.3s ease-out;\n  transition: transform 0.3s ease-out;\n}\n.modal.in .modal-dialog {\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n.modal-open .modal {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n.modal-dialog {\n  position: relative;\n  width: auto;\n  margin: 10px;\n}\n.modal-content {\n  position: relative;\n  background-color: #ffffff;\n  border: 1px solid #999999;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);\n  background-clip: padding-box;\n  outline: 0;\n}\n.modal-backdrop {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  z-index: 1040;\n  background-color: #000000;\n}\n.modal-backdrop.fade {\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.modal-backdrop.in {\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n}\n.modal-header {\n  padding: 15px;\n  border-bottom: 1px solid #e5e5e5;\n  min-height: 16.42857143px;\n}\n.modal-header .close {\n  margin-top: -2px;\n}\n.modal-title {\n  margin: 0;\n  line-height: 1.42857143;\n}\n.modal-body {\n  position: relative;\n  padding: 15px;\n}\n.modal-footer {\n  padding: 15px;\n  text-align: right;\n  border-top: 1px solid #e5e5e5;\n}\n.modal-footer .btn + .btn {\n  margin-left: 5px;\n  margin-bottom: 0;\n}\n.modal-footer .btn-group .btn + .btn {\n  margin-left: -1px;\n}\n.modal-footer .btn-block + .btn-block {\n  margin-left: 0;\n}\n.modal-scrollbar-measure {\n  position: absolute;\n  top: -9999px;\n  width: 50px;\n  height: 50px;\n  overflow: scroll;\n}\n@media (min-width: 768px) {\n  .modal-dialog {\n    width: 600px;\n    margin: 30px auto;\n  }\n  .modal-content {\n    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);\n  }\n  .modal-sm {\n    width: 300px;\n  }\n}\n@media (min-width: 992px) {\n  .modal-lg {\n    width: 900px;\n  }\n}\n.tooltip {\n  position: absolute;\n  z-index: 1070;\n  display: block;\n  visibility: visible;\n  font-size: 12px;\n  line-height: 1.4;\n  opacity: 0;\n  filter: alpha(opacity=0);\n}\n.tooltip.in {\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.tooltip.top {\n  margin-top: -3px;\n  padding: 5px 0;\n}\n.tooltip.right {\n  margin-left: 3px;\n  padding: 0 5px;\n}\n.tooltip.bottom {\n  margin-top: 3px;\n  padding: 5px 0;\n}\n.tooltip.left {\n  margin-left: -3px;\n  padding: 0 5px;\n}\n.tooltip-inner {\n  max-width: 200px;\n  padding: 3px 8px;\n  color: #ffffff;\n  text-align: center;\n  text-decoration: none;\n  background-color: #000000;\n  border-radius: 4px;\n}\n.tooltip-arrow {\n  position: absolute;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.tooltip.top .tooltip-arrow {\n  bottom: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.top-left .tooltip-arrow {\n  bottom: 0;\n  left: 5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.top-right .tooltip-arrow {\n  bottom: 0;\n  right: 5px;\n  border-width: 5px 5px 0;\n  border-top-color: #000000;\n}\n.tooltip.right .tooltip-arrow {\n  top: 50%;\n  left: 0;\n  margin-top: -5px;\n  border-width: 5px 5px 5px 0;\n  border-right-color: #000000;\n}\n.tooltip.left .tooltip-arrow {\n  top: 50%;\n  right: 0;\n  margin-top: -5px;\n  border-width: 5px 0 5px 5px;\n  border-left-color: #000000;\n}\n.tooltip.bottom .tooltip-arrow {\n  top: 0;\n  left: 50%;\n  margin-left: -5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.tooltip.bottom-left .tooltip-arrow {\n  top: 0;\n  left: 5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.tooltip.bottom-right .tooltip-arrow {\n  top: 0;\n  right: 5px;\n  border-width: 0 5px 5px;\n  border-bottom-color: #000000;\n}\n.popover {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 1060;\n  display: none;\n  max-width: 276px;\n  padding: 1px;\n  text-align: left;\n  background-color: #ffffff;\n  background-clip: padding-box;\n  border: 1px solid #cccccc;\n  border: 1px solid rgba(0, 0, 0, 0.2);\n  border-radius: 6px;\n  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);\n  white-space: normal;\n}\n.popover.top {\n  margin-top: -10px;\n}\n.popover.right {\n  margin-left: 10px;\n}\n.popover.bottom {\n  margin-top: 10px;\n}\n.popover.left {\n  margin-left: -10px;\n}\n.popover-title {\n  margin: 0;\n  padding: 8px 14px;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 18px;\n  background-color: #f7f7f7;\n  border-bottom: 1px solid #ebebeb;\n  border-radius: 5px 5px 0 0;\n}\n.popover-content {\n  padding: 9px 14px;\n}\n.popover > .arrow,\n.popover > .arrow:after {\n  position: absolute;\n  display: block;\n  width: 0;\n  height: 0;\n  border-color: transparent;\n  border-style: solid;\n}\n.popover > .arrow {\n  border-width: 11px;\n}\n.popover > .arrow:after {\n  border-width: 10px;\n  content: \"\";\n}\n.popover.top > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-bottom-width: 0;\n  border-top-color: #999999;\n  border-top-color: rgba(0, 0, 0, 0.25);\n  bottom: -11px;\n}\n.popover.top > .arrow:after {\n  content: \" \";\n  bottom: 1px;\n  margin-left: -10px;\n  border-bottom-width: 0;\n  border-top-color: #ffffff;\n}\n.popover.right > .arrow {\n  top: 50%;\n  left: -11px;\n  margin-top: -11px;\n  border-left-width: 0;\n  border-right-color: #999999;\n  border-right-color: rgba(0, 0, 0, 0.25);\n}\n.popover.right > .arrow:after {\n  content: \" \";\n  left: 1px;\n  bottom: -10px;\n  border-left-width: 0;\n  border-right-color: #ffffff;\n}\n.popover.bottom > .arrow {\n  left: 50%;\n  margin-left: -11px;\n  border-top-width: 0;\n  border-bottom-color: #999999;\n  border-bottom-color: rgba(0, 0, 0, 0.25);\n  top: -11px;\n}\n.popover.bottom > .arrow:after {\n  content: \" \";\n  top: 1px;\n  margin-left: -10px;\n  border-top-width: 0;\n  border-bottom-color: #ffffff;\n}\n.popover.left > .arrow {\n  top: 50%;\n  right: -11px;\n  margin-top: -11px;\n  border-right-width: 0;\n  border-left-color: #999999;\n  border-left-color: rgba(0, 0, 0, 0.25);\n}\n.popover.left > .arrow:after {\n  content: \" \";\n  right: 1px;\n  border-right-width: 0;\n  border-left-color: #ffffff;\n  bottom: -10px;\n}\n.carousel {\n  position: relative;\n}\n.carousel-inner {\n  position: relative;\n  overflow: hidden;\n  width: 100%;\n}\n.carousel-inner > .item {\n  display: none;\n  position: relative;\n  -webkit-transition: 0.6s ease-in-out left;\n  -o-transition: 0.6s ease-in-out left;\n  transition: 0.6s ease-in-out left;\n}\n.carousel-inner > .item > img,\n.carousel-inner > .item > a > img {\n  line-height: 1;\n}\n.carousel-inner > .active,\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  display: block;\n}\n.carousel-inner > .active {\n  left: 0;\n}\n.carousel-inner > .next,\n.carousel-inner > .prev {\n  position: absolute;\n  top: 0;\n  width: 100%;\n}\n.carousel-inner > .next {\n  left: 100%;\n}\n.carousel-inner > .prev {\n  left: -100%;\n}\n.carousel-inner > .next.left,\n.carousel-inner > .prev.right {\n  left: 0;\n}\n.carousel-inner > .active.left {\n  left: -100%;\n}\n.carousel-inner > .active.right {\n  left: 100%;\n}\n.carousel-control {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  width: 15%;\n  opacity: 0.5;\n  filter: alpha(opacity=50);\n  font-size: 20px;\n  color: #ffffff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-control.left {\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);\n}\n.carousel-control.right {\n  left: auto;\n  right: 0;\n  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);\n  background-repeat: repeat-x;\n  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);\n}\n.carousel-control:hover,\n.carousel-control:focus {\n  outline: 0;\n  color: #ffffff;\n  text-decoration: none;\n  opacity: 0.9;\n  filter: alpha(opacity=90);\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-left,\n.carousel-control .glyphicon-chevron-right {\n  position: absolute;\n  top: 50%;\n  z-index: 5;\n  display: inline-block;\n}\n.carousel-control .icon-prev,\n.carousel-control .glyphicon-chevron-left {\n  left: 50%;\n  margin-left: -10px;\n}\n.carousel-control .icon-next,\n.carousel-control .glyphicon-chevron-right {\n  right: 50%;\n  margin-right: -10px;\n}\n.carousel-control .icon-prev,\n.carousel-control .icon-next {\n  width: 20px;\n  height: 20px;\n  margin-top: -10px;\n  font-family: serif;\n}\n.carousel-control .icon-prev:before {\n  content: '\\2039';\n}\n.carousel-control .icon-next:before {\n  content: '\\203a';\n}\n.carousel-indicators {\n  position: absolute;\n  bottom: 10px;\n  left: 50%;\n  z-index: 15;\n  width: 60%;\n  margin-left: -30%;\n  padding-left: 0;\n  list-style: none;\n  text-align: center;\n}\n.carousel-indicators li {\n  display: inline-block;\n  width: 10px;\n  height: 10px;\n  margin: 1px;\n  text-indent: -999px;\n  border: 1px solid #ffffff;\n  border-radius: 10px;\n  cursor: pointer;\n  background-color: #000 \\9;\n  background-color: rgba(0, 0, 0, 0);\n}\n.carousel-indicators .active {\n  margin: 0;\n  width: 12px;\n  height: 12px;\n  background-color: #ffffff;\n}\n.carousel-caption {\n  position: absolute;\n  left: 15%;\n  right: 15%;\n  bottom: 20px;\n  z-index: 10;\n  padding-top: 20px;\n  padding-bottom: 20px;\n  color: #ffffff;\n  text-align: center;\n  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);\n}\n.carousel-caption .btn {\n  text-shadow: none;\n}\n@media screen and (min-width: 768px) {\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-prev,\n  .carousel-control .icon-next {\n    width: 30px;\n    height: 30px;\n    margin-top: -15px;\n    font-size: 30px;\n  }\n  .carousel-control .glyphicon-chevron-left,\n  .carousel-control .icon-prev {\n    margin-left: -15px;\n  }\n  .carousel-control .glyphicon-chevron-right,\n  .carousel-control .icon-next {\n    margin-right: -15px;\n  }\n  .carousel-caption {\n    left: 20%;\n    right: 20%;\n    padding-bottom: 30px;\n  }\n  .carousel-indicators {\n    bottom: 20px;\n  }\n}\n.clearfix:before,\n.clearfix:after,\n.dl-horizontal dd:before,\n.dl-horizontal dd:after,\n.container:before,\n.container:after,\n.container-fluid:before,\n.container-fluid:after,\n.row:before,\n.row:after,\n.form-horizontal .form-group:before,\n.form-horizontal .form-group:after,\n.btn-toolbar:before,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:before,\n.btn-group-vertical > .btn-group:after,\n.nav:before,\n.nav:after,\n.navbar:before,\n.navbar:after,\n.navbar-header:before,\n.navbar-header:after,\n.navbar-collapse:before,\n.navbar-collapse:after,\n.pager:before,\n.pager:after,\n.panel-body:before,\n.panel-body:after,\n.modal-footer:before,\n.modal-footer:after {\n  content: \" \";\n  display: table;\n}\n.clearfix:after,\n.dl-horizontal dd:after,\n.container:after,\n.container-fluid:after,\n.row:after,\n.form-horizontal .form-group:after,\n.btn-toolbar:after,\n.btn-group-vertical > .btn-group:after,\n.nav:after,\n.navbar:after,\n.navbar-header:after,\n.navbar-collapse:after,\n.pager:after,\n.panel-body:after,\n.modal-footer:after {\n  clear: both;\n}\n.center-block {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n.pull-right {\n  float: right !important;\n}\n.pull-left {\n  float: left !important;\n}\n.hide {\n  display: none !important;\n}\n.show {\n  display: block !important;\n}\n.invisible {\n  visibility: hidden;\n}\n.text-hide {\n  font: 0/0 a;\n  color: transparent;\n  text-shadow: none;\n  background-color: transparent;\n  border: 0;\n}\n.hidden {\n  display: none !important;\n  visibility: hidden !important;\n}\n.affix {\n  position: fixed;\n  -webkit-transform: translate3d(0, 0, 0);\n  transform: translate3d(0, 0, 0);\n}\n@-ms-viewport {\n  width: device-width;\n}\n.visible-xs,\n.visible-sm,\n.visible-md,\n.visible-lg {\n  display: none !important;\n}\n.visible-xs-block,\n.visible-xs-inline,\n.visible-xs-inline-block,\n.visible-sm-block,\n.visible-sm-inline,\n.visible-sm-inline-block,\n.visible-md-block,\n.visible-md-inline,\n.visible-md-inline-block,\n.visible-lg-block,\n.visible-lg-inline,\n.visible-lg-inline-block {\n  display: none !important;\n}\n@media (max-width: 767px) {\n  .visible-xs {\n    display: block !important;\n  }\n  table.visible-xs {\n    display: table;\n  }\n  tr.visible-xs {\n    display: table-row !important;\n  }\n  th.visible-xs,\n  td.visible-xs {\n    display: table-cell !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-block {\n    display: block !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline {\n    display: inline !important;\n  }\n}\n@media (max-width: 767px) {\n  .visible-xs-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm {\n    display: block !important;\n  }\n  table.visible-sm {\n    display: table;\n  }\n  tr.visible-sm {\n    display: table-row !important;\n  }\n  th.visible-sm,\n  td.visible-sm {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-block {\n    display: block !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .visible-sm-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md {\n    display: block !important;\n  }\n  table.visible-md {\n    display: table;\n  }\n  tr.visible-md {\n    display: table-row !important;\n  }\n  th.visible-md,\n  td.visible-md {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-block {\n    display: block !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .visible-md-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg {\n    display: block !important;\n  }\n  table.visible-lg {\n    display: table;\n  }\n  tr.visible-lg {\n    display: table-row !important;\n  }\n  th.visible-lg,\n  td.visible-lg {\n    display: table-cell !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-block {\n    display: block !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline {\n    display: inline !important;\n  }\n}\n@media (min-width: 1200px) {\n  .visible-lg-inline-block {\n    display: inline-block !important;\n  }\n}\n@media (max-width: 767px) {\n  .hidden-xs {\n    display: none !important;\n  }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n  .hidden-sm {\n    display: none !important;\n  }\n}\n@media (min-width: 992px) and (max-width: 1199px) {\n  .hidden-md {\n    display: none !important;\n  }\n}\n@media (min-width: 1200px) {\n  .hidden-lg {\n    display: none !important;\n  }\n}\n.visible-print {\n  display: none !important;\n}\n@media print {\n  .visible-print {\n    display: block !important;\n  }\n  table.visible-print {\n    display: table;\n  }\n  tr.visible-print {\n    display: table-row !important;\n  }\n  th.visible-print,\n  td.visible-print {\n    display: table-cell !important;\n  }\n}\n.visible-print-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-block {\n    display: block !important;\n  }\n}\n.visible-print-inline {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline {\n    display: inline !important;\n  }\n}\n.visible-print-inline-block {\n  display: none !important;\n}\n@media print {\n  .visible-print-inline-block {\n    display: inline-block !important;\n  }\n}\n@media print {\n  .hidden-print {\n    display: none !important;\n  }\n}\n";
+
+/***/ },
+/* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
 	// MarionetteJS (Backbone.Marionette)
 	// ----------------------------------
 	// v1.8.8
@@ -19437,9 +19458,9 @@
 	  if (true) {
 
 	    var underscore = __webpack_require__(2);
-	    var backbone = __webpack_require__(8);
-	    var wreqr = __webpack_require__(88);
-	    var babysitter = __webpack_require__(89);
+	    var backbone = __webpack_require__(10);
+	    var wreqr = __webpack_require__(90);
+	    var babysitter = __webpack_require__(91);
 
 	    module.exports = factory(underscore, backbone, wreqr, babysitter);
 
@@ -21900,76 +21921,6 @@
 
 
 /***/ },
-/* 13 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Marionette, App) {var Controller;
-
-	Controller = Marionette.Controller.extend({
-	  initialize: function() {
-	    var show;
-	    show = this.getShowView();
-	    return App.headerRegion.show(show);
-	  },
-	  getShowView: function() {
-	    var Show;
-	    Show = __webpack_require__(55);
-	    return new Show;
-	  }
-	});
-
-	module.exports = Controller;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(1)))
-
-/***/ },
-/* 14 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Marionette, App) {var Controller;
-
-	Controller = Marionette.Controller.extend({
-	  initialize: function() {
-	    this.layout = this.getLayoutView();
-	    this.listenTo(this.layout, 'show', (function(_this) {
-	      return function() {
-	        return _this.panelRegion();
-	      };
-	    })(this));
-	    return App.mainRegion.show(this.layout);
-	  },
-	  listRegion: function() {
-	    var listView;
-	    listView = this.getListView();
-	    return this.layout.listRegion.show(listView);
-	  },
-	  panelRegion: function() {
-	    var panelView;
-	    panelView = this.getPanelView();
-	    return this.layout.panelRegion.show(panelView);
-	  },
-	  getLayoutView: function() {
-	    var Layout;
-	    Layout = __webpack_require__(56);
-	    return new Layout;
-	  },
-	  getListView: function() {
-	    var List;
-	    List = __webpack_require__(57);
-	    return new List;
-	  },
-	  getPanelView: function() {
-	    var Panel;
-	    Panel = __webpack_require__(58);
-	    return new Panel;
-	  }
-	});
-
-	module.exports = Controller;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(1)))
-
-/***/ },
 /* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -21986,8 +21937,84 @@
 
 
 /***/ },
-/* 16 */,
-/* 17 */,
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Marionette, App) {var Controller;
+
+	Controller = Marionette.Controller.extend({
+	  initialize: function() {
+	    var show;
+	    show = this.getShowView();
+	    return App.headerRegion.show(show);
+	  },
+	  getShowView: function() {
+	    var Show;
+	    Show = __webpack_require__(57);
+	    return new Show;
+	  }
+	});
+
+	module.exports = Controller;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14), __webpack_require__(1)))
+
+/***/ },
+/* 17 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Marionette, App) {var Controller;
+
+	Controller = Marionette.Controller.extend({
+	  initialize: function() {
+	    this.layout = this.getLayoutView();
+	    this.listenTo(this.layout, 'show', (function(_this) {
+	      return function() {
+	        _this.listRegion();
+	        return _this.panelRegion();
+	      };
+	    })(this));
+	    App.vent.on('list:products', (function(_this) {
+	      return function(products) {
+	        return _this.listRegion(products);
+	      };
+	    })(this));
+	    return App.mainRegion.show(this.layout);
+	  },
+	  listRegion: function(products) {
+	    var listView;
+	    listView = this.getListView(products);
+	    return this.layout.listRegion.show(listView);
+	  },
+	  panelRegion: function() {
+	    var panelView;
+	    panelView = this.getPanelView();
+	    return this.layout.panelRegion.show(panelView);
+	  },
+	  getLayoutView: function() {
+	    var Layout;
+	    Layout = __webpack_require__(58);
+	    return new Layout;
+	  },
+	  getListView: function(products) {
+	    var List;
+	    List = __webpack_require__(59);
+	    return new List({
+	      collection: products
+	    });
+	  },
+	  getPanelView: function() {
+	    var Panel;
+	    Panel = __webpack_require__(60);
+	    return new Panel;
+	  }
+	});
+
+	module.exports = Controller;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14), __webpack_require__(1)))
+
+/***/ },
 /* 18 */,
 /* 19 */,
 /* 20 */,
@@ -22025,7 +22052,9 @@
 /* 52 */,
 /* 53 */,
 /* 54 */,
-/* 55 */
+/* 55 */,
+/* 56 */,
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Marionette) {var Show;
@@ -22033,22 +22062,22 @@
 	Show = Marionette.ItemView.extend({
 	  tagName: 'header',
 	  className: 'container',
-	  template: __webpack_require__(91)
+	  template: __webpack_require__(92)
 	});
 
 	module.exports = Show;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Marionette) {var Layout;
 
 	Layout = Marionette.Layout.extend({
 	  className: 'container',
-	  template: __webpack_require__(92),
+	  template: __webpack_require__(93),
 	  regions: {
 	    listRegion: '#list-region',
 	    panelRegion: '#panel-region'
@@ -22057,68 +22086,45 @@
 
 	module.exports = Layout;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(_) {var Backgrid, Grid,
-	  __hasProp = {}.hasOwnProperty,
-	  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+	/* WEBPACK VAR INJECTION */(function(Marionette) {var ChildView, List;
 
-	Backgrid = __webpack_require__(90);
+	ChildView = Marionette.ItemView.extend({
+	  template: __webpack_require__(94),
+	  tagName: 'tr'
+	});
 
-	Grid = (function(_super) {
-	  __extends(Grid, _super);
+	List = Marionette.CompositeView.extend({
+	  template: __webpack_require__(95),
+	  itemView: ChildView,
+	  itemViewContainer: 'tbody',
+	  tagName: 'table',
+	  className: 'table'
+	});
 
-	  function Grid() {
-	    return Grid.__super__.constructor.apply(this, arguments);
-	  }
-
-	  Grid.prototype.className = 'backgrid table';
-
-	  Grid.prototype.initialize = function(options) {
-	    if (options == null) {
-	      options = {};
-	    }
-	    _.defaults(options, {
-	      columns: [
-	        {
-	          name: 'id'
-	        }, {
-	          name: 'sku'
-	        }
-	      ]
-	    });
-	    return Grid.__super__.initialize.apply(this, arguments);
-	  };
-
-	  return Grid;
-
-	})(Backgrid.Grid);
-
-	log(new Grid);
-
-	module.exports = Grid;
+	module.exports = List;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14)))
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Marionette, $) {var Panel;
+	/* WEBPACK VAR INJECTION */(function(Marionette, $, Backbone, App) {var Panel;
 
 	Panel = Marionette.ItemView.extend({
-	  template: __webpack_require__(93),
+	  template: __webpack_require__(96),
 	  events: {
 	    'submit': 'search'
 	  },
 	  search: (function(_this) {
 	    return function(e) {
 	      var keyword;
-	      log(arguments);
 	      e.stopPropagation();
 	      e.preventDefault();
 	      keyword = $('#search-keyword').val();
@@ -22128,11 +22134,15 @@
 	        data: {
 	          keyword: keyword
 	        },
-	        success: function() {
-	          return log('worked');
+	        success: function(data) {
+	          var products;
+	          products = new Backbone.Collection(data, {
+	            comparator: 'Availability'
+	          });
+	          return App.vent.trigger('list:products', products);
 	        },
 	        error: function() {
-	          return log('failed');
+	          return warn('search error', arguments);
 	        }
 	      });
 	    };
@@ -22141,11 +22151,9 @@
 
 	module.exports = Panel;
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(12), __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(14), __webpack_require__(9), __webpack_require__(10), __webpack_require__(1)))
 
 /***/ },
-/* 59 */,
-/* 60 */,
 /* 61 */,
 /* 62 */,
 /* 63 */,
@@ -22173,7 +22181,9 @@
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */
+/* 88 */,
+/* 89 */,
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Backbone.Wreqr (Backbone.Marionette)
@@ -22189,7 +22199,7 @@
 	(function(root, factory) {
 
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = (function(Backbone, _) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(10), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = (function(Backbone, _) {
 	      return factory(Backbone, _);
 	    }.apply(null, __WEBPACK_AMD_DEFINE_ARRAY__)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if (typeof exports !== 'undefined') {
@@ -22619,7 +22629,7 @@
 
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Backbone.BabySitter
@@ -22634,7 +22644,7 @@
 	(function(root, factory) {
 
 	  if (true) {
-	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(8), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = (function(Backbone, _) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(10), __webpack_require__(2)], __WEBPACK_AMD_DEFINE_RESULT__ = (function(Backbone, _) {
 	      return factory(Backbone, _);
 	    }.apply(null, __WEBPACK_AMD_DEFINE_ARRAY__)), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	  } else if (typeof exports !== 'undefined') {
@@ -22815,2898 +22825,10 @@
 
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/*!
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2014 Jimmy Yuen Ho Wong and contributors <wyuenho@gmail.com>
-	  Licensed under the MIT license.
-	*/
-
-	(function (factory) {
-
-	  // CommonJS
-	  if (true) {
-	    module.exports = factory(module.exports,
-	                             __webpack_require__(2),
-	                             __webpack_require__(8));
-	  }
-	  // Browser
-	  else factory(this, this._, this.Backbone);
-	}(function (root, _, Backbone) {
-
-	  "use strict";
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	// Copyright 2009, 2010 Kristopher Michael Kowal
-	// https://github.com/kriskowal/es5-shim
-	// ES5 15.5.4.20
-	// http://es5.github.com/#x15.5.4.20
-	var ws = "\x09\x0A\x0B\x0C\x0D\x20\xA0\u1680\u180E\u2000\u2001\u2002\u2003" +
-	  "\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u202F\u205F\u3000\u2028" +
-	  "\u2029\uFEFF";
-	if (!String.prototype.trim || ws.trim()) {
-	  // http://blog.stevenlevithan.com/archives/faster-trim-javascript
-	  // http://perfectionkills.com/whitespace-deviations/
-	  ws = "[" + ws + "]";
-	  var trimBeginRegexp = new RegExp("^" + ws + ws + "*"),
-	  trimEndRegexp = new RegExp(ws + ws + "*$");
-	  String.prototype.trim = function trim() {
-	    if (this === undefined || this === null) {
-	      throw new TypeError("can't convert " + this + " to object");
-	    }
-	    return String(this)
-	      .replace(trimBeginRegexp, "")
-	      .replace(trimEndRegexp, "");
-	  };
-	}
-
-	function lpad(str, length, padstr) {
-	  var paddingLen = length - (str + '').length;
-	  paddingLen =  paddingLen < 0 ? 0 : paddingLen;
-	  var padding = '';
-	  for (var i = 0; i < paddingLen; i++) {
-	    padding = padding + padstr;
-	  }
-	  return padding + str;
-	}
-
-	var $ = Backbone.$;
-
-	var Backgrid = root.Backgrid = {
-
-	  Extension: {},
-
-	  resolveNameToClass: function (name, suffix) {
-	    if (_.isString(name)) {
-	      var key = _.map(name.split('-'), function (e) {
-	        return e.slice(0, 1).toUpperCase() + e.slice(1);
-	      }).join('') + suffix;
-	      var klass = Backgrid[key] || Backgrid.Extension[key];
-	      if (_.isUndefined(klass)) {
-	        throw new ReferenceError("Class '" + key + "' not found");
-	      }
-	      return klass;
-	    }
-
-	    return name;
-	  },
-
-	  callByNeed: function () {
-	    var value = arguments[0];
-	    if (!_.isFunction(value)) return value;
-
-	    var context = arguments[1];
-	    var args = [].slice.call(arguments, 2);
-	    return value.apply(context, !!(args + '') ? args : []);
-	  }
-
-	};
-	_.extend(Backgrid, Backbone.Events);
-
-	/**
-	   Command translates a DOM Event into commands that Backgrid
-	   recognizes. Interested parties can listen on selected Backgrid events that
-	   come with an instance of this class and act on the commands.
-
-	   It is also possible to globally rebind the keyboard shortcuts by replacing
-	   the methods in this class' prototype.
-
-	   @class Backgrid.Command
-	   @constructor
-	 */
-	var Command = Backgrid.Command = function (evt) {
-	  _.extend(this, {
-	    altKey: !!evt.altKey,
-	    "char": evt["char"],
-	    charCode: evt.charCode,
-	    ctrlKey: !!evt.ctrlKey,
-	    key: evt.key,
-	    keyCode: evt.keyCode,
-	    locale: evt.locale,
-	    location: evt.location,
-	    metaKey: !!evt.metaKey,
-	    repeat: !!evt.repeat,
-	    shiftKey: !!evt.shiftKey,
-	    which: evt.which
-	  });
-	};
-	_.extend(Command.prototype, {
-	  /**
-	     Up Arrow
-
-	     @member Backgrid.Command
-	   */
-	  moveUp: function () { return this.keyCode == 38; },
-	  /**
-	     Down Arrow
-
-	     @member Backgrid.Command
-	   */
-	  moveDown: function () { return this.keyCode === 40; },
-	  /**
-	     Shift Tab
-
-	     @member Backgrid.Command
-	   */
-	  moveLeft: function () { return this.shiftKey && this.keyCode === 9; },
-	  /**
-	     Tab
-
-	     @member Backgrid.Command
-	   */
-	  moveRight: function () { return !this.shiftKey && this.keyCode === 9; },
-	  /**
-	     Enter
-
-	     @member Backgrid.Command
-	   */
-	  save: function () { return this.keyCode === 13; },
-	  /**
-	     Esc
-
-	     @member Backgrid.Command
-	   */
-	  cancel: function () { return this.keyCode === 27; },
-	  /**
-	     None of the above.
-
-	     @member Backgrid.Command
-	   */
-	  passThru: function () {
-	    return !(this.moveUp() || this.moveDown() || this.moveLeft() ||
-	             this.moveRight() || this.save() || this.cancel());
-	  }
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   Just a convenient class for interested parties to subclass.
-
-	   The default Cell classes don't require the formatter to be a subclass of
-	   Formatter as long as the fromRaw(rawData) and toRaw(formattedData) methods
-	   are defined.
-
-	   @abstract
-	   @class Backgrid.CellFormatter
-	   @constructor
-	*/
-	var CellFormatter = Backgrid.CellFormatter = function () {};
-	_.extend(CellFormatter.prototype, {
-
-	  /**
-	     Takes a raw value from a model and returns an optionally formatted string
-	     for display. The default implementation simply returns the supplied value
-	     as is without any type conversion.
-
-	     @member Backgrid.CellFormatter
-	     @param {*} rawData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {*}
-	  */
-	  fromRaw: function (rawData, model) {
-	    return rawData;
-	  },
-
-	  /**
-	     Takes a formatted string, usually from user input, and returns a
-	     appropriately typed value for persistence in the model.
-
-	     If the user input is invalid or unable to be converted to a raw value
-	     suitable for persistence in the model, toRaw must return `undefined`.
-
-	     @member Backgrid.CellFormatter
-	     @param {string} formattedData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {*|undefined}
-	  */
-	  toRaw: function (formattedData, model) {
-	    return formattedData;
-	  }
-
-	});
-
-	/**
-	   A floating point number formatter. Doesn't understand scientific notation at
-	   the moment.
-
-	   @class Backgrid.NumberFormatter
-	   @extends Backgrid.CellFormatter
-	   @constructor
-	   @throws {RangeError} If decimals < 0 or > 20.
-	*/
-	var NumberFormatter = Backgrid.NumberFormatter = function (options) {
-	  _.extend(this, this.defaults, options || {});
-
-	  if (this.decimals < 0 || this.decimals > 20) {
-	    throw new RangeError("decimals must be between 0 and 20");
-	  }
-	};
-	NumberFormatter.prototype = new CellFormatter();
-	_.extend(NumberFormatter.prototype, {
-
-	  /**
-	     @member Backgrid.NumberFormatter
-	     @cfg {Object} options
-
-	     @cfg {number} [options.decimals=2] Number of decimals to display. Must be an integer.
-
-	     @cfg {string} [options.decimalSeparator='.'] The separator to use when
-	     displaying decimals.
-
-	     @cfg {string} [options.orderSeparator=','] The separator to use to
-	     separator thousands. May be an empty string.
-	   */
-	  defaults: {
-	    decimals: 2,
-	    decimalSeparator: '.',
-	    orderSeparator: ','
-	  },
-
-	  HUMANIZED_NUM_RE: /(\d)(?=(?:\d{3})+$)/g,
-
-	  /**
-	     Takes a floating point number and convert it to a formatted string where
-	     every thousand is separated by `orderSeparator`, with a `decimal` number of
-	     decimals separated by `decimalSeparator`. The number returned is rounded
-	     the usual way.
-
-	     @member Backgrid.NumberFormatter
-	     @param {number} number
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string}
-	  */
-	  fromRaw: function (number, model) {
-	    if (_.isNull(number) || _.isUndefined(number)) return '';
-
-	    number = number.toFixed(~~this.decimals);
-
-	    var parts = number.split('.');
-	    var integerPart = parts[0];
-	    var decimalPart = parts[1] ? (this.decimalSeparator || '.') + parts[1] : '';
-
-	    return integerPart.replace(this.HUMANIZED_NUM_RE, '$1' + this.orderSeparator) + decimalPart;
-	  },
-
-	  /**
-	     Takes a string, possibly formatted with `orderSeparator` and/or
-	     `decimalSeparator`, and convert it back to a number.
-
-	     @member Backgrid.NumberFormatter
-	     @param {string} formattedData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {number|undefined} Undefined if the string cannot be converted to
-	     a number.
-	  */
-	  toRaw: function (formattedData, model) {
-	    formattedData = formattedData.trim();
-
-	    if (formattedData === '') return null;
-
-	    var rawData = '';
-
-	    var thousands = formattedData.split(this.orderSeparator);
-	    for (var i = 0; i < thousands.length; i++) {
-	      rawData += thousands[i];
-	    }
-
-	    var decimalParts = rawData.split(this.decimalSeparator);
-	    rawData = '';
-	    for (var i = 0; i < decimalParts.length; i++) {
-	      rawData = rawData + decimalParts[i] + '.';
-	    }
-
-	    if (rawData[rawData.length - 1] === '.') {
-	      rawData = rawData.slice(0, rawData.length - 1);
-	    }
-
-	    var result = (rawData * 1).toFixed(~~this.decimals) * 1;
-	    if (_.isNumber(result) && !_.isNaN(result)) return result;
-	  }
-
-	});
-
-	/**
-	   A number formatter that converts a floating point number, optionally
-	   multiplied by a multiplier, to a percentage string and vice versa.
-
-	   @class Backgrid.PercentFormatter
-	   @extends Backgrid.NumberFormatter
-	   @constructor
-	   @throws {RangeError} If decimals < 0 or > 20.
-	 */
-	var PercentFormatter = Backgrid.PercentFormatter = function () {
-	  Backgrid.NumberFormatter.apply(this, arguments);
-	};
-
-	PercentFormatter.prototype = new Backgrid.NumberFormatter(),
-
-	_.extend(PercentFormatter.prototype, {
-
-	  /**
-	     @member Backgrid.PercentFormatter
-	     @cfg {Object} options
-
-	     @cfg {number} [options.multiplier=1] The number used to multiply the model
-	     value for display.
-
-	     @cfg {string} [options.symbol='%'] The symbol to append to the percentage
-	     string.
-	   */
-	  defaults: _.extend({}, NumberFormatter.prototype.defaults, {
-	    multiplier: 1,
-	    symbol: "%"
-	  }),
-
-	  /**
-	     Takes a floating point number, where the number is first multiplied by
-	     `multiplier`, then converted to a formatted string like
-	     NumberFormatter#fromRaw, then finally append `symbol` to the end.
-
-	     @member Backgrid.PercentFormatter
-	     @param {number} rawValue
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string}
-	  */
-	  fromRaw: function (number, model) {
-	    var args = [].slice.call(arguments, 1);
-	    args.unshift(number * this.multiplier);
-	    return (NumberFormatter.prototype.fromRaw.apply(this, args) || "0") + this.symbol;
-	  },
-
-	  /**
-	     Takes a string, possibly appended with `symbol` and/or `decimalSeparator`,
-	     and convert it back to a number for the model like NumberFormatter#toRaw,
-	     and then dividing it by `multiplier`.
-
-	     @member Backgrid.PercentFormatter
-	     @param {string} formattedData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {number|undefined} Undefined if the string cannot be converted to
-	     a number.
-	  */
-	  toRaw: function (formattedValue, model) {
-	    var tokens = formattedValue.split(this.symbol);
-	    if (tokens && tokens[0] && tokens[1] === "" || tokens[1] == null) {
-	      var rawValue = NumberFormatter.prototype.toRaw.call(this, tokens[0]);
-	      if (_.isUndefined(rawValue)) return rawValue;
-	      return rawValue / this.multiplier;
-	    }
-	  }
-
-	});
-
-	/**
-	   Formatter to converts between various datetime formats.
-
-	   This class only understands ISO-8601 formatted datetime strings and UNIX
-	   offset (number of milliseconds since UNIX Epoch). See
-	   Backgrid.Extension.MomentFormatter if you need a much more flexible datetime
-	   formatter.
-
-	   @class Backgrid.DatetimeFormatter
-	   @extends Backgrid.CellFormatter
-	   @constructor
-	   @throws {Error} If both `includeDate` and `includeTime` are false.
-	*/
-	var DatetimeFormatter = Backgrid.DatetimeFormatter = function (options) {
-	  _.extend(this, this.defaults, options || {});
-
-	  if (!this.includeDate && !this.includeTime) {
-	    throw new Error("Either includeDate or includeTime must be true");
-	  }
-	};
-	DatetimeFormatter.prototype = new CellFormatter();
-	_.extend(DatetimeFormatter.prototype, {
-
-	  /**
-	     @member Backgrid.DatetimeFormatter
-
-	     @cfg {Object} options
-
-	     @cfg {boolean} [options.includeDate=true] Whether the values include the
-	     date part.
-
-	     @cfg {boolean} [options.includeTime=true] Whether the values include the
-	     time part.
-
-	     @cfg {boolean} [options.includeMilli=false] If `includeTime` is true,
-	     whether to include the millisecond part, if it exists.
-	   */
-	  defaults: {
-	    includeDate: true,
-	    includeTime: true,
-	    includeMilli: false
-	  },
-
-	  DATE_RE: /^([+\-]?\d{4})-(\d{2})-(\d{2})$/,
-	  TIME_RE: /^(\d{2}):(\d{2}):(\d{2})(\.(\d{3}))?$/,
-	  ISO_SPLITTER_RE: /T|Z| +/,
-
-	  _convert: function (data, validate) {
-	    if ((data + '').trim() === '') return null;
-
-	    var date, time = null;
-	    if (_.isNumber(data)) {
-	      var jsDate = new Date(data);
-	      date = lpad(jsDate.getUTCFullYear(), 4, 0) + '-' + lpad(jsDate.getUTCMonth() + 1, 2, 0) + '-' + lpad(jsDate.getUTCDate(), 2, 0);
-	      time = lpad(jsDate.getUTCHours(), 2, 0) + ':' + lpad(jsDate.getUTCMinutes(), 2, 0) + ':' + lpad(jsDate.getUTCSeconds(), 2, 0);
-	    }
-	    else {
-	      data = data.trim();
-	      var parts = data.split(this.ISO_SPLITTER_RE) || [];
-	      date = this.DATE_RE.test(parts[0]) ? parts[0] : '';
-	      time = date && parts[1] ? parts[1] : this.TIME_RE.test(parts[0]) ? parts[0] : '';
-	    }
-
-	    var YYYYMMDD = this.DATE_RE.exec(date) || [];
-	    var HHmmssSSS = this.TIME_RE.exec(time) || [];
-
-	    if (validate) {
-	      if (this.includeDate && _.isUndefined(YYYYMMDD[0])) return;
-	      if (this.includeTime && _.isUndefined(HHmmssSSS[0])) return;
-	      if (!this.includeDate && date) return;
-	      if (!this.includeTime && time) return;
-	    }
-
-	    var jsDate = new Date(Date.UTC(YYYYMMDD[1] * 1 || 0,
-	                                   YYYYMMDD[2] * 1 - 1 || 0,
-	                                   YYYYMMDD[3] * 1 || 0,
-	                                   HHmmssSSS[1] * 1 || null,
-	                                   HHmmssSSS[2] * 1 || null,
-	                                   HHmmssSSS[3] * 1 || null,
-	                                   HHmmssSSS[5] * 1 || null));
-
-	    var result = '';
-
-	    if (this.includeDate) {
-	      result = lpad(jsDate.getUTCFullYear(), 4, 0) + '-' + lpad(jsDate.getUTCMonth() + 1, 2, 0) + '-' + lpad(jsDate.getUTCDate(), 2, 0);
-	    }
-
-	    if (this.includeTime) {
-	      result = result + (this.includeDate ? 'T' : '') + lpad(jsDate.getUTCHours(), 2, 0) + ':' + lpad(jsDate.getUTCMinutes(), 2, 0) + ':' + lpad(jsDate.getUTCSeconds(), 2, 0);
-
-	      if (this.includeMilli) {
-	        result = result + '.' + lpad(jsDate.getUTCMilliseconds(), 3, 0);
-	      }
-	    }
-
-	    if (this.includeDate && this.includeTime) {
-	      result += "Z";
-	    }
-
-	    return result;
-	  },
-
-	  /**
-	     Converts an ISO-8601 formatted datetime string to a datetime string, date
-	     string or a time string. The timezone is ignored if supplied.
-
-	     @member Backgrid.DatetimeFormatter
-	     @param {string} rawData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string|null|undefined} ISO-8601 string in UTC. Null and undefined
-	     values are returned as is.
-	  */
-	  fromRaw: function (rawData, model) {
-	    if (_.isNull(rawData) || _.isUndefined(rawData)) return '';
-	    return this._convert(rawData);
-	  },
-
-	  /**
-	     Converts an ISO-8601 formatted datetime string to a datetime string, date
-	     string or a time string. The timezone is ignored if supplied. This method
-	     parses the input values exactly the same way as
-	     Backgrid.Extension.MomentFormatter#fromRaw(), in addition to doing some
-	     sanity checks.
-
-	     @member Backgrid.DatetimeFormatter
-	     @param {string} formattedData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string|undefined} ISO-8601 string in UTC. Undefined if a date is
-	     found when `includeDate` is false, or a time is found when `includeTime` is
-	     false, or if `includeDate` is true and a date is not found, or if
-	     `includeTime` is true and a time is not found.
-	  */
-	  toRaw: function (formattedData, model) {
-	    return this._convert(formattedData, true);
-	  }
-
-	});
-
-	/**
-	   Formatter to convert any value to string.
-
-	   @class Backgrid.StringFormatter
-	   @extends Backgrid.CellFormatter
-	   @constructor
-	 */
-	var StringFormatter = Backgrid.StringFormatter = function () {};
-	StringFormatter.prototype = new CellFormatter();
-	_.extend(StringFormatter.prototype, {
-	  /**
-	     Converts any value to a string using Ecmascript's implicit type
-	     conversion. If the given value is `null` or `undefined`, an empty string is
-	     returned instead.
-
-	     @member Backgrid.StringFormatter
-	     @param {*} rawValue
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string}
-	   */
-	  fromRaw: function (rawValue, model) {
-	    if (_.isUndefined(rawValue) || _.isNull(rawValue)) return '';
-	    return rawValue + '';
-	  }
-	});
-
-	/**
-	   Simple email validation formatter.
-
-	   @class Backgrid.EmailFormatter
-	   @extends Backgrid.CellFormatter
-	   @constructor
-	 */
-	var EmailFormatter = Backgrid.EmailFormatter = function () {};
-	EmailFormatter.prototype = new CellFormatter();
-	_.extend(EmailFormatter.prototype, {
-	  /**
-	     Return the input if it is a string that contains an '@' character and if
-	     the strings before and after '@' are non-empty. If the input does not
-	     validate, `undefined` is returned.
-
-	     @member Backgrid.EmailFormatter
-	     @param {*} formattedData
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {string|undefined}
-	   */
-	  toRaw: function (formattedData, model) {
-	    var parts = formattedData.trim().split("@");
-	    if (parts.length === 2 && _.all(parts)) {
-	      return formattedData;
-	    }
-	  }
-	});
-
-	/**
-	   Formatter for SelectCell.
-
-	   If the type of a model value is not a string, it is expected that a subclass
-	   of this formatter is provided to the SelectCell, with #toRaw overridden to
-	   convert the string value returned from the DOM back to whatever value is
-	   expected in the model.
-
-	   @class Backgrid.SelectFormatter
-	   @extends Backgrid.CellFormatter
-	   @constructor
-	*/
-	var SelectFormatter = Backgrid.SelectFormatter = function () {};
-	SelectFormatter.prototype = new CellFormatter();
-	_.extend(SelectFormatter.prototype, {
-
-	  /**
-	     Normalizes raw scalar or array values to an array.
-
-	     @member Backgrid.SelectFormatter
-	     @param {*} rawValue
-	     @param {Backbone.Model} model Used for more complicated formatting
-	     @return {Array.<*>}
-	  */
-	  fromRaw: function (rawValue, model) {
-	    return _.isArray(rawValue) ? rawValue : rawValue != null ? [rawValue] : [];
-	  }
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   Generic cell editor base class. Only defines an initializer for a number of
-	   required parameters.
-
-	   @abstract
-	   @class Backgrid.CellEditor
-	   @extends Backbone.View
-	*/
-	var CellEditor = Backgrid.CellEditor = Backbone.View.extend({
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backgrid.CellFormatter} options.formatter
-	     @param {Backgrid.Column} options.column
-	     @param {Backbone.Model} options.model
-
-	     @throws {TypeError} If `formatter` is not a formatter instance, or when
-	     `model` or `column` are undefined.
-	  */
-	  initialize: function (options) {
-	    this.formatter = options.formatter;
-	    this.column = options.column;
-	    if (!(this.column instanceof Column)) {
-	      this.column = new Column(this.column);
-	    }
-
-	    this.listenTo(this.model, "backgrid:editing", this.postRender);
-	  },
-
-	  /**
-	     Post-rendering setup and initialization. Focuses the cell editor's `el` in
-	     this default implementation. **Should** be called by Cell classes after
-	     calling Backgrid.CellEditor#render.
-	  */
-	  postRender: function (model, column) {
-	    if (column == null || column.get("name") == this.column.get("name")) {
-	      this.$el.focus();
-	    }
-	    return this;
-	  }
-
-	});
-
-	/**
-	   InputCellEditor the cell editor type used by most core cell types. This cell
-	   editor renders a text input box as its editor. The input will render a
-	   placeholder if the value is empty on supported browsers.
-
-	   @class Backgrid.InputCellEditor
-	   @extends Backgrid.CellEditor
-	*/
-	var InputCellEditor = Backgrid.InputCellEditor = CellEditor.extend({
-
-	  /** @property */
-	  tagName: "input",
-
-	  /** @property */
-	  attributes: {
-	    type: "text"
-	  },
-
-	  /** @property */
-	  events: {
-	    "blur": "saveOrCancel",
-	    "keydown": "saveOrCancel"
-	  },
-
-	  /**
-	     Initializer. Removes this `el` from the DOM when a `done` event is
-	     triggered.
-
-	     @param {Object} options
-	     @param {Backgrid.CellFormatter} options.formatter
-	     @param {Backgrid.Column} options.column
-	     @param {Backbone.Model} options.model
-	     @param {string} [options.placeholder]
-	  */
-	  initialize: function (options) {
-	    InputCellEditor.__super__.initialize.apply(this, arguments);
-
-	    if (options.placeholder) {
-	      this.$el.attr("placeholder", options.placeholder);
-	    }
-	  },
-
-	  /**
-	     Renders a text input with the cell value formatted for display, if it
-	     exists.
-	  */
-	  render: function () {
-	    var model = this.model;
-	    this.$el.val(this.formatter.fromRaw(model.get(this.column.get("name")), model));
-	    return this;
-	  },
-
-	  /**
-	     If the key pressed is `enter`, `tab`, `up`, or `down`, converts the value
-	     in the editor to a raw value for saving into the model using the formatter.
-
-	     If the key pressed is `esc` the changes are undone.
-
-	     If the editor goes out of focus (`blur`) but the value is invalid, the
-	     event is intercepted and cancelled so the cell remains in focus pending for
-	     further action. The changes are saved otherwise.
-
-	     Triggers a Backbone `backgrid:edited` event from the model when successful,
-	     and `backgrid:error` if the value cannot be converted. Classes listening to
-	     the `error` event, usually the Cell classes, should respond appropriately,
-	     usually by rendering some kind of error feedback.
-
-	     @param {Event} e
-	  */
-	  saveOrCancel: function (e) {
-
-	    var formatter = this.formatter;
-	    var model = this.model;
-	    var column = this.column;
-
-	    var command = new Command(e);
-	    var blurred = e.type === "blur";
-
-	    if (command.moveUp() || command.moveDown() || command.moveLeft() || command.moveRight() ||
-	        command.save() || blurred) {
-
-	      e.preventDefault();
-	      e.stopPropagation();
-
-	      var val = this.$el.val();
-	      var newValue = formatter.toRaw(val, model);
-	      if (_.isUndefined(newValue)) {
-	        model.trigger("backgrid:error", model, column, val);
-	      }
-	      else {
-	        model.set(column.get("name"), newValue);
-	        model.trigger("backgrid:edited", model, column, command);
-	      }
-	    }
-	    // esc
-	    else if (command.cancel()) {
-	      // undo
-	      e.stopPropagation();
-	      model.trigger("backgrid:edited", model, column, command);
-	    }
-	  },
-
-	  postRender: function (model, column) {
-	    if (column == null || column.get("name") == this.column.get("name")) {
-	      // move the cursor to the end on firefox if text is right aligned
-	      if (this.$el.css("text-align") === "right") {
-	        var val = this.$el.val();
-	        this.$el.focus().val(null).val(val);
-	      }
-	      else this.$el.focus();
-	    }
-	    return this;
-	  }
-
-	});
-
-	/**
-	   The super-class for all Cell types. By default, this class renders a plain
-	   table cell with the model value converted to a string using the
-	   formatter. The table cell is clickable, upon which the cell will go into
-	   editor mode, which is rendered by a Backgrid.InputCellEditor instance by
-	   default. Upon encountering any formatting errors, this class will add an
-	   `error` CSS class to the table cell.
-
-	   @abstract
-	   @class Backgrid.Cell
-	   @extends Backbone.View
-	*/
-	var Cell = Backgrid.Cell = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "td",
-
-	  /**
-	     @property {Backgrid.CellFormatter|Object|string} [formatter=CellFormatter]
-	  */
-	  formatter: CellFormatter,
-
-	  /**
-	     @property {Backgrid.CellEditor} [editor=Backgrid.InputCellEditor] The
-	     default editor for all cell instances of this class. This value must be a
-	     class, it will be automatically instantiated upon entering edit mode.
-
-	     See Backgrid.CellEditor
-	  */
-	  editor: InputCellEditor,
-
-	  /** @property */
-	  events: {
-	    "click": "enterEditMode"
-	  },
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backbone.Model} options.model
-	     @param {Backgrid.Column} options.column
-
-	     @throws {ReferenceError} If formatter is a string but a formatter class of
-	     said name cannot be found in the Backgrid module.
-	  */
-	  initialize: function (options) {
-	    this.column = options.column;
-	    if (!(this.column instanceof Column)) {
-	      this.column = new Column(this.column);
-	    }
-
-	    var column = this.column, model = this.model, $el = this.$el;
-
-	    var formatter = Backgrid.resolveNameToClass(column.get("formatter") ||
-	                                                this.formatter, "Formatter");
-
-	    if (!_.isFunction(formatter.fromRaw) && !_.isFunction(formatter.toRaw)) {
-	      formatter = new formatter();
-	    }
-
-	    this.formatter = formatter;
-
-	    this.editor = Backgrid.resolveNameToClass(this.editor, "CellEditor");
-
-	    this.listenTo(model, "change:" + column.get("name"), function () {
-	      if (!$el.hasClass("editor")) this.render();
-	    });
-
-	    this.listenTo(model, "backgrid:error", this.renderError);
-
-	    this.listenTo(column, "change:editable change:sortable change:renderable",
-	                  function (column) {
-	                    var changed = column.changedAttributes();
-	                    for (var key in changed) {
-	                      if (changed.hasOwnProperty(key)) {
-	                        $el.toggleClass(key, changed[key]);
-	                      }
-	                    }
-	                  });
-
-	    if (Backgrid.callByNeed(column.editable(), column, model)) $el.addClass("editable");
-	    if (Backgrid.callByNeed(column.sortable(), column, model)) $el.addClass("sortable");
-	    if (Backgrid.callByNeed(column.renderable(), column, model)) $el.addClass("renderable");
-	  },
-
-	  /**
-	     Render a text string in a table cell. The text is converted from the
-	     model's raw value for this cell's column.
-	  */
-	  render: function () {
-	    this.$el.empty();
-	    var model = this.model;
-	    this.$el.text(this.formatter.fromRaw(model.get(this.column.get("name")), model));
-	    this.delegateEvents();
-	    return this;
-	  },
-
-	  /**
-	     If this column is editable, a new CellEditor instance is instantiated with
-	     its required parameters. An `editor` CSS class is added to the cell upon
-	     entering edit mode.
-
-	     This method triggers a Backbone `backgrid:edit` event from the model when
-	     the cell is entering edit mode and an editor instance has been constructed,
-	     but before it is rendered and inserted into the DOM. The cell and the
-	     constructed cell editor instance are sent as event parameters when this
-	     event is triggered.
-
-	     When this cell has finished switching to edit mode, a Backbone
-	     `backgrid:editing` event is triggered from the model. The cell and the
-	     constructed cell instance are also sent as parameters in the event.
-
-	     When the model triggers a `backgrid:error` event, it means the editor is
-	     unable to convert the current user input to an apprpriate value for the
-	     model's column, and an `error` CSS class is added to the cell accordingly.
-	  */
-	  enterEditMode: function () {
-	    var model = this.model;
-	    var column = this.column;
-
-	    var editable = Backgrid.callByNeed(column.editable(), column, model);
-	    if (editable) {
-
-	      this.currentEditor = new this.editor({
-	        column: this.column,
-	        model: this.model,
-	        formatter: this.formatter
-	      });
-
-	      model.trigger("backgrid:edit", model, column, this, this.currentEditor);
-
-	      // Need to redundantly undelegate events for Firefox
-	      this.undelegateEvents();
-	      this.$el.empty();
-	      this.$el.append(this.currentEditor.$el);
-	      this.currentEditor.render();
-	      this.$el.addClass("editor");
-
-	      model.trigger("backgrid:editing", model, column, this, this.currentEditor);
-	    }
-	  },
-
-	  /**
-	     Put an `error` CSS class on the table cell.
-	  */
-	  renderError: function (model, column) {
-	    if (column == null || column.get("name") == this.column.get("name")) {
-	      this.$el.addClass("error");
-	    }
-	  },
-
-	  /**
-	     Removes the editor and re-render in display mode.
-	  */
-	  exitEditMode: function () {
-	    this.$el.removeClass("error");
-	    this.currentEditor.remove();
-	    this.stopListening(this.currentEditor);
-	    delete this.currentEditor;
-	    this.$el.removeClass("editor");
-	    this.render();
-	  },
-
-	  /**
-	     Clean up this cell.
-
-	     @chainable
-	  */
-	  remove: function () {
-	    if (this.currentEditor) {
-	      this.currentEditor.remove.apply(this.currentEditor, arguments);
-	      delete this.currentEditor;
-	    }
-	    return Cell.__super__.remove.apply(this, arguments);
-	  }
-
-	});
-
-	/**
-	   StringCell displays HTML escaped strings and accepts anything typed in.
-
-	   @class Backgrid.StringCell
-	   @extends Backgrid.Cell
-	*/
-	var StringCell = Backgrid.StringCell = Cell.extend({
-
-	  /** @property */
-	  className: "string-cell",
-
-	  formatter: StringFormatter
-
-	});
-
-	/**
-	   UriCell renders an HTML `<a>` anchor for the value and accepts URIs as user
-	   input values. No type conversion or URL validation is done by the formatter
-	   of this cell. Users who need URL validation are encourage to subclass UriCell
-	   to take advantage of the parsing capabilities of the HTMLAnchorElement
-	   available on HTML5-capable browsers or using a third-party library like
-	   [URI.js](https://github.com/medialize/URI.js).
-
-	   @class Backgrid.UriCell
-	   @extends Backgrid.Cell
-	*/
-	var UriCell = Backgrid.UriCell = Cell.extend({
-
-	  /** @property */
-	  className: "uri-cell",
-
-	  /**
-	     @property {string} [title] The title attribute of the generated anchor. It
-	     uses the display value formatted by the `formatter.fromRaw` by default.
-	  */
-	  title: null,
-
-	  /**
-	     @property {string} [target="_blank"] The target attribute of the generated
-	     anchor.
-	  */
-	  target: "_blank",
-
-	  initialize: function (options) {
-	    UriCell.__super__.initialize.apply(this, arguments);
-	    this.title = options.title || this.title;
-	    this.target = options.target || this.target;
-	  },
-
-	  render: function () {
-	    this.$el.empty();
-	    var rawValue = this.model.get(this.column.get("name"));
-	    var formattedValue = this.formatter.fromRaw(rawValue, this.model);
-	    this.$el.append($("<a>", {
-	      tabIndex: -1,
-	      href: rawValue,
-	      title: this.title || formattedValue,
-	      target: this.target
-	    }).text(formattedValue));
-	    this.delegateEvents();
-	    return this;
-	  }
-
-	});
-
-	/**
-	   Like Backgrid.UriCell, EmailCell renders an HTML `<a>` anchor for the
-	   value. The `href` in the anchor is prefixed with `mailto:`. EmailCell will
-	   complain if the user enters a string that doesn't contain the `@` sign.
-
-	   @class Backgrid.EmailCell
-	   @extends Backgrid.StringCell
-	*/
-	var EmailCell = Backgrid.EmailCell = StringCell.extend({
-
-	  /** @property */
-	  className: "email-cell",
-
-	  formatter: EmailFormatter,
-
-	  render: function () {
-	    this.$el.empty();
-	    var model = this.model;
-	    var formattedValue = this.formatter.fromRaw(model.get(this.column.get("name")), model);
-	    this.$el.append($("<a>", {
-	      tabIndex: -1,
-	      href: "mailto:" + formattedValue,
-	      title: formattedValue
-	    }).text(formattedValue));
-	    this.delegateEvents();
-	    return this;
-	  }
-
-	});
-
-	/**
-	   NumberCell is a generic cell that renders all numbers. Numbers are formatted
-	   using a Backgrid.NumberFormatter.
-
-	   @class Backgrid.NumberCell
-	   @extends Backgrid.Cell
-	*/
-	var NumberCell = Backgrid.NumberCell = Cell.extend({
-
-	  /** @property */
-	  className: "number-cell",
-
-	  /**
-	     @property {number} [decimals=2] Must be an integer.
-	  */
-	  decimals: NumberFormatter.prototype.defaults.decimals,
-
-	  /** @property {string} [decimalSeparator='.'] */
-	  decimalSeparator: NumberFormatter.prototype.defaults.decimalSeparator,
-
-	  /** @property {string} [orderSeparator=','] */
-	  orderSeparator: NumberFormatter.prototype.defaults.orderSeparator,
-
-	  /** @property {Backgrid.CellFormatter} [formatter=Backgrid.NumberFormatter] */
-	  formatter: NumberFormatter,
-
-	  /**
-	     Initializes this cell and the number formatter.
-
-	     @param {Object} options
-	     @param {Backbone.Model} options.model
-	     @param {Backgrid.Column} options.column
-	  */
-	  initialize: function (options) {
-	    NumberCell.__super__.initialize.apply(this, arguments);
-	    var formatter = this.formatter;
-	    formatter.decimals = this.decimals;
-	    formatter.decimalSeparator = this.decimalSeparator;
-	    formatter.orderSeparator = this.orderSeparator;
-	  }
-
-	});
-
-	/**
-	   An IntegerCell is just a Backgrid.NumberCell with 0 decimals. If a floating
-	   point number is supplied, the number is simply rounded the usual way when
-	   displayed.
-
-	   @class Backgrid.IntegerCell
-	   @extends Backgrid.NumberCell
-	*/
-	var IntegerCell = Backgrid.IntegerCell = NumberCell.extend({
-
-	  /** @property */
-	  className: "integer-cell",
-
-	  /**
-	     @property {number} decimals Must be an integer.
-	  */
-	  decimals: 0
-	});
-
-	/**
-	   A PercentCell is another Backgrid.NumberCell that takes a floating number,
-	   optionally multiplied by a multiplier and display it as a percentage.
-
-	   @class Backgrid.PercentCell
-	   @extends Backgrid.NumberCell
-	 */
-	var PercentCell = Backgrid.PercentCell = NumberCell.extend({
-
-	  /** @property */
-	  className: "percent-cell",
-
-	  /** @property {number} [multiplier=1] */
-	  multiplier: PercentFormatter.prototype.defaults.multiplier,
-
-	  /** @property {string} [symbol='%'] */
-	  symbol: PercentFormatter.prototype.defaults.symbol,
-
-	  /** @property {Backgrid.CellFormatter} [formatter=Backgrid.PercentFormatter] */
-	  formatter: PercentFormatter,
-
-	  /**
-	     Initializes this cell and the percent formatter.
-
-	     @param {Object} options
-	     @param {Backbone.Model} options.model
-	     @param {Backgrid.Column} options.column
-	  */
-	  initialize: function () {
-	    PercentCell.__super__.initialize.apply(this, arguments);
-	    var formatter = this.formatter;
-	    formatter.multiplier = this.multiplier;
-	    formatter.symbol = this.symbol;
-	  }
-
-	});
-
-	/**
-	   DatetimeCell is a basic cell that accepts datetime string values in RFC-2822
-	   or W3C's subset of ISO-8601 and displays them in ISO-8601 format. For a much
-	   more sophisticated date time cell with better datetime formatting, take a
-	   look at the Backgrid.Extension.MomentCell extension.
-
-	   @class Backgrid.DatetimeCell
-	   @extends Backgrid.Cell
-
-	   See:
-
-	   - Backgrid.Extension.MomentCell
-	   - Backgrid.DatetimeFormatter
-	*/
-	var DatetimeCell = Backgrid.DatetimeCell = Cell.extend({
-
-	  /** @property */
-	  className: "datetime-cell",
-
-	  /**
-	     @property {boolean} [includeDate=true]
-	  */
-	  includeDate: DatetimeFormatter.prototype.defaults.includeDate,
-
-	  /**
-	     @property {boolean} [includeTime=true]
-	  */
-	  includeTime: DatetimeFormatter.prototype.defaults.includeTime,
-
-	  /**
-	     @property {boolean} [includeMilli=false]
-	  */
-	  includeMilli: DatetimeFormatter.prototype.defaults.includeMilli,
-
-	  /** @property {Backgrid.CellFormatter} [formatter=Backgrid.DatetimeFormatter] */
-	  formatter: DatetimeFormatter,
-
-	  /**
-	     Initializes this cell and the datetime formatter.
-
-	     @param {Object} options
-	     @param {Backbone.Model} options.model
-	     @param {Backgrid.Column} options.column
-	  */
-	  initialize: function (options) {
-	    DatetimeCell.__super__.initialize.apply(this, arguments);
-	    var formatter = this.formatter;
-	    formatter.includeDate = this.includeDate;
-	    formatter.includeTime = this.includeTime;
-	    formatter.includeMilli = this.includeMilli;
-
-	    var placeholder = this.includeDate ? "YYYY-MM-DD" : "";
-	    placeholder += (this.includeDate && this.includeTime) ? "T" : "";
-	    placeholder += this.includeTime ? "HH:mm:ss" : "";
-	    placeholder += (this.includeTime && this.includeMilli) ? ".SSS" : "";
-
-	    this.editor = this.editor.extend({
-	      attributes: _.extend({}, this.editor.prototype.attributes, this.editor.attributes, {
-	        placeholder: placeholder
-	      })
-	    });
-	  }
-
-	});
-
-	/**
-	   DateCell is a Backgrid.DatetimeCell without the time part.
-
-	   @class Backgrid.DateCell
-	   @extends Backgrid.DatetimeCell
-	*/
-	var DateCell = Backgrid.DateCell = DatetimeCell.extend({
-
-	  /** @property */
-	  className: "date-cell",
-
-	  /** @property */
-	  includeTime: false
-
-	});
-
-	/**
-	   TimeCell is a Backgrid.DatetimeCell without the date part.
-
-	   @class Backgrid.TimeCell
-	   @extends Backgrid.DatetimeCell
-	*/
-	var TimeCell = Backgrid.TimeCell = DatetimeCell.extend({
-
-	  /** @property */
-	  className: "time-cell",
-
-	  /** @property */
-	  includeDate: false
-
-	});
-
-	/**
-	   BooleanCellEditor renders a checkbox as its editor.
-
-	   @class Backgrid.BooleanCellEditor
-	   @extends Backgrid.CellEditor
-	*/
-	var BooleanCellEditor = Backgrid.BooleanCellEditor = CellEditor.extend({
-
-	  /** @property */
-	  tagName: "input",
-
-	  /** @property */
-	  attributes: {
-	    tabIndex: -1,
-	    type: "checkbox"
-	  },
-
-	  /** @property */
-	  events: {
-	    "mousedown": function () {
-	      this.mouseDown = true;
-	    },
-	    "blur": "enterOrExitEditMode",
-	    "mouseup": function () {
-	      this.mouseDown = false;
-	    },
-	    "change": "saveOrCancel",
-	    "keydown": "saveOrCancel"
-	  },
-
-	  /**
-	     Renders a checkbox and check it if the model value of this column is true,
-	     uncheck otherwise.
-	  */
-	  render: function () {
-	    var model = this.model;
-	    var val = this.formatter.fromRaw(model.get(this.column.get("name")), model);
-	    this.$el.prop("checked", val);
-	    return this;
-	  },
-
-	  /**
-	     Event handler. Hack to deal with the case where `blur` is fired before
-	     `change` and `click` on a checkbox.
-	  */
-	  enterOrExitEditMode: function (e) {
-	    if (!this.mouseDown) {
-	      var model = this.model;
-	      model.trigger("backgrid:edited", model, this.column, new Command(e));
-	    }
-	  },
-
-	  /**
-	     Event handler. Save the value into the model if the event is `change` or
-	     one of the keyboard navigation key presses. Exit edit mode without saving
-	     if `escape` was pressed.
-	  */
-	  saveOrCancel: function (e) {
-	    var model = this.model;
-	    var column = this.column;
-	    var formatter = this.formatter;
-	    var command = new Command(e);
-	    // skip ahead to `change` when space is pressed
-	    if (command.passThru() && e.type != "change") return true;
-	    if (command.cancel()) {
-	      e.stopPropagation();
-	      model.trigger("backgrid:edited", model, column, command);
-	    }
-
-	    var $el = this.$el;
-	    if (command.save() || command.moveLeft() || command.moveRight() || command.moveUp() ||
-	        command.moveDown()) {
-	      e.preventDefault();
-	      e.stopPropagation();
-	      var val = formatter.toRaw($el.prop("checked"), model);
-	      model.set(column.get("name"), val);
-	      model.trigger("backgrid:edited", model, column, command);
-	    }
-	    else if (e.type == "change") {
-	      var val = formatter.toRaw($el.prop("checked"), model);
-	      model.set(column.get("name"), val);
-	      $el.focus();
-	    }
-	  }
-
-	});
-
-	/**
-	   BooleanCell renders a checkbox both during display mode and edit mode. The
-	   checkbox is checked if the model value is true, unchecked otherwise.
-
-	   @class Backgrid.BooleanCell
-	   @extends Backgrid.Cell
-	*/
-	var BooleanCell = Backgrid.BooleanCell = Cell.extend({
-
-	  /** @property */
-	  className: "boolean-cell",
-
-	  /** @property */
-	  editor: BooleanCellEditor,
-
-	  /** @property */
-	  events: {
-	    "click": "enterEditMode"
-	  },
-
-	  /**
-	     Renders a checkbox and check it if the model value of this column is true,
-	     uncheck otherwise.
-	  */
-	  render: function () {
-	    this.$el.empty();
-	    var model = this.model, column = this.column;
-	    var editable = Backgrid.callByNeed(column.editable(), column, model);
-	    this.$el.append($("<input>", {
-	      tabIndex: -1,
-	      type: "checkbox",
-	      checked: this.formatter.fromRaw(model.get(column.get("name")), model),
-	      disabled: !editable
-	    }));
-	    this.delegateEvents();
-	    return this;
-	  }
-
-	});
-
-	/**
-	   SelectCellEditor renders an HTML `<select>` fragment as the editor.
-
-	   @class Backgrid.SelectCellEditor
-	   @extends Backgrid.CellEditor
-	*/
-	var SelectCellEditor = Backgrid.SelectCellEditor = CellEditor.extend({
-
-	  /** @property */
-	  tagName: "select",
-
-	  /** @property */
-	  events: {
-	    "change": "save",
-	    "blur": "close",
-	    "keydown": "close"
-	  },
-
-	  /** @property {function(Object, ?Object=): string} template */
-	  template: _.template('<option value="<%- value %>" <%= selected ? \'selected="selected"\' : "" %>><%- text %></option>', null, {variable: null}),
-
-	  setOptionValues: function (optionValues) {
-	    this.optionValues = optionValues;
-	    this.optionValues = _.result(this, "optionValues");
-	  },
-
-	  setMultiple: function (multiple) {
-	    this.multiple = multiple;
-	    this.$el.prop("multiple", multiple);
-	  },
-
-	  _renderOptions: function (nvps, selectedValues) {
-	    var options = '';
-	    for (var i = 0; i < nvps.length; i++) {
-	      options = options + this.template({
-	        text: nvps[i][0],
-	        value: nvps[i][1],
-	        selected: _.indexOf(selectedValues, nvps[i][1]) > -1
-	      });
-	    }
-	    return options;
-	  },
-
-	  /**
-	     Renders the options if `optionValues` is a list of name-value pairs. The
-	     options are contained inside option groups if `optionValues` is a list of
-	     object hashes. The name is rendered at the option text and the value is the
-	     option value. If `optionValues` is a function, it is called without a
-	     parameter.
-	  */
-	  render: function () {
-	    this.$el.empty();
-
-	    var optionValues = _.result(this, "optionValues");
-	    var model = this.model;
-	    var selectedValues = this.formatter.fromRaw(model.get(this.column.get("name")), model);
-
-	    if (!_.isArray(optionValues)) throw new TypeError("optionValues must be an array");
-
-	    var optionValue = null;
-	    var optionText = null;
-	    var optionValue = null;
-	    var optgroupName = null;
-	    var optgroup = null;
-
-	    for (var i = 0; i < optionValues.length; i++) {
-	      var optionValue = optionValues[i];
-
-	      if (_.isArray(optionValue)) {
-	        optionText  = optionValue[0];
-	        optionValue = optionValue[1];
-
-	        this.$el.append(this.template({
-	          text: optionText,
-	          value: optionValue,
-	          selected: _.indexOf(selectedValues, optionValue) > -1
-	        }));
-	      }
-	      else if (_.isObject(optionValue)) {
-	        optgroupName = optionValue.name;
-	        optgroup = $("<optgroup></optgroup>", { label: optgroupName });
-	        optgroup.append(this._renderOptions.call(this, optionValue.values, selectedValues));
-	        this.$el.append(optgroup);
-	      }
-	      else {
-	        throw new TypeError("optionValues elements must be a name-value pair or an object hash of { name: 'optgroup label', value: [option name-value pairs] }");
-	      }
-	    }
-
-	    this.delegateEvents();
-
-	    return this;
-	  },
-
-	  /**
-	     Saves the value of the selected option to the model attribute.
-	  */
-	  save: function (e) {
-	    var model = this.model;
-	    var column = this.column;
-	    model.set(column.get("name"), this.formatter.toRaw(this.$el.val(), model));
-	  },
-
-	  /**
-	     Triggers a `backgrid:edited` event from the model so the body can close
-	     this editor.
-	  */
-	  close: function (e) {
-	    var model = this.model;
-	    var column = this.column;
-	    var command = new Command(e);
-	    if (command.cancel()) {
-	      e.stopPropagation();
-	      model.trigger("backgrid:edited", model, column, new Command(e));
-	    }
-	    else if (command.save() || command.moveLeft() || command.moveRight() ||
-	             command.moveUp() || command.moveDown() || e.type == "blur") {
-	      e.preventDefault();
-	      e.stopPropagation();
-	      this.save(e);
-	      model.trigger("backgrid:edited", model, column, new Command(e));
-	    }
-	  }
-
-	});
-
-	/**
-	   SelectCell is also a different kind of cell in that upon going into edit mode
-	   the cell renders a list of options to pick from, as opposed to an input box.
-
-	   SelectCell cannot be referenced by its string name when used in a column
-	   definition because it requires an `optionValues` class attribute to be
-	   defined. `optionValues` can either be a list of name-value pairs, to be
-	   rendered as options, or a list of object hashes which consist of a key *name*
-	   which is the option group name, and a key *values* which is a list of
-	   name-value pairs to be rendered as options under that option group.
-
-	   In addition, `optionValues` can also be a parameter-less function that
-	   returns one of the above. If the options are static, it is recommended the
-	   returned values to be memoized. `_.memoize()` is a good function to help with
-	   that.
-
-	   During display mode, the default formatter will normalize the raw model value
-	   to an array of values whether the raw model value is a scalar or an
-	   array. Each value is compared with the `optionValues` values using
-	   Ecmascript's implicit type conversion rules. When exiting edit mode, no type
-	   conversion is performed when saving into the model. This behavior is not
-	   always desirable when the value type is anything other than string. To
-	   control type conversion on the client-side, you should subclass SelectCell to
-	   provide a custom formatter or provide the formatter to your column
-	   definition.
-
-	   See:
-	     [$.fn.val()](http://api.jquery.com/val/)
-
-	   @class Backgrid.SelectCell
-	   @extends Backgrid.Cell
-	*/
-	var SelectCell = Backgrid.SelectCell = Cell.extend({
-
-	  /** @property */
-	  className: "select-cell",
-
-	  /** @property */
-	  editor: SelectCellEditor,
-
-	  /** @property */
-	  multiple: false,
-
-	  /** @property */
-	  formatter: SelectFormatter,
-
-	  /**
-	     @property {Array.<Array>|Array.<{name: string, values: Array.<Array>}>} optionValues
-	  */
-	  optionValues: undefined,
-
-	  /** @property */
-	  delimiter: ', ',
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backbone.Model} options.model
-	     @param {Backgrid.Column} options.column
-
-	     @throws {TypeError} If `optionsValues` is undefined.
-	  */
-	  initialize: function (options) {
-	    SelectCell.__super__.initialize.apply(this, arguments);
-	    this.listenTo(this.model, "backgrid:edit", function (model, column, cell, editor) {
-	      if (column.get("name") == this.column.get("name")) {
-	        editor.setOptionValues(this.optionValues);
-	        editor.setMultiple(this.multiple);
-	      }
-	    });
-	  },
-
-	  /**
-	     Renders the label using the raw value as key to look up from `optionValues`.
-
-	     @throws {TypeError} If `optionValues` is malformed.
-	  */
-	  render: function () {
-	    this.$el.empty();
-
-	    var optionValues = _.result(this, "optionValues");
-	    var model = this.model;
-	    var rawData = this.formatter.fromRaw(model.get(this.column.get("name")), model);
-
-	    var selectedText = [];
-
-	    try {
-	      if (!_.isArray(optionValues) || _.isEmpty(optionValues)) throw new TypeError;
-
-	      for (var k = 0; k < rawData.length; k++) {
-	        var rawDatum = rawData[k];
-
-	        for (var i = 0; i < optionValues.length; i++) {
-	          var optionValue = optionValues[i];
-
-	          if (_.isArray(optionValue)) {
-	            var optionText  = optionValue[0];
-	            var optionValue = optionValue[1];
-
-	            if (optionValue == rawDatum) selectedText.push(optionText);
-	          }
-	          else if (_.isObject(optionValue)) {
-	            var optionGroupValues = optionValue.values;
-
-	            for (var j = 0; j < optionGroupValues.length; j++) {
-	              var optionGroupValue = optionGroupValues[j];
-	              if (optionGroupValue[1] == rawDatum) {
-	                selectedText.push(optionGroupValue[0]);
-	              }
-	            }
-	          }
-	          else {
-	            throw new TypeError;
-	          }
-	        }
-	      }
-
-	      this.$el.append(selectedText.join(this.delimiter));
-	    }
-	    catch (ex) {
-	      if (ex instanceof TypeError) {
-	        throw new TypeError("'optionValues' must be of type {Array.<Array>|Array.<{name: string, values: Array.<Array>}>}");
-	      }
-	      throw ex;
-	    }
-
-	    this.delegateEvents();
-
-	    return this;
-	  }
-
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   A Column is a placeholder for column metadata.
-
-	   You usually don't need to create an instance of this class yourself as a
-	   collection of column instances will be created for you from a list of column
-	   attributes in the Backgrid.js view class constructors.
-
-	   @class Backgrid.Column
-	   @extends Backbone.Model
-	*/
-	var Column = Backgrid.Column = Backbone.Model.extend({
-
-	  /**
-	     @cfg {Object} defaults Column defaults. To override any of these default
-	     values, you can either change the prototype directly to override
-	     Column.defaults globally or extend Column and supply the custom class to
-	     Backgrid.Grid:
-
-	         // Override Column defaults globally
-	         Column.prototype.defaults.sortable = false;
-
-	         // Override Column defaults locally
-	         var MyColumn = Column.extend({
-	           defaults: _.defaults({
-	             editable: false
-	           }, Column.prototype.defaults)
-	         });
-
-	         var grid = new Backgrid.Grid(columns: new Columns([{...}, {...}], {
-	           model: MyColumn
-	         }));
-
-	     @cfg {string} [defaults.name] The default name of the model attribute.
-
-	     @cfg {string} [defaults.label] The default label to show in the header.
-
-	     @cfg {string|Backgrid.Cell} [defaults.cell] The default cell type. If this
-	     is a string, the capitalized form will be used to look up a cell class in
-	     Backbone, i.e.: string => StringCell. If a Cell subclass is supplied, it is
-	     initialized with a hash of parameters. If a Cell instance is supplied, it
-	     is used directly.
-
-	     @cfg {string|Backgrid.HeaderCell} [defaults.headerCell] The default header
-	     cell type.
-
-	     @cfg {boolean|string|function(): boolean} [defaults.sortable=true] Whether
-	     this column is sortable. If the value is a string, a method will the same
-	     name will be looked up from the column instance to determine whether the
-	     column should be sortable. The method's signature must be `function
-	     (Backgrid.Column, Backbone.Model): boolean`.
-
-	     @cfg {boolean|string|function(): boolean} [defaults.editable=true] Whether
-	     this column is editable. If the value is a string, a method will the same
-	     name will be looked up from the column instance to determine whether the
-	     column should be editable. The method's signature must be `function
-	     (Backgrid.Column, Backbone.Model): boolean`.
-
-	     @cfg {boolean|string|function(): boolean} [defaults.renderable=true]
-	     Whether this column is renderable. If the value is a string, a method will
-	     the same name will be looked up from the column instance to determine
-	     whether the column should be renderable. The method's signature must be
-	     `function (Backrid.Column, Backbone.Model): boolean`.
-
-	     @cfg {Backgrid.CellFormatter | Object | string} [defaults.formatter] The
-	     formatter to use to convert between raw model values and user input.
-
-	     @cfg {"toggle"|"cycle"} [defaults.sortType="cycle"] Whether sorting will
-	     toggle between ascending and descending order, or cycle between insertion
-	     order, ascending and descending order.
-
-	     @cfg {(function(Backbone.Model, string): *) | string} [defaults.sortValue]
-	     The function to use to extract a value from the model for comparison during
-	     sorting. If this value is a string, a method with the same name will be
-	     looked up from the column instance.
-
-	     @cfg {"ascending"|"descending"|null} [defaults.direction=null] The initial
-	     sorting direction for this column. The default is ordered by
-	     Backbone.Model.cid, which usually means the collection is ordered by
-	     insertion order.
-	  */
-	  defaults: {
-	    name: undefined,
-	    label: undefined,
-	    sortable: true,
-	    editable: true,
-	    renderable: true,
-	    formatter: undefined,
-	    sortType: "cycle",
-	    sortValue: undefined,
-	    direction: null,
-	    cell: undefined,
-	    headerCell: undefined
-	  },
-
-	  /**
-	     Initializes this Column instance.
-
-	     @param {Object} attrs
-
-	     @param {string} attrs.name The model attribute this column is responsible
-	     for.
-
-	     @param {string|Backgrid.Cell} attrs.cell The cell type to use to render
-	     this column.
-
-	     @param {string} [attrs.label]
-
-	     @param {string|Backgrid.HeaderCell} [attrs.headerCell]
-
-	     @param {boolean|string|function(): boolean} [attrs.sortable=true]
-
-	     @param {boolean|string|function(): boolean} [attrs.editable=true]
-
-	     @param {boolean|string|function(): boolean} [attrs.renderable=true]
-
-	     @param {Backgrid.CellFormatter | Object | string} [attrs.formatter]
-
-	     @param {"toggle"|"cycle"}  [attrs.sortType="cycle"]
-
-	     @param {(function(Backbone.Model, string): *) | string} [attrs.sortValue]
-
-	     @throws {TypeError} If attrs.cell or attrs.options are not supplied.
-
-	     @throws {ReferenceError} If formatter is a string but a formatter class of
-	     said name cannot be found in the Backgrid module.
-
-	     See:
-
-	     - Backgrid.Column.defaults
-	     - Backgrid.Cell
-	     - Backgrid.CellFormatter
-	   */
-	  initialize: function () {
-	    if (!this.has("label")) {
-	      this.set({ label: this.get("name") }, { silent: true });
-	    }
-
-	    var headerCell = Backgrid.resolveNameToClass(this.get("headerCell"), "HeaderCell");
-
-	    var cell = Backgrid.resolveNameToClass(this.get("cell"), "Cell");
-
-	    this.set({cell: cell, headerCell: headerCell}, { silent: true });
-	  },
-
-	  /**
-	     Returns an appropriate value extraction function from a model for sorting.
-
-	     If the column model contains an attribute `sortValue`, if it is a string, a
-	     method from the column instance identifified by the `sortValue` string is
-	     returned. If it is a function, it it returned as is. If `sortValue` isn't
-	     found from the column model's attributes, a default value extraction
-	     function is returned which will compare according to the natural order of
-	     the value's type.
-
-	     @return {function(Backbone.Model, string): *}
-	   */
-	  sortValue: function () {
-	    var sortValue = this.get("sortValue");
-	    if (_.isString(sortValue)) return this[sortValue];
-	    else if (_.isFunction(sortValue)) return sortValue;
-
-	    return function (model, colName) {
-	      return model.get(colName);
-	    };
-	  }
-
-	  /**
-	     @member Backgrid.Column
-	     @protected
-	     @method sortable
-	     @return {function(Backgrid.Column, Backbone.Model): boolean | boolean}
-	  */
-
-	  /**
-	     @member Backgrid.Column
-	     @protected
-	     @method editable
-	     @return {function(Backgrid.Column, Backbone.Model): boolean | boolean}
-	  */
-
-	  /**
-	     @member Backgrid.Column
-	     @protected
-	     @method renderable
-	     @return {function(Backgrid.Column, Backbone.Model): boolean | boolean}
-	  */
-	});
-
-	_.each(["sortable", "renderable", "editable"], function (key) {
-	  Column.prototype[key] = function () {
-	    var value = this.get(key);
-	    if (_.isString(value)) return this[value];
-	    else if (_.isFunction(value)) return value;
-
-	    return !!value;
-	  };
-	});
-
-	/**
-	   A Backbone collection of Column instances.
-
-	   @class Backgrid.Columns
-	   @extends Backbone.Collection
-	 */
-	var Columns = Backgrid.Columns = Backbone.Collection.extend({
-
-	  /**
-	     @property {Backgrid.Column} model
-	   */
-	  model: Column
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   Row is a simple container view that takes a model instance and a list of
-	   column metadata describing how each of the model's attribute is to be
-	   rendered, and apply the appropriate cell to each attribute.
-
-	   @class Backgrid.Row
-	   @extends Backbone.View
-	*/
-	var Row = Backgrid.Row = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "tr",
-
-	  /**
-	     Initializes a row view instance.
-
-	     @param {Object} options
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns Column metadata.
-	     @param {Backbone.Model} options.model The model instance to render.
-
-	     @throws {TypeError} If options.columns or options.model is undefined.
-	  */
-	  initialize: function (options) {
-
-	    var columns = this.columns = options.columns;
-	    if (!(columns instanceof Backbone.Collection)) {
-	      columns = this.columns = new Columns(columns);
-	    }
-
-	    var cells = this.cells = [];
-	    for (var i = 0; i < columns.length; i++) {
-	      cells.push(this.makeCell(columns.at(i), options));
-	    }
-
-	    this.listenTo(columns, "add", function (column, columns) {
-	      var i = columns.indexOf(column);
-	      var cell = this.makeCell(column, options);
-	      cells.splice(i, 0, cell);
-
-	      var $el = this.$el;
-	      if (i === 0) {
-	        $el.prepend(cell.render().$el);
-	      }
-	      else if (i === columns.length - 1) {
-	        $el.append(cell.render().$el);
-	      }
-	      else {
-	        $el.children().eq(i).before(cell.render().$el);
-	      }
-	    });
-
-	    this.listenTo(columns, "remove", function (column, columns, opts) {
-	      cells[opts.index].remove();
-	      cells.splice(opts.index, 1);
-	    });
-	  },
-
-	  /**
-	     Factory method for making a cell. Used by #initialize internally. Override
-	     this to provide an appropriate cell instance for a custom Row subclass.
-
-	     @protected
-
-	     @param {Backgrid.Column} column
-	     @param {Object} options The options passed to #initialize.
-
-	     @return {Backgrid.Cell}
-	  */
-	  makeCell: function (column) {
-	    return new (column.get("cell"))({
-	      column: column,
-	      model: this.model
-	    });
-	  },
-
-	  /**
-	     Renders a row of cells for this row's model.
-	  */
-	  render: function () {
-	    this.$el.empty();
-
-	    var fragment = document.createDocumentFragment();
-	    for (var i = 0; i < this.cells.length; i++) {
-	      fragment.appendChild(this.cells[i].render().el);
-	    }
-
-	    this.el.appendChild(fragment);
-
-	    this.delegateEvents();
-
-	    return this;
-	  },
-
-	  /**
-	     Clean up this row and its cells.
-
-	     @chainable
-	  */
-	  remove: function () {
-	    for (var i = 0; i < this.cells.length; i++) {
-	      var cell = this.cells[i];
-	      cell.remove.apply(cell, arguments);
-	    }
-	    return Backbone.View.prototype.remove.apply(this, arguments);
-	  }
-
-	});
-
-	/**
-	   EmptyRow is a simple container view that takes a list of column and render a
-	   row with a single column.
-
-	   @class Backgrid.EmptyRow
-	   @extends Backbone.View
-	*/
-	var EmptyRow = Backgrid.EmptyRow = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "tr",
-
-	  /** @property {string|function(): string} */
-	  emptyText: null,
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {string|function(): string} options.emptyText
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns Column metadata.
-	   */
-	  initialize: function (options) {
-	    this.emptyText = options.emptyText;
-	    this.columns =  options.columns;
-	  },
-
-	  /**
-	     Renders an empty row.
-	  */
-	  render: function () {
-	    this.$el.empty();
-
-	    var td = document.createElement("td");
-	    td.setAttribute("colspan", this.columns.length);
-	    td.appendChild(document.createTextNode(_.result(this, "emptyText")));
-
-	    this.el.className = "empty";
-	    this.el.appendChild(td);
-
-	    return this;
-	  }
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   HeaderCell is a special cell class that renders a column header cell. If the
-	   column is sortable, a sorter is also rendered and will trigger a table
-	   refresh after sorting.
-
-	   @class Backgrid.HeaderCell
-	   @extends Backbone.View
-	 */
-	var HeaderCell = Backgrid.HeaderCell = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "th",
-
-	  /** @property */
-	  events: {
-	    "click a": "onClick"
-	  },
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backgrid.Column|Object} options.column
-
-	     @throws {TypeError} If options.column or options.collection is undefined.
-	   */
-	  initialize: function (options) {
-	    this.column = options.column;
-	    if (!(this.column instanceof Column)) {
-	      this.column = new Column(this.column);
-	    }
-
-	    var column = this.column, collection = this.collection, $el = this.$el;
-
-	    this.listenTo(column, "change:editable change:sortable change:renderable",
-	                  function (column) {
-	                    var changed = column.changedAttributes();
-	                    for (var key in changed) {
-	                      if (changed.hasOwnProperty(key)) {
-	                        $el.toggleClass(key, changed[key]);
-	                      }
-	                    }
-	                  });
-	    this.listenTo(column, "change:direction", this.setCellDirection);
-	    this.listenTo(column, "change:name change:label", this.render);
-
-	    if (Backgrid.callByNeed(column.editable(), column, collection)) $el.addClass("editable");
-	    if (Backgrid.callByNeed(column.sortable(), column, collection)) $el.addClass("sortable");
-	    if (Backgrid.callByNeed(column.renderable(), column, collection)) $el.addClass("renderable");
-
-	    this.listenTo(collection.fullCollection || collection, "sort", this.removeCellDirection);
-	  },
-
-	  /**
-	     Event handler for the collection's `sort` event. Removes all the CSS
-	     direction classes.
-	   */
-	  removeCellDirection: function () {
-	    this.$el.removeClass("ascending").removeClass("descending");
-	    this.column.set("direction", null);
-	  },
-
-	  /**
-	     Event handler for the column's `change:direction` event. If this
-	     HeaderCell's column is being sorted on, it applies the direction given as a
-	     CSS class to the header cell. Removes all the CSS direction classes
-	     otherwise.
-	   */
-	  setCellDirection: function (column, direction) {
-	    this.$el.removeClass("ascending").removeClass("descending");
-	    if (column.cid == this.column.cid) this.$el.addClass(direction);
-	  },
-
-	  /**
-	     Event handler for the `click` event on the cell's anchor. If the column is
-	     sortable, clicking on the anchor will cycle through 3 sorting orderings -
-	     `ascending`, `descending`, and default.
-	   */
-	  onClick: function (e) {
-	    e.preventDefault();
-
-	    var column = this.column;
-	    var collection = this.collection;
-	    var event = "backgrid:sort";
-
-	    function cycleSort(header, col) {
-	      if (column.get("direction") === "ascending") collection.trigger(event, col, "descending");
-	      else if (column.get("direction") === "descending") collection.trigger(event, col, null);
-	      else collection.trigger(event, col, "ascending");
-	    }
-
-	    function toggleSort(header, col) {
-	      if (column.get("direction") === "ascending") collection.trigger(event, col, "descending");
-	      else collection.trigger(event, col, "ascending");
-	    }
-
-	    var sortable = Backgrid.callByNeed(column.sortable(), column, this.collection);
-	    if (sortable) {
-	      var sortType = column.get("sortType");
-	      if (sortType === "toggle") toggleSort(this, column);
-	      else cycleSort(this, column);
-	    }
-	  },
-
-	  /**
-	     Renders a header cell with a sorter, a label, and a class name for this
-	     column.
-	   */
-	  render: function () {
-	    this.$el.empty();
-	    var column = this.column;
-	    var sortable = Backgrid.callByNeed(column.sortable(), column, this.collection);
-	    var label;
-	    if(sortable){
-	      label = $("<a>").text(column.get("label")).append("<b class='sort-caret'></b>");
-	    } else {
-	      label = document.createTextNode(column.get("label"));
-	    }
-
-	    this.$el.append(label);
-	    this.$el.addClass(column.get("name"));
-	    this.$el.addClass(column.get("direction"));
-	    this.delegateEvents();
-	    return this;
-	  }
-
-	});
-
-	/**
-	   HeaderRow is a controller for a row of header cells.
-
-	   @class Backgrid.HeaderRow
-	   @extends Backgrid.Row
-	 */
-	var HeaderRow = Backgrid.HeaderRow = Backgrid.Row.extend({
-
-	  requiredOptions: ["columns", "collection"],
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns
-	     @param {Backgrid.HeaderCell} [options.headerCell] Customized default
-	     HeaderCell for all the columns. Supply a HeaderCell class or instance to a
-	     the `headerCell` key in a column definition for column-specific header
-	     rendering.
-
-	     @throws {TypeError} If options.columns or options.collection is undefined.
-	   */
-	  initialize: function () {
-	    Backgrid.Row.prototype.initialize.apply(this, arguments);
-	  },
-
-	  makeCell: function (column, options) {
-	    var headerCell = column.get("headerCell") || options.headerCell || HeaderCell;
-	    headerCell = new headerCell({
-	      column: column,
-	      collection: this.collection
-	    });
-	    return headerCell;
-	  }
-
-	});
-
-	/**
-	   Header is a special structural view class that renders a table head with a
-	   single row of header cells.
-
-	   @class Backgrid.Header
-	   @extends Backbone.View
-	 */
-	var Header = Backgrid.Header = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "thead",
-
-	  /**
-	     Initializer. Initializes this table head view to contain a single header
-	     row view.
-
-	     @param {Object} options
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns Column metadata.
-	     @param {Backbone.Model} options.model The model instance to render.
-
-	     @throws {TypeError} If options.columns or options.model is undefined.
-	   */
-	  initialize: function (options) {
-	    this.columns = options.columns;
-	    if (!(this.columns instanceof Backbone.Collection)) {
-	      this.columns = new Columns(this.columns);
-	    }
-
-	    this.row = new Backgrid.HeaderRow({
-	      columns: this.columns,
-	      collection: this.collection
-	    });
-	  },
-
-	  /**
-	     Renders this table head with a single row of header cells.
-	   */
-	  render: function () {
-	    this.$el.append(this.row.render().$el);
-	    this.delegateEvents();
-	    return this;
-	  },
-
-	  /**
-	     Clean up this header and its row.
-
-	     @chainable
-	   */
-	  remove: function () {
-	    this.row.remove.apply(this.row, arguments);
-	    return Backbone.View.prototype.remove.apply(this, arguments);
-	  }
-
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   Body is the table body which contains the rows inside a table. Body is
-	   responsible for refreshing the rows after sorting, insertion and removal.
-
-	   @class Backgrid.Body
-	   @extends Backbone.View
-	*/
-	var Body = Backgrid.Body = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "tbody",
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backbone.Collection} options.collection
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns
-	     Column metadata.
-	     @param {Backgrid.Row} [options.row=Backgrid.Row] The Row class to use.
-	     @param {string|function(): string} [options.emptyText] The text to display in the empty row.
-
-	     @throws {TypeError} If options.columns or options.collection is undefined.
-
-	     See Backgrid.Row.
-	  */
-	  initialize: function (options) {
-
-	    this.columns = options.columns;
-	    if (!(this.columns instanceof Backbone.Collection)) {
-	      this.columns = new Columns(this.columns);
-	    }
-
-	    this.row = options.row || Row;
-	    this.rows = this.collection.map(function (model) {
-	      var row = new this.row({
-	        columns: this.columns,
-	        model: model
-	      });
-
-	      return row;
-	    }, this);
-
-	    this.emptyText = options.emptyText;
-	    this._unshiftEmptyRowMayBe();
-
-	    var collection = this.collection;
-	    this.listenTo(collection, "add", this.insertRow);
-	    this.listenTo(collection, "remove", this.removeRow);
-	    this.listenTo(collection, "sort", this.refresh);
-	    this.listenTo(collection, "reset", this.refresh);
-	    this.listenTo(collection, "backgrid:sort", this.sort);
-	    this.listenTo(collection, "backgrid:edited", this.moveToNextCell);
-	  },
-
-	  _unshiftEmptyRowMayBe: function () {
-	    if (this.rows.length === 0 && this.emptyText != null) {
-	      this.rows.unshift(new EmptyRow({
-	        emptyText: this.emptyText,
-	        columns: this.columns
-	      }));
-	    }
-	  },
-
-	  /**
-	     This method can be called either directly or as a callback to a
-	     [Backbone.Collecton#add](http://backbonejs.org/#Collection-add) event.
-
-	     When called directly, it accepts a model or an array of models and an
-	     option hash just like
-	     [Backbone.Collection#add](http://backbonejs.org/#Collection-add) and
-	     delegates to it. Once the model is added, a new row is inserted into the
-	     body and automatically rendered.
-
-	     When called as a callback of an `add` event, splices a new row into the
-	     body and renders it.
-
-	     @param {Backbone.Model} model The model to render as a row.
-	     @param {Backbone.Collection} collection When called directly, this
-	     parameter is actually the options to
-	     [Backbone.Collection#add](http://backbonejs.org/#Collection-add).
-	     @param {Object} options When called directly, this must be null.
-
-	     See:
-
-	     - [Backbone.Collection#add](http://backbonejs.org/#Collection-add)
-	  */
-	  insertRow: function (model, collection, options) {
-
-	    if (this.rows[0] instanceof EmptyRow) this.rows.pop().remove();
-
-	    // insertRow() is called directly
-	    if (!(collection instanceof Backbone.Collection) && !options) {
-	      this.collection.add(model, (options = collection));
-	      return;
-	    }
-
-	    var row = new this.row({
-	      columns: this.columns,
-	      model: model
-	    });
-
-	    var index = collection.indexOf(model);
-	    this.rows.splice(index, 0, row);
-
-	    var $el = this.$el;
-	    var $children = $el.children();
-	    var $rowEl = row.render().$el;
-
-	    if (index >= $children.length) {
-	      $el.append($rowEl);
-	    }
-	    else {
-	      $children.eq(index).before($rowEl);
-	    }
-
-	    return this;
-	  },
-
-	  /**
-	     The method can be called either directly or as a callback to a
-	     [Backbone.Collection#remove](http://backbonejs.org/#Collection-remove)
-	     event.
-
-	     When called directly, it accepts a model or an array of models and an
-	     option hash just like
-	     [Backbone.Collection#remove](http://backbonejs.org/#Collection-remove) and
-	     delegates to it. Once the model is removed, a corresponding row is removed
-	     from the body.
-
-	     When called as a callback of a `remove` event, splices into the rows and
-	     removes the row responsible for rendering the model.
-
-	     @param {Backbone.Model} model The model to remove from the body.
-	     @param {Backbone.Collection} collection When called directly, this
-	     parameter is actually the options to
-	     [Backbone.Collection#remove](http://backbonejs.org/#Collection-remove).
-	     @param {Object} options When called directly, this must be null.
-
-	     See:
-
-	     - [Backbone.Collection#remove](http://backbonejs.org/#Collection-remove)
-	  */
-	  removeRow: function (model, collection, options) {
-
-	    // removeRow() is called directly
-	    if (!options) {
-	      this.collection.remove(model, (options = collection));
-	      this._unshiftEmptyRowMayBe();
-	      return;
-	    }
-
-	    if (_.isUndefined(options.render) || options.render) {
-	      this.rows[options.index].remove();
-	    }
-
-	    this.rows.splice(options.index, 1);
-	    this._unshiftEmptyRowMayBe();
-
-	    return this;
-	  },
-
-	  /**
-	     Reinitialize all the rows inside the body and re-render them. Triggers a
-	     Backbone `backgrid:refresh` event from the collection along with the body
-	     instance as its sole parameter when done.
-	  */
-	  refresh: function () {
-	    for (var i = 0; i < this.rows.length; i++) {
-	      this.rows[i].remove();
-	    }
-
-	    this.rows = this.collection.map(function (model) {
-	      var row = new this.row({
-	        columns: this.columns,
-	        model: model
-	      });
-
-	      return row;
-	    }, this);
-	    this._unshiftEmptyRowMayBe();
-
-	    this.render();
-
-	    this.collection.trigger("backgrid:refresh", this);
-
-	    return this;
-	  },
-
-	  /**
-	     Renders all the rows inside this body. If the collection is empty and
-	     `options.emptyText` is defined and not null in the constructor, an empty
-	     row is rendered, otherwise no row is rendered.
-	  */
-	  render: function () {
-	    this.$el.empty();
-
-	    var fragment = document.createDocumentFragment();
-	    for (var i = 0; i < this.rows.length; i++) {
-	      var row = this.rows[i];
-	      fragment.appendChild(row.render().el);
-	    }
-
-	    this.el.appendChild(fragment);
-
-	    this.delegateEvents();
-
-	    return this;
-	  },
-
-	  /**
-	     Clean up this body and it's rows.
-
-	     @chainable
-	  */
-	  remove: function () {
-	    for (var i = 0; i < this.rows.length; i++) {
-	      var row = this.rows[i];
-	      row.remove.apply(row, arguments);
-	    }
-	    return Backbone.View.prototype.remove.apply(this, arguments);
-	  },
-
-	  /**
-	     If the underlying collection is a Backbone.PageableCollection in
-	     server-mode or infinite-mode, a page of models is fetched after sorting is
-	     done on the server.
-
-	     If the underlying collection is a Backbone.PageableCollection in
-	     client-mode, or any
-	     [Backbone.Collection](http://backbonejs.org/#Collection) instance, sorting
-	     is done on the client side. If the collection is an instance of a
-	     Backbone.PageableCollection, sorting will be done globally on all the pages
-	     and the current page will then be returned.
-
-	     Triggers a Backbone `backgrid:sorted` event from the collection when done
-	     with the column, direction and a reference to the collection.
-
-	     @param {Backgrid.Column} column
-	     @param {null|"ascending"|"descending"} direction
-
-	     See [Backbone.Collection#comparator](http://backbonejs.org/#Collection-comparator)
-	  */
-	  sort: function (column, direction) {
-
-	    if (!_.contains(["ascending", "descending", null], direction)) {
-	      throw new RangeError('direction must be one of "ascending", "descending" or `null`');
-	    }
-
-	    if (_.isString(column)) column = this.columns.findWhere({name: column});
-
-	    var collection = this.collection;
-
-	    var order;
-	    if (direction === "ascending") order = -1;
-	    else if (direction === "descending") order = 1;
-	    else order = null;
-
-	    var comparator = this.makeComparator(column.get("name"), order,
-	                                         order ?
-	                                         column.sortValue() :
-	                                         function (model) {
-	                                           return model.cid.replace('c', '') * 1;
-	                                         });
-
-	    if (Backbone.PageableCollection &&
-	        collection instanceof Backbone.PageableCollection) {
-
-	      collection.setSorting(order && column.get("name"), order,
-	                            {sortValue: column.sortValue()});
-
-	      if (collection.fullCollection) {
-	        // If order is null, pageable will remove the comparator on both sides,
-	        // in this case the default insertion order comparator needs to be
-	        // attached to get back to the order before sorting.
-	        if (collection.fullCollection.comparator == null) {
-	          collection.fullCollection.comparator = comparator;
-	        }
-	        collection.fullCollection.sort();
-	        collection.trigger("backgrid:sorted", column, direction, collection);
-	      }
-	      else collection.fetch({reset: true, success: function () {
-	        collection.trigger("backgrid:sorted", column, direction, collection);
-	      }});
-	    }
-	    else {
-	      collection.comparator = comparator;
-	      collection.sort();
-	      collection.trigger("backgrid:sorted", column, direction, collection);
-	    }
-
-	    column.set("direction", direction);
-
-	    return this;
-	  },
-
-	  makeComparator: function (attr, order, func) {
-
-	    return function (left, right) {
-	      // extract the values from the models
-	      var l = func(left, attr), r = func(right, attr), t;
-
-	      // if descending order, swap left and right
-	      if (order === 1) t = l, l = r, r = t;
-
-	      // compare as usual
-	      if (l === r) return 0;
-	      else if (l < r) return -1;
-	      return 1;
-	    };
-	  },
-
-	  /**
-	     Moves focus to the next renderable and editable cell and return the
-	     currently editing cell to display mode.
-
-	     Triggers a `backgrid:next` event on the model with the indices of the row
-	     and column the user *intended* to move to, and whether the intended move
-	     was going to go out of bounds. Note that *out of bound* always means an
-	     attempt to go past the end of the last row.
-
-	     @param {Backbone.Model} model The originating model
-	     @param {Backgrid.Column} column The originating model column
-	     @param {Backgrid.Command} command The Command object constructed from a DOM
-	     event
-	  */
-	  moveToNextCell: function (model, column, command) {
-	    var i = this.collection.indexOf(model);
-	    var j = this.columns.indexOf(column);
-	    var cell, renderable, editable, m, n;
-
-	    this.rows[i].cells[j].exitEditMode();
-
-	    if (command.moveUp() || command.moveDown() || command.moveLeft() ||
-	        command.moveRight() || command.save()) {
-	      var l = this.columns.length;
-	      var maxOffset = l * this.collection.length;
-
-	      if (command.moveUp() || command.moveDown()) {
-	        m = i + (command.moveUp() ? -1 : 1);
-	        var row = this.rows[m];
-	        if (row) {
-	          cell = row.cells[j];
-	          if (Backgrid.callByNeed(cell.column.editable(), cell.column, model)) {
-	            cell.enterEditMode();
-	            model.trigger("backgrid:next", m, j, false);
-	          }
-	        }
-	        else model.trigger("backgrid:next", m, j, true);
-	      }
-	      else if (command.moveLeft() || command.moveRight()) {
-	        var right = command.moveRight();
-	        for (var offset = i * l + j + (right ? 1 : -1);
-	             offset >= 0 && offset < maxOffset;
-	             right ? offset++ : offset--) {
-	          m = ~~(offset / l);
-	          n = offset - m * l;
-	          cell = this.rows[m].cells[n];
-	          renderable = Backgrid.callByNeed(cell.column.renderable(), cell.column, cell.model);
-	          editable = Backgrid.callByNeed(cell.column.editable(), cell.column, model);
-	          if (renderable && editable) {
-	            cell.enterEditMode();
-	            model.trigger("backgrid:next", m, n, false);
-	            break;
-	          }
-	        }
-
-	        if (offset == maxOffset) {
-	          model.trigger("backgrid:next", ~~(offset / l), offset - m * l, true);
-	        }
-	      }
-	    }
-
-	    return this;
-	  }
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   A Footer is a generic class that only defines a default tag `tfoot` and
-	   number of required parameters in the initializer.
-
-	   @abstract
-	   @class Backgrid.Footer
-	   @extends Backbone.View
-	 */
-	var Footer = Backgrid.Footer = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "tfoot",
-
-	  /**
-	     Initializer.
-
-	     @param {Object} options
-	     @param {Backbone.Collection.<Backgrid.Column>|Array.<Backgrid.Column>|Array.<Object>} options.columns
-	     Column metadata.
-	     @param {Backbone.Collection} options.collection
-
-	     @throws {TypeError} If options.columns or options.collection is undefined.
-	  */
-	  initialize: function (options) {
-	    this.columns = options.columns;
-	    if (!(this.columns instanceof Backbone.Collection)) {
-	      this.columns = new Backgrid.Columns(this.columns);
-	    }
-	  }
-
-	});
-
-	/*
-	  backgrid
-	  http://github.com/wyuenho/backgrid
-
-	  Copyright (c) 2013 Jimmy Yuen Ho Wong and contributors
-	  Licensed under the MIT license.
-	*/
-
-	/**
-	   Grid represents a data grid that has a header, body and an optional footer.
-
-	   By default, a Grid treats each model in a collection as a row, and each
-	   attribute in a model as a column. To render a grid you must provide a list of
-	   column metadata and a collection to the Grid constructor. Just like any
-	   Backbone.View class, the grid is rendered as a DOM node fragment when you
-	   call render().
-
-	       var grid = Backgrid.Grid({
-	         columns: [{ name: "id", label: "ID", type: "string" },
-	          // ...
-	         ],
-	         collections: books
-	       });
-
-	       $("#table-container").append(grid.render().el);
-
-	   Optionally, if you want to customize the rendering of the grid's header and
-	   footer, you may choose to extend Backgrid.Header and Backgrid.Footer, and
-	   then supply that class or an instance of that class to the Grid constructor.
-	   See the documentation for Header and Footer for further details.
-
-	       var grid = Backgrid.Grid({
-	         columns: [{ name: "id", label: "ID", type: "string" }],
-	         collections: books,
-	         header: Backgrid.Header.extend({
-	              //...
-	         }),
-	         footer: Backgrid.Paginator
-	       });
-
-	   Finally, if you want to override how the rows are rendered in the table body,
-	   you can supply a Body subclass as the `body` attribute that uses a different
-	   Row class.
-
-	   @class Backgrid.Grid
-	   @extends Backbone.View
-
-	   See:
-
-	   - Backgrid.Column
-	   - Backgrid.Header
-	   - Backgrid.Body
-	   - Backgrid.Row
-	   - Backgrid.Footer
-	*/
-	var Grid = Backgrid.Grid = Backbone.View.extend({
-
-	  /** @property */
-	  tagName: "table",
-
-	  /** @property */
-	  className: "backgrid",
-
-	  /** @property */
-	  header: Header,
-
-	  /** @property */
-	  body: Body,
-
-	  /** @property */
-	  footer: null,
-
-	  /**
-	     Initializes a Grid instance.
-
-	     @param {Object} options
-	     @param {Backbone.Collection.<Backgrid.Columns>|Array.<Backgrid.Column>|Array.<Object>} options.columns Column metadata.
-	     @param {Backbone.Collection} options.collection The collection of tabular model data to display.
-	     @param {Backgrid.Header} [options.header=Backgrid.Header] An optional Header class to override the default.
-	     @param {Backgrid.Body} [options.body=Backgrid.Body] An optional Body class to override the default.
-	     @param {Backgrid.Row} [options.row=Backgrid.Row] An optional Row class to override the default.
-	     @param {Backgrid.Footer} [options.footer=Backgrid.Footer] An optional Footer class.
-	   */
-	  initialize: function (options) {
-	    // Convert the list of column objects here first so the subviews don't have
-	    // to.
-	    if (!(options.columns instanceof Backbone.Collection)) {
-	      options.columns = new Columns(options.columns);
-	    }
-	    this.columns = options.columns;
-
-	    var filteredOptions = _.omit(options, ["el", "id", "attributes",
-	                                           "className", "tagName", "events"]);
-
-	    // must construct body first so it listens to backgrid:sort first
-	    this.body = options.body || this.body;
-	    this.body = new this.body(filteredOptions);
-
-	    this.header = options.header || this.header;
-	    if (this.header) {
-	      this.header = new this.header(filteredOptions);
-	    }
-
-	    this.footer = options.footer || this.footer;
-	    if (this.footer) {
-	      this.footer = new this.footer(filteredOptions);
-	    }
-
-	    this.listenTo(this.columns, "reset", function () {
-	      if (this.header) {
-	        this.header = new (this.header.remove().constructor)(filteredOptions);
-	      }
-	      this.body = new (this.body.remove().constructor)(filteredOptions);
-	      if (this.footer) {
-	        this.footer = new (this.footer.remove().constructor)(filteredOptions);
-	      }
-	      this.render();
-	    });
-	  },
-
-	  /**
-	     Delegates to Backgrid.Body#insertRow.
-	   */
-	  insertRow: function () {
-	    this.body.insertRow.apply(this.body, arguments);
-	    return this;
-	  },
-
-	  /**
-	     Delegates to Backgrid.Body#removeRow.
-	   */
-	  removeRow: function () {
-	    this.body.removeRow.apply(this.body, arguments);
-	    return this;
-	  },
-
-	  /**
-	     Delegates to Backgrid.Columns#add for adding a column. Subviews can listen
-	     to the `add` event from their internal `columns` if rerendering needs to
-	     happen.
-
-	     @param {Object} [options] Options for `Backgrid.Columns#add`.
-	   */
-	  insertColumn: function () {
-	    this.columns.add.apply(this.columns, arguments);
-	    return this;
-	  },
-
-	  /**
-	     Delegates to Backgrid.Columns#remove for removing a column. Subviews can
-	     listen to the `remove` event from the internal `columns` if rerendering
-	     needs to happen.
-
-	     @param {Object} [options] Options for `Backgrid.Columns#remove`.
-	   */
-	  removeColumn: function () {
-	    this.columns.remove.apply(this.columns, arguments);
-	    return this;
-	  },
-
-	  /**
-	     Delegates to Backgrid.Body#sort.
-	   */
-	  sort: function () {
-	    this.body.sort.apply(this.body, arguments);
-	    return this;
-	  },
-
-	  /**
-	     Renders the grid's header, then footer, then finally the body. Triggers a
-	     Backbone `backgrid:rendered` event along with a reference to the grid when
-	     the it has successfully been rendered.
-	   */
-	  render: function () {
-	    this.$el.empty();
-
-	    if (this.header) {
-	      this.$el.append(this.header.render().$el);
-	    }
-
-	    if (this.footer) {
-	      this.$el.append(this.footer.render().$el);
-	    }
-
-	    this.$el.append(this.body.render().$el);
-
-	    this.delegateEvents();
-
-	    this.trigger("backgrid:rendered", this);
-
-	    return this;
-	  },
-
-	  /**
-	     Clean up this grid and its subviews.
-
-	     @chainable
-	   */
-	  remove: function () {
-	    this.header && this.header.remove.apply(this.header, arguments);
-	    this.body.remove.apply(this.body, arguments);
-	    this.footer && this.footer.remove.apply(this.footer, arguments);
-	    return Backbone.View.prototype.remove.apply(this, arguments);
-	  }
-
-	});
-	return Backgrid;
-	}));
-
-/***/ },
-/* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var jade = __webpack_require__(98);
+	var jade = __webpack_require__(101);
 
 	module.exports = function template(locals) {
 	var buf = [];
@@ -25717,24 +22839,61 @@
 	}
 
 /***/ },
-/* 92 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var jade = __webpack_require__(98);
+	var jade = __webpack_require__(101);
 
 	module.exports = function template(locals) {
 	var buf = [];
 	var jade_mixins = {};
 	var jade_interp;
 
-	buf.push("<h3>Search</h3><div id=\"panel-region\"></div><div id=\"list-region\"></div>");;return buf.join("");
+	buf.push("<h3>Products</h3><div id=\"panel-region\"></div><div id=\"list-region\"></div>");;return buf.join("");
 	}
 
 /***/ },
-/* 93 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var jade = __webpack_require__(98);
+	var jade = __webpack_require__(101);
+
+	module.exports = function template(locals) {
+	var buf = [];
+	var jade_mixins = {};
+	var jade_interp;
+	var locals_ = (locals || {}),ImageLarge = locals_.ImageLarge,ProductText = locals_.ProductText,Link = locals_.Link,Availability = locals_.Availability,Title = locals_.Title,AreaDescription = locals_.AreaDescription,UnitVolume = locals_.UnitVolume,UnitPrice = locals_.UnitPrice,Proof = locals_.Proof;
+	buf.push("<td class=\"text-center\">");
+	if ( ImageLarge != '/img/no_photo_big.jpg')
+	{
+	buf.push("<img" + (jade.attr("src", ImageLarge, true, false)) + (jade.attr("title", ProductText, true, false)) + "/>");
+	}
+	else
+	{
+	buf.push("<i>No image</i>");
+	}
+	buf.push("</td><td><a" + (jade.attr("href", 'http://www.binnys.com'+Link, true, false)) + ">" + (jade.escape(null == (jade_interp = Availability) ? "" : jade_interp)) + "</a></td><td>" + (jade.escape(null == (jade_interp = Title) ? "" : jade_interp)) + "</td><td class=\"hidden-xs\">" + (jade.escape(null == (jade_interp = AreaDescription) ? "" : jade_interp)) + "</td><td class=\"hidden-xs\">" + (jade.escape(null == (jade_interp = UnitVolume) ? "" : jade_interp)) + "</td><td>" + (jade.escape(null == (jade_interp = '$'+parseFloat(UnitPrice)) ? "" : jade_interp)) + "</td><td class=\"hidden-xs\">" + (jade.escape(null == (jade_interp = parseFloat(Proof)) ? "" : jade_interp)) + "</td>");;return buf.join("");
+	}
+
+/***/ },
+/* 95 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var jade = __webpack_require__(101);
+
+	module.exports = function template(locals) {
+	var buf = [];
+	var jade_mixins = {};
+	var jade_interp;
+
+	buf.push("<thead><tr><th></th><th>Availabilty</th><th>Title</th><th class=\"hidden-xs\">Region</th><th class=\"hidden-xs\">Volume</th><th>Price</th><th class=\"hidden-xs\">Proof</th></tr></thead><tbody></tbody>");;return buf.join("");
+	}
+
+/***/ },
+/* 96 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var jade = __webpack_require__(101);
 
 	module.exports = function template(locals) {
 	var buf = [];
@@ -25745,31 +22904,31 @@
 	}
 
 /***/ },
-/* 94 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "7ad17c6085dee9a33787bac28fb23d46.eot"
 
 /***/ },
-/* 95 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "e49d52e74b7689a0727def99da31f3eb.ttf"
 
 /***/ },
-/* 96 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "32941d6330044744c02493835b799e90.svg"
 
 /***/ },
-/* 97 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = "data:application/font-woff;base64,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"
 
 /***/ },
-/* 98 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25951,7 +23110,7 @@
 	    throw err;
 	  }
 	  try {
-	    str =  str || __webpack_require__(99).readFileSync(filename, 'utf8')
+	    str =  str || __webpack_require__(102).readFileSync(filename, 'utf8')
 	  } catch (ex) {
 	    rethrow(err, null, lineno)
 	  }
@@ -25978,7 +23137,7 @@
 
 
 /***/ },
-/* 99 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 

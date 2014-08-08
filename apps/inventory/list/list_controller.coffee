@@ -2,12 +2,14 @@ Controller = Marionette.Controller.extend
   initialize: ->
     @layout = @getLayoutView()
     @listenTo @layout, 'show', =>
-      #@listRegion()
+      @listRegion()
       @panelRegion()
+    App.vent.on 'list:products', (products) =>
+      @listRegion products
     App.mainRegion.show @layout
 
-  listRegion: ->
-    listView = @getListView()
+  listRegion: (products) ->
+    listView = @getListView products
     @layout.listRegion.show listView
 
   panelRegion: ->
@@ -18,9 +20,10 @@ Controller = Marionette.Controller.extend
     Layout = require('./layout_view')
     new Layout
 
-  getListView: ->
+  getListView: (products) ->
     List = require('./list_view')
     new List
+      collection: products
 
   getPanelView: ->
     Panel = require('./panel_view')

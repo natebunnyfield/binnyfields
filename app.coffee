@@ -28,7 +28,7 @@ App.addRegions
 
 App.on 'initialize:before', (options) ->
   log 'init:before'
-  #require('./models/skus')
+  require('./binnyfields.scss')
 
 App.on 'initialize:after', ->
   log 'init:after'

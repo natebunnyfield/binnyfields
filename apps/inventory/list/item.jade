@@ -1,0 +1,12 @@
+td.text-center
+  if ImageLarge != '/img/no_photo_big.jpg'
+    img(src=ImageLarge title=ProductText)
+  else
+    i No image
+td
+  a(href='http://www.binnys.com'+Link)= Availability
+td= Title
+td.hidden-xs= AreaDescription
+td.hidden-xs= UnitVolume
+td= '$'+parseFloat(UnitPrice)
+td.hidden-xs= parseFloat(Proof)
