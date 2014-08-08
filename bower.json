@@ -5,9 +5,7 @@
     "bootstrap": "3.2.0",
     "backbone": "1.1.2",
     "lodash": "2.4.1",
-    "marionette": "1.8.8",
-    "backgrid": "0.3.5",
-    "backgrid-filter": "0.3.5"
+    "marionette": "1.8.8"
   },
   "private": true
 }
